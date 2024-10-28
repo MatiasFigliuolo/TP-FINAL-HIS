@@ -1,0 +1,11 @@
+.formStyle
+{
+    border: 2px solid black;
+    display:inline-block ;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px;
+    position: relative;
+    top: 45%;
+    left: 35%;
+}
