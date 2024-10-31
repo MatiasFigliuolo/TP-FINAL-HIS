@@ -1,11 +1,36 @@
-.formStyle
+.formBox
 {
     border: 2px solid black;
     display:inline-block ;
-    padding: 30px;
+    font-size: larger;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 20px;
+    padding-right: 150px;
     border-radius: 10px;
     box-shadow: 1px 1px 1px 1px;
-    position: relative;
-    top: 45%;
-    left: 35%;
+}
+
+.buttonClass
+{
+    border-radius: 15px;
+    padding: 3px;
+    box-shadow: 0 1px 1px 1px;
+    transition: 0.2s;
+}
+
+.buttonCancelar
+{
+    margin-left: 40px;
+    background-color: rgb(244, 75, 75);
+}
+
+.buttonConfirmar
+{
+    background-color: green;
+}
+
+.buttonClass:hover
+{
+    background-color: rgb(202, 201, 201);
 }

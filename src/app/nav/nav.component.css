@@ -41,6 +41,7 @@ body, html {
   
   .nav-item {
     margin-left: 20px;
+    cursor: pointer;
   }
   
   .nav-item a {
