@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { AddPatientComponent } from './add-patient/add-patient.component';
     NavComponent,
     LogInComponent,
     AddMedicComponent,
-    AddPatientComponent
+    AddPatientComponent,
   ],
   imports: [
     BrowserModule,
