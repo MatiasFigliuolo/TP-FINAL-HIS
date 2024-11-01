@@ -4,6 +4,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
-  encapsulation: ViewEncapsulation.None // Desactiva la encapsulación de estilos
+  encapsulation: ViewEncapsulation.None 
 })
 export class NavComponent {}

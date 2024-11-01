@@ -16,7 +16,7 @@ import { AddPatientComponent } from './add-patient/add-patient.component';
     NavComponent,
     LogInComponent,
     AddMedicComponent,
-    AddPatientComponent,
+    AddPatientComponent
   ],
   imports: [
     BrowserModule,
