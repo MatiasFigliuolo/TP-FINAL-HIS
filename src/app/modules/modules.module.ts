@@ -1,4 +1,5 @@
 export class Doctor {
+  matricula: string = '';
   firstName: string = '';
   lastName: string = '';
   email: string = '';
@@ -15,9 +16,4 @@ export class Patient {
   email: string = '';
   phone: number = 0;
   insurance: string = '';
-}
-
-export class AddMedicComponent
-{
-  
 }

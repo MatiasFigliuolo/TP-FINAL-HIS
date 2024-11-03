@@ -3,17 +3,19 @@
 <h1>Agregar nuevo Medico</h1>
 <br><br><br>
 <div class="formBox">
-    <form class="formStyle">
-        <strong>Nombre: </strong><input type="text" name="name">
+    <form class="formStyle" [formGroup]="medicForm" (ngSubmit)="onSumbit()">
+        <strong>Nombre: </strong><input type="text" name="firstName" formControlName="firstName">
         <br><br>
-        <strong>Apellido: </strong><input type="text" name="lastName">
+        <strong>Apellido: </strong><input type="text" name="lastName"  formControlName="lastName">
         <br><br>
-        <strong>Email: </strong><input type="email" name="email">
+        <strong>Matricula: </strong><input type="text" name="matricula"  formControlName="matricula">
         <br><br>
-        <strong>Telefono: </strong><input type="number" name="phone">
+        <strong>Email: </strong><input type="email" name="email"  formControlName="email">
         <br><br>
-        <strong>Constraseña: </strong><input type="password" name="password">
+        <strong>Telefono: </strong><input type="number" name="phone"  formControlName="phone">
         <br><br>
-        <button type="submit" class="buttonClass buttonConfirmar">Agregar</button><button type="reset" class="buttonClass buttonCancelar">Cancelar</button>
+        <strong>Constraseña: </strong><input type="password" name="password"  formControlName="password">
+        <br><br>
+        <button type="submit" class="buttonClass buttonConfirmar" [disabled]="!medicForm.valid">Agregar</button><button type="reset" class="buttonClass buttonCancelar">Cancelar</button>
     </form>
 </div>
