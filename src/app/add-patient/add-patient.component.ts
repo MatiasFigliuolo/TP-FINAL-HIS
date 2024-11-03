@@ -1,12 +1,10 @@
-import { Component, NgModule } from '@angular/core';
-import { AddMedicComponent } from '../add-medic/add-medic.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-add-patient',
   templateUrl: './add-patient.component.html',
-  styles: ``
+  styleUrl: './add-patient.component.css'
 })
-
 export class AddPatientComponent {
 
 }
