@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let patient of patientList" (click)="selectPatient(patient)">
+      <tr class="patientStyle" *ngFor="let patient of patientList" (click)="selectPatient(patient)">
         <td>{{ patient.firstName }}</td>
         <td>{{ patient.lastName }}</td>
         <td>{{ patient.dni }}</td>
@@ -20,7 +20,7 @@
   </table>
 </div>
 
-<div *ngIf="selectedPatient">
+<div class="patientInfo" *ngIf="selectedPatient">
   <p>Nombre: {{ selectedPatient.firstName }}</p>
   <p>Apellido: {{ selectedPatient.lastName }}</p>
   <p>DNI: {{ selectedPatient.dni }}</p>
