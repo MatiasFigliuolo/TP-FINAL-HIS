@@ -1,19 +1,21 @@
 <app-nav></app-nav>
 <br><br>
-<form class="formStyle">
-    <strong>DNI: </strong><input type="text" name="dni">
-    <br><br>
-    <strong>Nombre: </strong><input type="text" name="name">
-    <br><br>
-    <strong>Apellido: </strong><input type="text" name="lastName">
-    <br><br>
-    <strong>Fecha de Nacimiento: </strong><input type="text" name="birthDate">
-    <br><br>
-    <strong>Direccion: </strong><input type="text" name="address">
-    <br><br>
-    <strong>Email: </strong><input type="text" name="email">
-    <br><br>
-    <strong>Telefono: </strong><input type="text" name="phoneNumber">
-    <br><br>
-    <strong>Obra Social: </strong><input type="text" name="insurance">
-</form>
+<div class="formBox">
+    <form class="formStyle" [formGroup]="patientForm" (ngSubmit)="onSumbit()">
+        <strong>DNI: </strong><input type="text" name="dni">
+        <br><br>
+        <strong>Nombre: </strong><input type="text" name="name">
+        <br><br>
+        <strong>Apellido: </strong><input type="text" name="lastName">
+        <br><br>
+        <strong>Fecha de Nacimiento: </strong><input type="text" name="birthDate">
+        <br><br>
+        <strong>Direccion: </strong><input type="text" name="address">
+        <br><br>
+        <strong>Email: </strong><input type="text" name="email">
+        <br><br>
+        <strong>Telefono: </strong><input type="text" name="phoneNumber">
+        <br><br>
+        <strong>Obra Social: </strong><input type="text" name="insurance">
+    </form>
+</div>
