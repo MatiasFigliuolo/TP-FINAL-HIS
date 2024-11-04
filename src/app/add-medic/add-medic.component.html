@@ -3,7 +3,7 @@
 <h1>Agregar nuevo Medico</h1>
 <br><br><br>
 <div class="formBox">
-    <form class="formStyle" [formGroup]="medicForm" (ngSubmit)="onSumbit()">
+    <form [formGroup]="medicForm" (ngSubmit)="onSumbit()">
         <strong>Nombre: </strong><input type="text" name="firstName" formControlName="firstName">
         <br><br>
         <strong>Apellido: </strong><input type="text" name="lastName"  formControlName="lastName">
