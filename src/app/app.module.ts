@@ -11,6 +11,7 @@ import { LogInComponent } from './log-in/log-in.component';
 import { AddMedicComponent } from './add-medic/add-medic.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicListComponent } from './medic-list/medic-list.component';
+import { ListPatientComponent } from './list-patient/list-patient.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MedicListComponent } from './medic-list/medic-list.component';
     AddMedicComponent,
     AddPatientComponent,
     MedicListComponent,
+    ListPatientComponent,
   ],
   imports: [
     BrowserModule,

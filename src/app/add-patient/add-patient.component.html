@@ -1,21 +1,23 @@
 <app-nav></app-nav>
 <br><br>
 <div class="formBox">
-    <form class="formStyle" [formGroup]="patientForm" (ngSubmit)="onSumbit()">
-        <strong>DNI: </strong><input type="text" name="dni">
+    <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+        <strong>DNI: </strong><input type="text" name="dni" formControlName="dni">
         <br><br>
-        <strong>Nombre: </strong><input type="text" name="name">
+        <strong>Nombre: </strong><input type="text" name="firstName" formControlName="firstName">
         <br><br>
-        <strong>Apellido: </strong><input type="text" name="lastName">
+        <strong>Apellido: </strong><input type="text" name="lastName" formControlName="lastName">
         <br><br>
-        <strong>Fecha de Nacimiento: </strong><input type="text" name="birthDate">
+        <strong>Fecha de Nacimiento: </strong><input type="text" name="birthDate" formControlName="birthDate">
         <br><br>
-        <strong>Direccion: </strong><input type="text" name="address">
+        <strong>Direccion: </strong><input type="text" name="address" formControlName="address">
         <br><br>
-        <strong>Email: </strong><input type="text" name="email">
+        <strong>Email: </strong><input type="text" name="email" formControlName="email">
         <br><br>
-        <strong>Telefono: </strong><input type="text" name="phoneNumber">
+        <strong>Telefono: </strong><input type="text" name="phoneNumber" formControlName="phone">
         <br><br>
-        <strong>Obra Social: </strong><input type="text" name="insurance">
+        <strong>Obra Social: </strong><input type="text" name="insurance" formControlName="insurance">
+        <br><br>
+        <button type="submit" class="buttonClass buttonConfirmar" [disabled]="!patientForm.valid">Agregar</button><button type="reset" class="buttonClass buttonCancelar">Cancelar</button>
     </form>
 </div>

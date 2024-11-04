@@ -1,0 +1,20 @@
+<app-nav></app-nav>
+
+<div class="patientListStyle">
+<table class="table table-striped medicListStyle">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Matricula</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medic of patientList">
+            <td>{{medic.firstName}}</td>
+            <td>{{medic.lastName}}</td>
+            <td>{{medic.dni}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
