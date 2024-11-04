@@ -1,16 +1,10 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
 
-.navbar {
+
+.navbarNav {
   width: 100%;
   background-color: #512da8;
   background: linear-gradient(to right, #5c6bc0, #512da8);
-  color: white;
+  color: rgb(80, 50, 50);
   padding: 10px 0;
   padding-bottom: 40px;
   position: fixed;
@@ -19,7 +13,7 @@ html {
   z-index: 1000;
 }
 
-.navbar-content {
+.navbarNav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,14 +23,14 @@ html {
   padding: 0 20px;
 }
 
-.navbar-nav {
+.navbarNav-nav {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.navbar-brand {
+.navbarNav-brand {
   position: relative;
   top: 15px;
   right: 80px;
