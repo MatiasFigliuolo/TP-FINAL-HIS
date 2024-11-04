@@ -1,20 +1,33 @@
 <app-nav></app-nav>
 
 <div class="patientListStyle">
-<table class="table table-striped medicListStyle">
+  <table class="table table-striped patientListStyle">
     <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Matricula</th>
-        </tr>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let medic of patientList">
-            <td>{{medic.firstName}}</td>
-            <td>{{medic.lastName}}</td>
-            <td>{{medic.dni}}</td>
-        </tr>
+      <tr *ngFor="let patient of patientList" (click)="selectPatient(patient)">
+        <td>{{ patient.firstName }}</td>
+        <td>{{ patient.lastName }}</td>
+        <td>{{ patient.dni }}</td>
+      </tr>
     </tbody>
   </table>
 </div>
+
+<div *ngIf="selectedPatient">
+  <p>Nombre: {{ selectedPatient.firstName }}</p>
+  <p>Apellido: {{ selectedPatient.lastName }}</p>
+  <p>DNI: {{ selectedPatient.dni }}</p>
+  <p>Email: {{ selectedPatient.email }}</p>
+  <p>Teléfono: {{ selectedPatient.phone }}</p>
+  <p>Obra Social: {{ selectedPatient.insurance }}</p>
+  <p>Dirección: {{ selectedPatient.address }}</p>
+  <p>Fecha de Nacimiento: {{ selectedPatient.birthDate }}</p>
+</div>
+
+
