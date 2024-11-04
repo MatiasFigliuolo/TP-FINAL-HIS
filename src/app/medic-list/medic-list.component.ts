@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Doctor } from '../modules/modules.module';
+import { Medic } from '../modules/modules.module';
 import { MedicServiceService } from '../service/medic-service.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { MedicServiceService } from '../service/medic-service.service';
 })
 export class MedicListComponent implements OnInit{
   
-  medicList: Array<Doctor> = [];
+  medicList: Array<Medic> = [];
 
   constructor(private medicService : MedicServiceService){}
   

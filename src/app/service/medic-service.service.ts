@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Doctor } from '../modules/modules.module';
+import { Medic } from '../modules/modules.module';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +8,12 @@ import { Doctor } from '../modules/modules.module';
 
 export class MedicServiceService {
 
-  private doctorList = new Array<Doctor>();
+  private doctorList = new Array<Medic>();
   constructor() { }
 
 
 
-  add(doctor : Doctor)
+  add(doctor : Medic)
   {
     this.doctorList.push(doctor);
   }

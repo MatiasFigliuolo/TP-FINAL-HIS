@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MedicServiceService } from '../service/medic-service.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Doctor } from '../modules/modules.module';
+import { Medic } from '../modules/modules.module';
 
 @Component({
   selector: 'app-add-medic',
@@ -29,7 +29,7 @@ export class AddMedicComponent implements OnInit {
 
   onSumbit()
   {
-    let medic = new Doctor();
+    let medic = new Medic();
     medic.firstName = this.medicForm.get('firstName')?.value || '';
     medic.lastName = this.medicForm.get('lastName')?.value || '';
     medic.email = this.medicForm.get('email')?.value || '';
