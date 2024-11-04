@@ -6,3 +6,24 @@
     width: 65.59%;
     height: auto;
 }
+
+.patientStyle
+{
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.patientStyle:hover
+{
+    border: 2px black solid;
+}
+
+.patientInfo
+{
+    position: absolute;
+    right: 15%;
+    padding: 5px;
+    top: 35%;
+    border-radius: 5px;
+    border: 2px black solid;
+}
