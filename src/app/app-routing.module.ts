@@ -15,11 +15,12 @@ const routes: Routes = [
   {path: 'list-patients', component: ListPatientComponent},
   {path: 'add-patient', component: AddPatientComponent},
   {path: '', redirectTo: 'log-in', pathMatch: 'full'},
-  {path: '* *', component: PageTransitionEvent}
+  {path: '**', component: PageTransitionEvent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
