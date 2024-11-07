@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,12 +23,13 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
     AddMedicComponent,
     AddPatientComponent,
     MedicListComponent,
-    ListPatientComponent,
+    ListPatientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
