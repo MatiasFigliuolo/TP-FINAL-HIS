@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
-import { FormControl } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';  // Asegúrate de importar ReactiveFormsModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +27,8 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
+    FormsModule,  // Este módulo es para formularios de plantilla
+    ReactiveFormsModule  // Este módulo es para formularios reactivos
   ],
   providers: [],
   bootstrap: [AppComponent]
