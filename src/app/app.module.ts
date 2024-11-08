@@ -4,6 +4,7 @@ import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -30,6 +31,7 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
