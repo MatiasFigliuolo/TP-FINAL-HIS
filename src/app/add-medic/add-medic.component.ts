@@ -25,8 +25,6 @@ export class AddMedicComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-
-
   onSumbit()
   {
     let medic = new Medic();

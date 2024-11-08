@@ -1,20 +1,36 @@
-<app-nav></app-nav>
+<body>
+    <app-nav></app-nav>
 
-<div class="medicListStyle">
-<table class="table table-striped medicListStyle">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Matricula</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let medic of medicList">
-            <td>{{medic.firstName}}</td>
-            <td>{{medic.lastName}}</td>
-            <td>{{medic.matricula}}</td>
-        </tr>
-    </tbody>
-  </table>
-</div>
+    <div class="searchContainer">
+        <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
+          (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
+      </div>
+
+    <div class="medicListStyle">
+        <table class="table table-striped medicListStyle">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Matricula</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class= "MedicStyle" *ngFor="let medic of filteredMedics.length > 0 ? filteredMedics : medicList"
+                    (click)="selectMedic(medic)">
+                    <td>{{ medic.firstName }}</td>
+                    <td>{{ medic.lastName }}</td>
+                    <td>{{ medic.matricula }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="medicInfo" *ngIf="selectedMedic">
+        <p>Nombre: {{ selectedMedic.firstName }}</p>
+        <p>Apellido: {{ selectedMedic.lastName }}</p>
+        <p>Matricula: {{ selectedMedic.matricula }}</p>
+        <p>Email: {{ selectedMedic.email }}</p>
+        <p>Teléfono: {{ selectedMedic.phone }}</p>
+      </div>
+</body>

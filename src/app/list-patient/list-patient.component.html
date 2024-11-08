@@ -1,15 +1,9 @@
 <body>
-
   <app-nav></app-nav>
 
   <div class="searchContainer">
-    <input 
-          type="text" 
-          placeholder="Ingrese Nombre, Apellido, o DNI del paciente" 
-          [(ngModel)]="searchTerm" 
-          (ngModelChange)="filterPatients()"
-          (keydown.enter)="onSearchEnter()" 
-          class="searchBar" />
+    <input type="text" placeholder="Ingrese Nombre, Apellido, o DNI del paciente" [(ngModel)]="searchTerm"
+      (ngModelChange)="filterPatients()" (keydown.enter)="onSearchEnter()" class="searchBar" />
   </div>
 
   <div class="patientListStyle">
@@ -22,7 +16,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="patientStyle" *ngFor="let patient of filteredPatients.length > 0 ? filteredPatients : patientList" (click)="selectPatient(patient)">
+        <tr class="patientStyle" *ngFor="let patient of filteredPatients.length > 0 ? filteredPatients : patientList"
+          (click)="selectPatient(patient)">
           <td>{{ patient.firstName }}</td>
           <td>{{ patient.lastName }}</td>
           <td>{{ patient.dni }}</td>
