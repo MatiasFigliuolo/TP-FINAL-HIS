@@ -11,6 +11,10 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  border-bottom-left-radius: 20px; 
+  border-bottom-right-radius: 20px; 
+  overflow: hidden; 
+
 }
 
 .navbarNav-content {
