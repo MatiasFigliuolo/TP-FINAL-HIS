@@ -1,79 +1,62 @@
-/* Fondo gradiente para el encabezado de la tabla */
-.table-header {
-    background: linear-gradient(to right, #5c6bc0, #512da8);
-    color: #fff;
+.medicListStyle {
+    position: fixed;
+    top: 30%;
+    left: 1%;
+    width: 65.59%;
+    max-height: 400px !important;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Scrollbar y tamaño de la lista */
-.medic-list {
-    flex: 2;
-    width: 66%;
-    padding-right: 20px;
-    max-height: 400px; /* Limita la altura de la lista */
-    overflow-y: auto; /* Activa el scrollbar */
+.medicListStyle .table {
+    width: 100%; 
 }
 
-/* Formulario de edición de médico seleccionado */
-.medic-details {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-    text-align: left;
+.medicListStyle .table tbody {
+    display: block; /* Convierte tbody en un bloque para aplicar max-height */
+    max-height: 350px; /* Ajusta la altura para mostrar el scrollbar en el cuerpo de la tabla */
+    overflow-y: auto;
 }
 
-.medic-details h3 {
-    margin-bottom: 15px;
-    color: #512da8;
-}
-
-.medic-details label {
-    font-weight: bold;
-}
-
-.medic-details input {
-    display: block;
+.medicListStyle .table thead,
+.medicListStyle .table tbody tr {
+    display: table; /* Asegura que thead y las filas se muestren correctamente */
     width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 14px;
+    table-layout: fixed;
 }
 
-/* Estilos de los botones de Confirmar y Eliminar */
-.button-group {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.button-confirm {
-    background-color: green;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
+.medicStyle {
     cursor: pointer;
-    font-weight: bold;
+    transition: 0.1s;
 }
 
-.button-delete {
-    background-color: #f44336;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
+.medicStyle:hover {
+    border: 2px black solid;
 }
 
-.button-confirm:hover {
-    background-color: #45a049;
+.medicInfo {
+    position: fixed;
+    right: 15%;
+    padding: 5px;
+    top: 35%;
+    border-radius: 5px;
+    border: 2px black solid;
 }
 
-.button-delete:hover {
-    background-color: #d32f2f;
+.searchContainer {
+    position: fixed;
+    top: 18%;
+    left: 1%;
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 10; 
 }
+
+.searchBar {
+    width: 50%;
+    padding: 7px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+

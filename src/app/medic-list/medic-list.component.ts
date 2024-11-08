@@ -1,44 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { Medic } from '../modules/modules.module';
+import { MedicServiceService } from '../service/medic-service.service';
 
 @Component({
   selector: 'app-medic-list',
   templateUrl: './medic-list.component.html',
   styleUrls: ['./medic-list.component.css']
 })
-export class MedicListComponent implements OnInit {
-  
-  medicList: Array<Medic> = [
-   
-  ];
+export class MedicListComponent implements OnInit{
+  medicList: Array<Medic> = [];
   selectedMedic: Medic | null = null;
+  filteredMedics: Medic[] = [];  
+  searchTerm: string = '';
 
-  ngOnInit(): void {console.log(this.medicList);}
+  constructor(private medicService : MedicServiceService){}
+  
+  ngOnInit(): void {
+    this.medicList =this.medicService.getAll()
+  }
 
   selectMedic(medic: Medic): void {
-    // Crear una copia del médico seleccionado para evitar modificar el original directamente
-    this.selectedMedic = { ...medic };
+    this.selectedMedic = medic;
   }
 
-  updateMedic(): void {
-    if (this.selectedMedic) {
-      // Encuentra el índice del médico en el arreglo
-      const index = this.medicList.findIndex(m => m.matricula === this.selectedMedic?.matricula);
-      if (index !== -1) {
-        // Actualiza los datos del médico en el arreglo
-        this.medicList[index] = { ...this.selectedMedic };
-      }
-      // Limpia el formulario después de la actualización
-      this.selectedMedic = null;
-    }
+  onSearchEnter() {
+    this.filterMedics(); 
   }
 
-  deleteMedic(): void {
-    if (this.selectedMedic) {
-      // Filtra el arreglo para eliminar el médico seleccionado
-      this.medicList = this.medicList.filter(m => m.matricula !== this.selectedMedic?.matricula);
-      // Limpia el formulario después de la eliminación
-      this.selectedMedic = null;
-    }
+  filterMedics(): void {
+    const term = this.searchTerm.toLowerCase();
+    this.filteredMedics = this.medicList.filter(medic =>
+      medic.firstName.toLowerCase().includes(term) ||
+      medic.lastName.toLowerCase().includes(term) ||
+      medic.matricula.toString().includes(term)
+    );
   }
 }

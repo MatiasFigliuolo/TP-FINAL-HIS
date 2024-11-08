@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
+import { FormControl } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';  // Asegúrate de importar ReactiveFormsModule
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,13 +24,14 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
     AddMedicComponent,
     AddPatientComponent,
     MedicListComponent,
-    ListPatientComponent,
+    ListPatientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,  // Este módulo es para formularios de plantilla
-    ReactiveFormsModule  // Este módulo es para formularios reactivos
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

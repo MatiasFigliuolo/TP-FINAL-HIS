@@ -1,34 +1,40 @@
-<app-nav></app-nav>
+<body>
+  <app-nav></app-nav>
 
-<div class="patientListStyle">
-  <table class="table table-striped patientListStyle">
-    <thead>
+  <div class="searchContainer">
+    <input type="text" placeholder="Ingrese Nombre, Apellido, o DNI del paciente" [(ngModel)]="searchTerm"
+      (ngModelChange)="filterPatients()" (keydown.enter)="onSearchEnter()" class="searchBar" />
+  </div>
 
-      <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>DNI</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="patientStyle" *ngFor="let patient of patientList" (click)="selectPatient(patient)">
-        <td>{{ patient.firstName }}</td>
-        <td>{{ patient.lastName }}</td>
-        <td>{{ patient.dni }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="patientInfo" *ngIf="selectedPatient">
-  <p>Nombre: {{ selectedPatient.firstName }}</p>
-  <p>Apellido: {{ selectedPatient.lastName }}</p>
-  <p>DNI: {{ selectedPatient.dni }}</p>
-  <p>Email: {{ selectedPatient.email }}</p>
-  <p>Teléfono: {{ selectedPatient.phone }}</p>
-  <p>Obra Social: {{ selectedPatient.insurance }}</p>
-  <p>Dirección: {{ selectedPatient.address }}</p>
-  <p>Fecha de Nacimiento: {{ selectedPatient.birthDate }}</p>
-</div>
+  <div class="patientListStyle">
+    <table class="table table-striped patientListStyle">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>DNI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="patientStyle" *ngFor="let patient of filteredPatients.length > 0 ? filteredPatients : patientList"
+          (click)="selectPatient(patient)">
+          <td>{{ patient.firstName }}</td>
+          <td>{{ patient.lastName }}</td>
+          <td>{{ patient.dni }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
+  <div class="patientInfo" *ngIf="selectedPatient">
+    <p>Nombre: {{ selectedPatient.firstName }}</p>
+    <p>Apellido: {{ selectedPatient.lastName }}</p>
+    <p>DNI: {{ selectedPatient.dni }}</p>
+    <p>Email: {{ selectedPatient.email }}</p>
+    <p>Teléfono: {{ selectedPatient.phone }}</p>
+    <p>Obra Social: {{ selectedPatient.insurance }}</p>
+    <p>Dirección: {{ selectedPatient.address }}</p>
+    <p>Fecha de Nacimiento: {{ selectedPatient.birthDate }}</p>
+  </div>
+</body>

@@ -1,49 +1,38 @@
-<app-nav></app-nav>
+<body>
+    <app-nav></app-nav>
 
-<div class="container">
-    <h2 class="text-center">Lista de Médicos</h2>
-    <div class="main-content">
-        <!-- Lista de Médicos -->
-        <div class="medic-list">
-            <table class="table table-hover">
-                <thead class="table-header">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Matrícula</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let medic of medicList" (click)="selectMedic(medic)">
-                        <td>{{ medic.firstName }}</td>
-                        <td>{{ medic.lastName }}</td>
-                        <td>{{ medic.matricula }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Información del Médico Seleccionado -->
-        <div class="medic-details" *ngIf="selectedMedic">
-            <h3>Detalles del Médico</h3>
-            <form #medicForm="ngForm">
-                <div>
-                    <label>Nombre:</label>
-                    <input type="text" [(ngModel)]="selectedMedic.firstName" name="firstName">
-                </div>
-                <div>
-                    <label>Apellido:</label>
-                    <input type="text" [(ngModel)]="selectedMedic.lastName" name="lastName">
-                </div>
-                <div>
-                    <label>Matrícula:</label>
-                    <input type="text" [(ngModel)]="selectedMedic.matricula" name="matricula">
-                </div>
-                <div class="button-group">
-                    <button type="button" class="button-confirm" (click)="updateMedic()">Confirmar</button>
-                    <button type="button" class="button-delete" (click)="deleteMedic()">Eliminar</button>
-                </div>
-            </form>
-        </div>
+    <div class="searchContainer">
+        <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
+          (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
+      </div>
+
+    <div class="medicListStyle">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Matricula</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class= "medicStyle" *ngFor="let medic of filteredMedics.length > 0 ? filteredMedics : medicList"
+                    (click)="selectMedic(medic)">
+                    <td>{{ medic.firstName }}</td>
+                    <td>{{ medic.lastName }}</td>
+                    <td>{{ medic.matricula }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-</div>
+
+    <div class="medicInfo" *ngIf="selectedMedic">
+        <h3>Información del Médico</h3>
+        <p><strong>Nombre:</strong> {{ selectedMedic.firstName }}</p>
+        <p><strong>Apellido:</strong> {{ selectedMedic.lastName }}</p>
+        <p><strong>Matrícula:</strong> {{ selectedMedic.matricula }}</p>
+        <p><strong>Email:</strong> {{ selectedMedic.email }}</p>
+        <p><strong>Teléfono:</strong> {{ selectedMedic.phone }}</p>
+    </div>
+    
+</body>
