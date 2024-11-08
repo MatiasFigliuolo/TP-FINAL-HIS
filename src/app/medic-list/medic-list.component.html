@@ -7,7 +7,7 @@
       </div>
 
     <div class="medicListStyle">
-        <table class="table table-striped medicListStyle">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -16,7 +16,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class= "MedicStyle" *ngFor="let medic of filteredMedics.length > 0 ? filteredMedics : medicList"
+                <tr class= "medicStyle" *ngFor="let medic of filteredMedics.length > 0 ? filteredMedics : medicList"
                     (click)="selectMedic(medic)">
                     <td>{{ medic.firstName }}</td>
                     <td>{{ medic.lastName }}</td>
@@ -27,10 +27,12 @@
     </div>
 
     <div class="medicInfo" *ngIf="selectedMedic">
-        <p>Nombre: {{ selectedMedic.firstName }}</p>
-        <p>Apellido: {{ selectedMedic.lastName }}</p>
-        <p>Matricula: {{ selectedMedic.matricula }}</p>
-        <p>Email: {{ selectedMedic.email }}</p>
-        <p>Teléfono: {{ selectedMedic.phone }}</p>
-      </div>
+        <h3>Información del Médico</h3>
+        <p><strong>Nombre:</strong> {{ selectedMedic.firstName }}</p>
+        <p><strong>Apellido:</strong> {{ selectedMedic.lastName }}</p>
+        <p><strong>Matrícula:</strong> {{ selectedMedic.matricula }}</p>
+        <p><strong>Email:</strong> {{ selectedMedic.email }}</p>
+        <p><strong>Teléfono:</strong> {{ selectedMedic.phone }}</p>
+    </div>
+    
 </body>
