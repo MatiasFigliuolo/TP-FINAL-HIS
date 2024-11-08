@@ -2,7 +2,7 @@
     <app-nav></app-nav>
 
     <div class="searchContainer">
-        <input type="text" placeholder="Ingrese Nombre, Apellido, o DNI del paciente" [(ngModel)]="searchTerm"
+        <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
           (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
       </div>
 
@@ -16,10 +16,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let medic of medicList">
-                    <td>{{medic.firstName}}</td>
-                    <td>{{medic.lastName}}</td>
-                    <td>{{medic.matricula}}</td>
+                <tr class= "MedicStyle" *ngFor="let medic of filteredMedics.length > 0 ? filteredMedics : medicList"
+                    (click)="selectMedic(medic)">
+                    <td>{{ medic.firstName }}</td>
+                    <td>{{ medic.lastName }}</td>
+                    <td>{{ medic.matricula }}</td>
                 </tr>
             </tbody>
         </table>

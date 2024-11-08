@@ -1,8 +1,44 @@
 .medicListStyle
 {
-    position: absolute;
-    top: 20%;
-    left: 0.56%;
-    width: 81%;
+    position: fixed;
+    top: 30%;
+    left: 1%;
+    width: 65.59%;
     height: auto;
 }
+
+.medicStyle {
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.medicStyle:hover {
+    border: 2px black solid;
+}
+
+.medicInfo {
+    position: fixed;
+    right: 15%;
+    padding: 5px;
+    top: 35%;
+    border-radius: 5px;
+    border: 2px black solid;
+}
+
+.searchContainer {
+    position: fixed;
+    top: 18%;
+    left: 1%;
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 10; 
+}
+
+.searchBar {
+    width: 50%;
+    padding: 7px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
