@@ -19,13 +19,14 @@
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 50px; /* Espacio entre columnas */
-    row-gap: 20px; /* Espacio entre filas */
+    column-gap: 50px; 
+    row-gap: 20px; 
 }
 
 .formField {
     display: flex;
     flex-direction: column;
+    font-weight: 500;
 }
 
 .formBox input[type="text"] {
@@ -38,27 +39,26 @@ form {
 .buttonClass {
     border-radius: 15px;
     padding: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     font-size: 14px;
     cursor: pointer;
     width: 48%; 
     text-align: center;
 }
 
-.buttonCancelar, .buttonConfirmar {
+.buttonConfirmar {
     background-color: #512da8;
     color: white;
     width: 20%;
+    border: 1px solid #512da8;
+    transition: ease-in-out 0.5s;
+    grid-column: 2;
 }
 
 .buttonClass:hover {
     background-color: rgb(178, 209, 228);
+    color: black;
 }
 
-/*
-.buttonContainer {
-    display: flex;
-    justify-content: space-between;
-}*/
+
 
 
