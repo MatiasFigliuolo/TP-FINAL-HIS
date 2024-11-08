@@ -35,4 +35,22 @@ export class MedicListComponent implements OnInit{
       medic.matricula.toString().includes(term)
     );
   }
+
+  updateMedic(): void {
+    if (this.selectedMedic) {
+      const index = this.medicList.findIndex(m => m.matricula === this.selectedMedic?.matricula);
+      if (index !== -1) {
+        this.medicList[index] = { ...this.selectedMedic };
+      }
+      this.selectedMedic = null;
+    }
+  }
+
+  deleteMedic(): void {
+    if (this.selectedMedic) {
+      this.medicList = this.medicList.filter(m => m.matricula !== this.selectedMedic?.matricula);
+      this.selectedMedic = null;
+    }
+  }
 }
+
