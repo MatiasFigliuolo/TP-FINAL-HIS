@@ -1,10 +1,27 @@
-.medicListStyle
-{
+.medicListStyle {
     position: fixed;
     top: 30%;
     left: 1%;
     width: 65.59%;
-    height: auto;
+    max-height: 400px !important;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.medicListStyle .table {
+    width: 100%; 
+}
+
+.medicListStyle .table tbody {
+    display: block; /* Convierte tbody en un bloque para aplicar max-height */
+    max-height: 350px; /* Ajusta la altura para mostrar el scrollbar en el cuerpo de la tabla */
+    overflow-y: auto;
+}
+
+.medicListStyle .table thead,
+.medicListStyle .table tbody tr {
+    display: table; /* Asegura que thead y las filas se muestren correctamente */
+    width: 100%;
+    table-layout: fixed;
 }
 
 .medicStyle {
@@ -41,4 +58,5 @@
     border: 1px solid black;
     border-radius: 10px;
 }
+
 

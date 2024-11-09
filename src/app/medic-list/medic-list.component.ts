@@ -5,7 +5,7 @@ import { MedicServiceService } from '../service/medic-service.service';
 @Component({
   selector: 'app-medic-list',
   templateUrl: './medic-list.component.html',
-  styleUrl: './medic-list.component.css'
+  styleUrls: ['./medic-list.component.css']
 })
 export class MedicListComponent implements OnInit{
   medicList: Array<Medic> = [];
