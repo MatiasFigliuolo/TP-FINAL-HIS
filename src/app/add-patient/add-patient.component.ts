@@ -33,6 +33,15 @@ export class AddPatientComponent {
     patient.phone = Number(this.patientForm.get('phone')?.value) || 0;
     patient.insurance = this.patientForm.get('insurance')?.value || '';
 
-    this.patientService.add(patient);
+    this.patientService.add(patient).subscribe({
+      next: (newPatient: Patient) => {
+        console.log('Paciente agregado:', newPatient);
+        this.patientService.updatePatientList();
+        this.patientForm.reset(); 
+      },
+      error: (err: any) => {
+        console.error('Error al agregar el paciente:', err);
+      }
+    });
   }
 }
