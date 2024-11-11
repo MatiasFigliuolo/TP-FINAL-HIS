@@ -1,37 +1,62 @@
-.formBox
-{
-    border: 2px solid black;
-    display:inline-block ;
-    margin-left: 0.5%;
-    font-size: larger;
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-bottom: 20px;
-    padding-right: 150px;
+.formBox {
+    background-color: rgb(229, 239, 248);
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px;
+    width: 90%;
+    height: 70%;
+    max-width: 150%; 
+    max-height: 600px;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.buttonClass
-{
-    border-radius: 15px;
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px; 
+    row-gap: 40px; 
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.formBox input[type="text"], 
+.formBox input[type="email"], 
+.formBox input[type="number"], 
+.formBox input[type="password"] {
+    width: 90%;
     padding: 3px;
-    box-shadow: 0 1px 1px 1px;
-    transition: 0.2s;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
-.buttonCancelar
-{
-    margin-left: 40px;
-    background-color: rgb(244, 75, 75);
+.buttonClass {
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 48%; 
+    text-align: center;
+    transition: ease-in-out 0.5s;
 }
 
-.buttonConfirmar
-{
-    background-color: green;
+.buttonConfirmar {
+    background-color: #512da8;
+    color: white;
+    width: 20%;
+    border: 1px solid #512da8;
+    grid-column: 2;
 }
 
-.buttonClass:hover
-{
-    background-color: rgb(202, 201, 201);
+.buttonClass:hover {
+    background-color: rgb(178, 209, 228);
+    color: black;
 }

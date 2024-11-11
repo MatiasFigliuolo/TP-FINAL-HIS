@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+<br><br><br><br>
+<div class="input-group mb-3 divStyleMedic">
+  <label class="input-group-text" for="inputGroupSelect01">Options</label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Elegir Medico</option>
+    <option *ngFor="let medic of medicList" value="medic.matricula">{{ medic.firstName }} {{medic.lastName}}</option>
+  </select>
+</div>
+
+<div class="input-group mb-3 divStylePatient ">
+  <label class="input-group-text" for="inputGroupSelect02">Options</label>
+  <select class="form-select" id="inputGroupSelect02">
+    <option selected>Elegir Paciente</option>
+    <option *ngFor="let pacient of patientList" value="medic.matricula">{{ pacient.firstName }} {{pacient.lastName}}
+    </option>
+  </select>
+</div>
+
+<div class="calendar">
+  <mwl-calendar-month-view [viewDate]="viewDate" [events]="events"
+    (eventClicked)="handleEvent('Clicked', $event.event)">
+  </mwl-calendar-month-view>
+</div>

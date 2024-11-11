@@ -3,6 +3,8 @@ import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PatientService } from './services/patient.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,9 @@ import { AddMedicComponent } from './add-medic/add-medic.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicListComponent } from './medic-list/medic-list.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
+import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
   declarations: [
@@ -23,13 +28,18 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
     AddMedicComponent,
     AddPatientComponent,
     MedicListComponent,
-    ListPatientComponent
+    ListPatientComponent,
+    AddAppointmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

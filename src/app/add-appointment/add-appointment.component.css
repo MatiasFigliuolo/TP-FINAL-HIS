@@ -1,0 +1,22 @@
+
+
+.divStyleMedic {
+    width: 30%;
+    position: absolute;
+    top: 30%;
+}
+
+.divStylePatient {
+    width: 30%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.calendar
+{
+    position: absolute;
+    top: 40%;
+    height: 2%;
+}
+
