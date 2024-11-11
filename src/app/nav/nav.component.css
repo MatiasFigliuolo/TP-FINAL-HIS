@@ -1,80 +1,9 @@
-
-
-.navbarNav {
-  width: 100%;
-  background-color: #512da8;
-  background: linear-gradient(to right, #5c6bc0, #512da8);
-  color: rgb(80, 50, 50);
-  padding: 10px 0;
-  padding-bottom: 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  border-bottom-left-radius: 20px; 
-  border-bottom-right-radius: 20px; 
-  overflow: hidden; 
-
-}
-
-.navbarNav-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.navbarNav-nav {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.navbarNav-brand {
+.navbar-brand{
   position: relative;
-  top: 15px;
-  right: 80px;
-  font-size: 26px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-item {
-  position: relative;
-  top: 15px;
-  margin-left: 20px;
-  cursor: pointer;
-}
-
-.nav-item a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  /* Espaciado interno de los enlaces */
-  border-radius: 8px;
-  /* Bordes redondeados */
-  background-color: #5c6bc0;
-  /* Color de fondo de los botones */
-  transition: background-color 0.3s ease;
-  /* Transición suave para el cambio de color */
-}
-
-.nav-item a:hover {
-  background-color: #3f51b5;
-  /* Color de fondo al pasar el ratón */
-}
-
-/* .navbar-brand{
+  left: 20px;
   font-weight: 600;
   font-size: xx-large;
   color: white;
-  left: 1%;
 }
 
 .container-fluid{
@@ -90,25 +19,23 @@
   border-bottom-left-radius: 20px; 
   border-bottom-right-radius: 20px; 
   overflow: hidden; 
+  height: 15%;
 }
 
 .navbar-toggler{
-  right: 5px;
-} */
+  position: relative;
+  left: -20px;
+  border-color: white;
+} 
 
-/*
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+}
+
 .container-fluid{
   background-color: #512da8;
   background: linear-gradient(to right, #5c6bc0, #512da8);
 }
-
-.navbar-brand{
-  font-weight: 600;
-  font-size: xx-large;
-  color: white;
-  left: 1%;
-}
-
 
  .navbarNav {
   width: 100%;
@@ -173,5 +100,28 @@
 
 .nav-item a:hover {
   background-color: #3f51b5;
+  color: white;
 }
- */
+ 
+.offcanvas-body{
+  background-color: white;
+}
+
+.offcanvas-header{
+  background-color: #512da8;
+  background: linear-gradient(to right, #5c6bc0, #512da8);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.offcanvas-title{
+  color: white;
+}
+
+.btn-close {
+  filter: invert(1); 
+}
+
+.home-link {
+  color: white !important;
+}
