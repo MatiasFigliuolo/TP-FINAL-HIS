@@ -1,54 +1,93 @@
+/* Aplica el gradiente a todo el thead para cubrir toda la cabecera */
+.table-header {
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+
+/* Ajuste de las celdas para asegurar que el fondo no se sobreponga */
+.table-header th {
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background: transparent; /* Asegura que el gradiente de thead cubra toda la cabecera */
+}
+
+/* Configuración general de la tabla */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Estilo de la lista de médicos */
 .medicListStyle {
-    position: fixed;
-    top: 30%;
-    left: 1%;
-    width: 65.59%;
-    max-height: 400px !important;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;
+    margin-top: 150px;
 }
 
-.medicListStyle .table {
-    width: 100%; 
-}
-
-.medicListStyle .table tbody {
-    display: block; /* Convierte tbody en un bloque para aplicar max-height */
-    max-height: 350px; /* Ajusta la altura para mostrar el scrollbar en el cuerpo de la tabla */
+/* Scroll en tbody */
+.table tbody {
+    display: block;
+    max-height: 350px;
     overflow-y: auto;
 }
 
-.medicListStyle .table thead,
-.medicListStyle .table tbody tr {
-    display: table; /* Asegura que thead y las filas se muestren correctamente */
+.table thead,
+.table tbody tr {
+    display: table;
     width: 100%;
     table-layout: fixed;
 }
 
-.medicStyle {
-    cursor: pointer;
-    transition: 0.1s;
+/* Estilo del formulario de detalles del médico */
+.medic-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    max-width: 200%;
+    text-align: left;
 }
 
-.medicStyle:hover {
-    border: 2px black solid;
+.medic-details h3 {
+    color: #512da8;
 }
 
-.medicInfo {
-    position: fixed;
-    right: 15%;
-    padding: 5px;
-    top: 35%;
-    border-radius: 5px;
-    border: 2px black solid;
+.medic-details label {
+    font-weight: bold;
 }
 
+.medic-details input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Botones */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Barra de búsqueda */
 .searchContainer {
     position: fixed;
-    top: 18%;
+    top: 13%;
     left: 1%;
     margin-bottom: 20px;
     width: 100%;
-    z-index: 10; 
+    z-index: 10;
 }
 
 .searchBar {
@@ -58,5 +97,4 @@
     border: 1px solid black;
     border-radius: 10px;
 }
-
 
