@@ -31,7 +31,7 @@ export class PatientService {
       this.patientListSubject.next(patients); 
     });
   }
-  
+
 }
 
 
