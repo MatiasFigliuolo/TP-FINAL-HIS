@@ -18,6 +18,12 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
 import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
 
 @NgModule({
   declarations: [
@@ -37,7 +43,11 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    FullCalendarModule
+    FullCalendarModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

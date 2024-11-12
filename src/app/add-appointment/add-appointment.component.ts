@@ -2,8 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../services/patient.service';
 import { Medic, Patient } from '../modules/modules.module';
 import { MedicServiceService } from '../service/medic-service.service';
-import { CalendarOptions, EventInput, DateSelectArg } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+
+
+
+
 
 @Component({
   selector: 'app-add-appointment',
@@ -17,7 +22,6 @@ export class AddAppointmentComponent implements OnInit {
   calendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin],
-  
   };
 
 

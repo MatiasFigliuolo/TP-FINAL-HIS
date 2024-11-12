@@ -3,6 +3,7 @@ import { MedicServiceService } from '../service/medic-service.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Medic } from '../modules/modules.module';
 
+
 @Component({
   selector: 'app-add-medic',
   templateUrl: './add-medic.component.html',
