@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../services/patient.service';
-import { Medic, Patient } from '../modules/modules.module';
+import { AppointmentServiceService } from '../services/appointment-service.service';
+import { Appointment, AppointmentState, Medic, Patient } from '../modules/modules.module';
 import { MedicServiceService } from '../service/medic-service.service';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
-
-
-
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-appointment',
@@ -16,6 +13,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   styleUrls: ['./add-appointment.component.css']
 })
 export class AddAppointmentComponent implements OnInit {
+
   medicList: Array<Medic> = [];
   patientList: Array<Patient> = [];
 
@@ -24,10 +22,10 @@ export class AddAppointmentComponent implements OnInit {
     plugins: [dayGridPlugin],
   };
 
-
   constructor(
     private medicService: MedicServiceService,
-    private patientService: PatientService
+    private patientService: PatientService,
+    private appointmentService: AppointmentServiceService
   ) { }
 
   ngOnInit(): void {
@@ -35,8 +33,25 @@ export class AddAppointmentComponent implements OnInit {
     this.patientService.getAll().subscribe((patients: Patient[]) => {
       this.patientList = patients;
     });
-
   }
-  // Configuración del calendario
+
+  appointmentForm = new FormGroup({
+    matricula: new FormControl('',Validators.required),
+    dni: new FormControl('',Validators.required),
+    date: new FormControl(new Date(),Validators.required)
+  });
+  
+  onSubmit()
+  {
+    let appointment = new Appointment;
+    appointment.State = AppointmentState.Confirm;
+    appointment.creationDate = new Date();
+    appointment.appointmentDate = this.appointmentForm.get('date')?.value || new Date();
+    appointment.medicId = this.appointmentForm.get('matricula')?.value || '';
+    appointment.patientDni = this.appointmentForm.get('dni')?.value || '';
+    this.appointmentService.add(appointment);
+    console.log(appointment);
+  }
+
 
 }

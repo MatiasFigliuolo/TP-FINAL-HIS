@@ -23,7 +23,7 @@ export class AddMedicComponent implements OnInit {
 
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+ 
   }
 
   onSumbit()
@@ -37,6 +37,7 @@ export class AddMedicComponent implements OnInit {
     medic.password = this.medicForm.get('password')?.value || '';
 
     this.medicService.add(medic);
+    console.log(medic);
 
   }
 

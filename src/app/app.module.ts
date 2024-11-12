@@ -16,7 +16,6 @@ import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicListComponent } from './medic-list/medic-list.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -47,7 +46,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
