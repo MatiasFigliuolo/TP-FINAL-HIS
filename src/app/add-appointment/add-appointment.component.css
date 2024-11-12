@@ -1,0 +1,40 @@
+
+
+.backgroundStyle {
+
+    background-color: rgb(229, 239, 248);
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+    max-width: 150%;
+    max-height: 600px;
+    position: absolute;
+    top: 32%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.medicPatientStyle {
+    left: 2%;
+    width: 60%;
+    position: relative;
+}
+
+
+
+.calendar {
+    position: relative;
+    margin-top: 17%;
+    width: 80%;
+    /* Ajusta según el tamaño deseado */
+    height: 400px;
+    width: 50%;
+    transform-origin: top left;
+    /* Asegura que el escalado se haga desde la esquina superior izquierda */
+}

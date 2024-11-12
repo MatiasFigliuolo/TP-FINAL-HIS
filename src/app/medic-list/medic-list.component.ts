@@ -16,7 +16,7 @@ export class MedicListComponent implements OnInit{
   constructor(private medicService : MedicServiceService){}
   
   ngOnInit(): void {
-    this.medicList =this.medicService.getAll()
+    this.medicList =this.medicService.getAll();
   }
 
   selectMedic(medic: Medic): void {
