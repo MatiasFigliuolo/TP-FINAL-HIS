@@ -25,6 +25,7 @@ export class Appointment
   medicId: String = '';
   appointmentDate : Date = new Date();
   State: AppointmentState = AppointmentState.Pending;
+  hour: Number = 0;
 }
 
 export enum AppointmentState

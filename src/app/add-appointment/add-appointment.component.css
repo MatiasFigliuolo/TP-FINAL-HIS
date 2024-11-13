@@ -38,3 +38,11 @@
     transform-origin: top left;
     /* Asegura que el escalado se haga desde la esquina superior izquierda */
 }
+
+.hourStyle
+{
+    display: inline-block;
+    position: relative;
+    width: 15%;
+    margin-left: 50px;
+}

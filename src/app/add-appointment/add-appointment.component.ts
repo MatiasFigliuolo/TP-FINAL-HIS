@@ -16,6 +16,8 @@ export class AddAppointmentComponent implements OnInit {
 
   medicList: Array<Medic> = [];
   patientList: Array<Patient> = [];
+  appointmentList: Array<Appointment> = [];
+  abilableHour: Array<Number> = []
 
   calendarOptions = {
     initialView: 'dayGridMonth',
@@ -33,12 +35,14 @@ export class AddAppointmentComponent implements OnInit {
     this.patientService.getAll().subscribe((patients: Patient[]) => {
       this.patientList = patients;
     });
+    this.appointmentList = this.appointmentService.getAll();
   }
 
   appointmentForm = new FormGroup({
     matricula: new FormControl('',Validators.required),
     dni: new FormControl('',Validators.required),
-    date: new FormControl(new Date(),Validators.required)
+    date: new FormControl(new Date(),Validators.required),
+    hour: new FormControl('',Validators.required)
   });
   
   onSubmit()
@@ -49,8 +53,24 @@ export class AddAppointmentComponent implements OnInit {
     appointment.appointmentDate = this.appointmentForm.get('date')?.value || new Date();
     appointment.medicId = this.appointmentForm.get('matricula')?.value || '';
     appointment.patientDni = this.appointmentForm.get('dni')?.value || '';
+    appointment.hour = Number(this.appointmentForm.get('hour')?.value);
     this.appointmentService.add(appointment);
     console.log(appointment);
+  }
+
+  hourFilter(matricula : String, date: Date)
+  {
+   this.appointmentList.forEach(element => 
+    {
+      if(element.medicId === matricula)
+      {
+        if(element.appointmentDate === date)
+        {
+          
+        }
+      }
+    
+   });
   }
 
 

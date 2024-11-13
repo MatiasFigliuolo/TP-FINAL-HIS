@@ -38,7 +38,6 @@ export class AddMedicComponent implements OnInit {
 
     this.medicService.add(medic);
     console.log(medic);
-
   }
 
 
