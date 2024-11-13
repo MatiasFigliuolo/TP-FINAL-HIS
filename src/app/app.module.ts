@@ -24,7 +24,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core'; 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,13 +46,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatInputModule,
-<<<<<<< HEAD
-    MatNativeDateModule,
-    FormsModule
-=======
     MatNativeDateModule, 
     RouterModule
->>>>>>> 1f92354b53eb3976fb106e606181b6f090dd3077
   ],
   providers: [],
   bootstrap: [AppComponent]
