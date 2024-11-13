@@ -6,6 +6,7 @@ import { MedicServiceService } from '../service/medic-service.service';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-add-appointment',
@@ -17,9 +18,10 @@ export class AddAppointmentComponent implements OnInit {
   medicList: Array<Medic> = [];
   patientList: Array<Patient> = [];
   appointmentList: Array<Appointment> = [];
-  abilableHour: Array<Number> = []
+  availableHours: Array<Number>= [12,1,2,3,4,5,6,7,8,9];
+  updatedHours: Array<Number> = [];
 
-  calendarOptions = {
+  calendarOptions : any = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin],
   };
@@ -36,6 +38,18 @@ export class AddAppointmentComponent implements OnInit {
       this.patientList = patients;
     });
     this.appointmentList = this.appointmentService.getAll();
+
+    this.appointmentForm.get('matricula')?.valueChanges.subscribe(medic => {
+      this.updateHours();
+      this.loadEventsForMedic(String(medic));
+    });
+    
+
+    this.appointmentForm.get('date')?.valueChanges.subscribe(date => {
+      this.updateHours();
+    });
+
+
   }
 
   appointmentForm = new FormGroup({
@@ -56,22 +70,56 @@ export class AddAppointmentComponent implements OnInit {
     appointment.hour = Number(this.appointmentForm.get('hour')?.value);
     this.appointmentService.add(appointment);
     console.log(appointment);
+    this.appointmentForm.reset();
   }
 
-  hourFilter(matricula : String, date: Date)
-  {
-   this.appointmentList.forEach(element => 
-    {
-      if(element.medicId === matricula)
-      {
-        if(element.appointmentDate === date)
-        {
-          
+  updateHours(): void {
+    const medicId = this.appointmentForm.get('matricula')?.value || '';
+    const date = this.appointmentForm.get('date')?.value || new Date();
+    this.hourFilter(medicId, date);
+  }
+
+  hourFilter(matricula: string, date: Date): void {
+
+    this.updatedHours = [...this.availableHours];
+    
+    this.appointmentList.forEach(element => {
+      if (element.medicId === matricula) {
+       
+        const elementDate = new Date(element.appointmentDate);
+        const selectedDate = new Date(date);
+        
+        if (
+          elementDate.getFullYear() === selectedDate.getFullYear() &&
+          elementDate.getMonth() === selectedDate.getMonth() &&
+          elementDate.getDate() === selectedDate.getDate()
+        ) {
+    
+          this.updatedHours = this.updatedHours.filter(hour => hour !== element.hour);
         }
       }
-    
-   });
+    });
   }
 
+  getEventsForMedic(medicoId: string): any[] {
+   
+    let medicAppointments = this.appointmentList.filter(appointment => medicoId === appointment.medicId);
+    
+    // Mapea cada cita a un formato que FullCalendar pueda entender
+    return medicAppointments.map(appointment => ({
+      title: appointment.State,       // Título del evento (ajusta esto según los datos en appointment)
+      date: appointment.appointmentDate // Fecha del evento (asegúrate de que appointmentDate sea una cadena o una instancia de Date)
+    }));
+  }
 
+  loadEventsForMedic(medicoId: string): void {
+    const medicEvents = this.getEventsForMedic(medicoId);
+    
+    this.calendarOptions = {
+      ...this.calendarOptions,
+      events: medicEvents
+    };
+  }
+  
+  
 }

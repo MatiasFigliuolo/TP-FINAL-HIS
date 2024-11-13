@@ -30,9 +30,8 @@
   <div class="hourStyle" *ngIf="appointmentForm.get('matricula')?.value">
  
     <select class="form-select" id="inputGroupSelect02" formControlName="hour">
-      <option value="" disabled selected >Hora</option>
-      <option *ngFor="let patient of patientList" [value]="patient.dni">
-      </option>
+      <option value="" disabled selected>Hora</option>
+      <option *ngFor="let hour of updatedHours" [value]="hour">{{ hour }}</option>
     </select>
 
     <button type="submit" mat-raised-button color="primary">Submit</button>
@@ -42,6 +41,6 @@
 </form>
 
 <div class="calendar">
-  <full-calendar [options]="calendarOptions" [events]=""></full-calendar>
+  <full-calendar [options]="calendarOptions"></full-calendar>
 </div>
 
