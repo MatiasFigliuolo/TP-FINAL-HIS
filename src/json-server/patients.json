@@ -1,7 +1,7 @@
 {
   "pacientes": [
     {
-      "id": 1,
+      "id": "1",
       "dni": "1234567",
       "firstName": "Juan",
       "lastName": "Perez",
@@ -12,7 +12,7 @@
       "phone": "123456789"
     },
     {
-      "id": 2,
+      "id": "2",
       "dni": "2345678",
       "firstName": "Maria",
       "lastName": "Lopez",
@@ -23,7 +23,7 @@
       "phone": "987654321"
     },
     {
-      "id": 3,
+      "id": "3",
       "dni": "3456789",
       "firstName": "Carlos",
       "lastName": "Gonzalez",
@@ -34,7 +34,7 @@
       "phone": "1122334455"
     },
     {
-      "id": 4,
+      "id": "4",
       "dni": "4567890",
       "firstName": "Ana",
       "lastName": "Martinez",
@@ -45,7 +45,7 @@
       "phone": "2233445566"
     },
     {
-      "id": 5,
+      "id": "5",
       "dni": "51234567",
       "firstName": "Luis",
       "lastName": "Fernandez",
@@ -56,7 +56,7 @@
       "phone": "3344556677"
     },
     {
-      "id": 6,
+      "id": "6",
       "dni": "6543210",
       "firstName": "Lucia",
       "lastName": "Gimenez",
@@ -67,7 +67,7 @@
       "phone": "4455667788"
     },
     {
-      "id": 7,
+      "id": "7",
       "dni": "12345678",
       "firstName": "Fernando",
       "lastName": "Sosa",
@@ -78,7 +78,7 @@
       "phone": "5566778899"
     },
     {
-      "id": 8,
+      "id": "8",
       "dni": "7654321",
       "firstName": "Marta",
       "lastName": "Diaz",
@@ -89,7 +89,7 @@
       "phone": "6677889900"
     },
     {
-      "id": 9,
+      "id": "9",
       "dni": "5123456",
       "firstName": "Jorge",
       "lastName": "Alvarez",
@@ -100,7 +100,7 @@
       "phone": "7788990011"
     },
     {
-      "id": 10,
+      "id": "10",
       "dni": "8765432",
       "firstName": "Laura",
       "lastName": "Ortiz",
@@ -111,7 +111,7 @@
       "phone": "8899001122"
     },
     {
-      "id": 11,
+      "id": "11",
       "dni": "4321098",
       "firstName": "Rosa",
       "lastName": "Castro",
@@ -122,7 +122,7 @@
       "phone": "9911223344"
     },
     {
-      "id": 12,
+      "id": "12",
       "dni": "50123456",
       "firstName": "Diego",
       "lastName": "Ramirez",
@@ -133,7 +133,7 @@
       "phone": "1022334455"
     },
     {
-      "id": 13,
+      "id": "13",
       "dni": "2345678",
       "firstName": "Silvana",
       "lastName": "Perez",
@@ -144,7 +144,7 @@
       "phone": "2033445566"
     },
     {
-      "id": 14,
+      "id": "14",
       "dni": "3456721",
       "firstName": "Eduardo",
       "lastName": "Gutierrez",
@@ -155,7 +155,7 @@
       "phone": "3044556677"
     },
     {
-      "id": 15,
+      "id": "15",
       "dni": "5012345",
       "firstName": "Clara",
       "lastName": "Paz",
@@ -166,7 +166,7 @@
       "phone": "4055667788"
     },
     {
-      "id": 16,
+      "id": "16",
       "dni": "8765432",
       "firstName": "Alberto",
       "lastName": "Rey",
@@ -177,7 +177,7 @@
       "phone": "5066778899"
     },
     {
-      "id": 17,
+      "id": "17",
       "dni": "4321012",
       "firstName": "Daniela",
       "lastName": "Moreno",
@@ -188,7 +188,7 @@
       "phone": "6077889900"
     },
     {
-      "id": 18,
+      "id": "18",
       "dni": "1234509",
       "firstName": "Gustavo",
       "lastName": "Ayala",
@@ -199,7 +199,7 @@
       "phone": "7088990011"
     },
     {
-      "id": 19,
+      "id": "19",
       "dni": "2345670",
       "firstName": "Elsa",
       "lastName": "Vega",
@@ -210,7 +210,7 @@
       "phone": "8099001122"
     },
     {
-      "id": 20,
+      "id": "20",
       "dni": "4321098",
       "firstName": "Federico",
       "lastName": "Sanchez",
@@ -252,6 +252,28 @@
       "email": "denoialuna@gmail.com",
       "phone": 2235250554,
       "insurance": "swiss medical"
+    },
+    {
+      "id": "5f6d",
+      "dni": 41149466,
+      "firstName": "Matias",
+      "lastName": "Figliuolo",
+      "birthDate": "12312",
+      "address": "Lavalle 4343",
+      "email": "matias.figliuolo1@gmail.com",
+      "phone": 2235134158,
+      "insurance": "osde"
+    },
+    {
+      "id": "abd8",
+      "dni": 12314151,
+      "firstName": "POablo",
+      "lastName": "Figliuolo",
+      "birthDate": "12312",
+      "address": "Lavalle 4343",
+      "email": "matias.figliuolo1@gmail.com",
+      "phone": 2235134158,
+      "insurance": "osde"
     }
   ]
 }

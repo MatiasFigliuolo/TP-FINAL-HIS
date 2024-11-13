@@ -21,16 +21,17 @@ export class Patient {
 export class Appointment
 {
   creationDate: Date = new Date();
-  patient: Patient = new Patient();
-  medicId: number = 0;
+  patientDni: String = '';
+  medicId: String = '';
   appointmentDate : Date = new Date();
-  Estado: AppointmentState = AppointmentState.Pendiente;
+  State: AppointmentState = AppointmentState.Pending;
+  hour: Number = 0;
 }
 
 export enum AppointmentState
 {
-  Confirmado = 'Confirmado',
-  Pendiente = 'Pendiente',
-  Cancelado = 'Cancelado',
-  Realizado = 'Realizado'
+  Confirm = 'Confirmado',
+  Pending = 'Pendiente',
+  Cancel = 'Cancelado',
+  Done = 'Realizado'
 }

@@ -1,31 +1,47 @@
 <app-nav></app-nav>
 <br><br><br><br>
-<div class="backgroundStyle">
-<div class="input-group mb-3 medicPatientStyle">
-  <label class="input-group-text" for="inputGroupSelect01">Options</label>
-  <select class="form-select" id="inputGroupSelect01">
-    <option selected>Elegir Medico</option>
-    <option *ngFor="let medic of medicList" value="{{medic.matricula}}">{{ medic.firstName }} {{medic.lastName}}</option>
-  </select>
+<form [formGroup]="appointmentForm" class="backgroundStyle" (ngSubmit)="onSubmit()">
+  <div class="input-group mb-3 medicPatientStyle">
+    <label class="input-group-text" for="inputGroupSelect01">Medico</label>
+    <select class="form-select" id="inputGroupSelect01" formControlName="matricula">
+      <option value="" disabled selected>Elegir Medico</option>
+      <option *ngFor="let medic of medicList" [value]="medic.matricula">
+        {{ medic.firstName }} {{ medic.lastName }}
+      </option>
+    </select>
+  </div>
+
+  <div class="input-group mb-3 medicPatientStyle">
+    <label class="input-group-text" for="inputGroupSelect02">Paciente</label>
+    <select class="form-select" id="inputGroupSelect02" formControlName="dni">
+      <option value="" disabled selected>Elegir Paciente</option>
+      <option *ngFor="let patient of patientList" [value]="patient.dni">
+        {{ patient.firstName }} {{ patient.lastName }}
+      </option>
+    </select>
+  </div>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="hourStyle" *ngIf="appointmentForm.get('matricula')?.value">
+ 
+    <select class="form-select" id="inputGroupSelect02" formControlName="hour">
+      <option value="" disabled selected >Hora</option>
+      <option *ngFor="let patient of patientList" [value]="patient.dni">
+      </option>
+    </select>
+
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+  </div>
+
+  
+</form>
+
+<div class="calendar">
+  <full-calendar [options]="calendarOptions" [events]=""></full-calendar>
 </div>
 
-<div class="input-group mb-3 medicPatientStyle ">
-  <label class="input-group-text" for="inputGroupSelect02">Options</label>
-  <select class="form-select" id="inputGroupSelect02">
-    <option selected>Elegir Paciente</option>
-    <option *ngFor="let pacient of patientList" value="{{pacient.dni}}">{{ pacient.firstName }} {{pacient.lastName}}
-    </option>
-  </select>
-</div>
-<mat-form-field>
-  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
-</div>
-<div class="calendar">
-  <full-calendar
-  [options]="calendarOptions"
-  [events]=""
-></full-calendar>
-</div>
