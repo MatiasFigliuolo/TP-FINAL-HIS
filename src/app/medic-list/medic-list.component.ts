@@ -17,7 +17,6 @@ export class MedicListComponent implements OnInit {
 
   ngOnInit(): void {
     this.medicService.getAll().subscribe((medics: Medic[]) => {
-      console.log('Medics received in ngOnInit:', medics);  // Asegúrate de que los datos lleguen a esta parte
       this.medicList = medics;
       this.filteredMedics = [...medics];  // Inicializa la lista filtrada
       this.filterMedics();  // Llamar a filterMedics para aplicar el filtro si existe algún término de búsqueda

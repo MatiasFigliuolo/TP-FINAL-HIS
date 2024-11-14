@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MedicServiceService } from '../service/medic-service.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Medic } from '../modules/modules.module';
+import { CustomValidators } from '../validators/custom-validators';
+import swal from 'sweetalert';
 
 
 @Component({
@@ -13,7 +15,7 @@ export class AddMedicComponent implements OnInit {
   medicForm = new FormGroup ({
     firstName: new FormControl('',[Validators.required]),
     lastName: new FormControl('',[Validators.required]),
-    matricula: new FormControl('',[Validators.required]),
+    matricula: new FormControl('',[Validators.required],[CustomValidators.medicExist(inject(MedicServiceService))]),
     email: new FormControl(''),
     phone: new FormControl(''),
     password: new FormControl('',[Validators.required])
@@ -21,20 +23,27 @@ export class AddMedicComponent implements OnInit {
 
   constructor(private medicService : MedicServiceService) {}
 
+  get firstName(){return this.medicForm.get('firstName')};
+  get lastName(){return this.medicForm.get('lastName')};
+  get matricula(){return this.medicForm.get('matricula')};
+  get email(){return this.medicForm.get('email')};
+  get phone(){return Number(this.medicForm.get('phone'))};
+  get password(){return this.medicForm.get('password')};
+
+
 
   ngOnInit(): void {
- 
   }
 
   onSumbit()
   {
     let medic = new Medic();
-    medic.firstName = this.medicForm.get('firstName')?.value || '';
-    medic.lastName = this.medicForm.get('lastName')?.value || '';
-    medic.email = this.medicForm.get('email')?.value || '';
-    medic.matricula = this.medicForm.get('matricula')?.value || '';
-    medic.phone = Number(this.medicForm.get('phone')?.value) || 0;
-    medic.password = this.medicForm.get('password')?.value || '';
+    medic.firstName = this.firstName?.value!;
+    medic.lastName = this.lastName?.value!;
+    medic.email = this.email?.value!;
+    medic.matricula = this.matricula?.value!;
+    medic.phone = this.phone;
+    medic.password = this.password?.value!;
 
     this.medicService.add(medic).subscribe({
       next: (newMedic: Medic) => {
@@ -46,6 +55,8 @@ export class AddMedicComponent implements OnInit {
         console.error('Error al agregar el medico:', err);
       }
     });
+
+    swal("Medico Agregado Exitosamente!",'',"success");
   }
 
 }
