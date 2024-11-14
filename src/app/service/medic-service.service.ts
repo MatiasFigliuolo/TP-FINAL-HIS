@@ -43,7 +43,6 @@ export class MedicServiceService implements OnInit {
         return medics.length > 0;  // Si el array tiene al menos un médico con esa matrícula, retorna true
       }),
       catchError(() => {
-        console.log('Error al consultar matrícula');
         return of(false);  // Si ocurre un error, asumimos que no existe
       })
     );
