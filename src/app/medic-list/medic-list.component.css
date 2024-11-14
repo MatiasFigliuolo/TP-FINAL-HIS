@@ -48,6 +48,10 @@
     width: 100%;
     table-layout: fixed;
 }
+.table-header {
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+}
 
 /* Estilo del formulario de detalles del médico */
 .medic-details {
@@ -92,11 +96,12 @@
 /* Barra de búsqueda */
 .searchContainer {
     position: fixed;
-    top: 13%;
+    top: 9%;
     left: 1%;
-    margin-top: 17px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 100%;
+    padding: 10px 0;
+    z-index: 10;
 }
 
 .searchBar {

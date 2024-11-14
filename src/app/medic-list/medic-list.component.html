@@ -1,11 +1,11 @@
-    <app-nav></app-nav>
+<app-nav></app-nav>
 
-    <div class="searchContainer">
-        <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
-          (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
-    </div>
+<div class="searchContainer">
+    <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
+      (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
+</div>
 
-    <div>
+<div>
 
       <div class="listStyle">
         <div class="row">
@@ -61,7 +61,5 @@
             </div>
         </div>
     </div>
-    
-
-    
+</div>
 
