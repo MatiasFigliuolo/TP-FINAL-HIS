@@ -1,18 +1,9 @@
 {
   "medicos": [
     {
-      "id": "1",
-      "matricula": "M12345",
-      "firstName": "Carlos",
-      "lastName": "Gomez",
-      "email": "carlos.gomez@hospital.com",
-      "phone": 123456789,
-      "password": "password1"
-    },
-    {
       "id": "2",
       "matricula": "M23456",
-      "firstName": "Ana",
+      "firstName": "Anita",
       "lastName": "Ramirez",
       "email": "ana.ramirez@hospital.com",
       "phone": 987654321,
@@ -188,6 +179,15 @@
       "email": "denoialuna@gmail.com",
       "phone": 2235250554,
       "password": "ssssss"
+    },
+    {
+      "id": "3776",
+      "matricula": "2525252525",
+      "firstName": "Juan Cruz",
+      "lastName": "Morales",
+      "email": "jcmxu95@gmail.com",
+      "phone": 2235050264,
+      "password": "234"
     }
   ]
 }

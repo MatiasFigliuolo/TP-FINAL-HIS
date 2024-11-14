@@ -87,10 +87,11 @@
 /* Barra de búsqueda */
 .searchContainer {
     position: fixed;
-    top: 13%;
+    top: 9%;
     left: 1%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 100%;
+    padding: 10px 0;
     z-index: 10;
 }
 

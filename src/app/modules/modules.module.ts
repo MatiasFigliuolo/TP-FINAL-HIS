@@ -1,4 +1,5 @@
 export class Medic {
+  id: number | undefined;
   matricula: string = '';
   firstName: string = '';
   lastName: string = '';

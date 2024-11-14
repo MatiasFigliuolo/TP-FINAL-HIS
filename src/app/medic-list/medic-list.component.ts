@@ -57,13 +57,21 @@ export class MedicListComponent implements OnInit{
   }  
 
   updateMedic(): void {
-    /* if (this.selectedMedic) {
-      const index = this.medicList.findIndex(m => m.matricula === this.selectedMedic?.matricula);
-      if (index !== -1) {
-        this.medicList[index] = { ...this.selectedMedic };
-      }
-      this.selectedMedic = null;
-    } */
+    if (this.selectedMedic) {
+      this.medicService.updateMedic(this.selectedMedic).subscribe(() => {
+        console.log('Médico actualizado con éxito');
+        this.selectedMedic = null;  // Limpia el formulario después de actualizar
+      });
+    }
+  }
+  
+  deleteMedic(): void {
+    if (this.selectedMedic) {
+      this.medicService.deleteMedic(this.selectedMedic).subscribe(() => {
+        console.log('Médico eliminado con éxito');
+        this.selectedMedic = null;  // Limpia el formulario después de eliminar
+      });
+    }
   }
 
 }

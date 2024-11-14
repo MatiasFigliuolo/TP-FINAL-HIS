@@ -1,67 +1,64 @@
-    <app-nav></app-nav>
+<app-nav></app-nav>
 
-    <div class="searchContainer">
-        <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
-          (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
-    </div>
+<div class="searchContainer">
+    <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
+      (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
+</div>
 
-    <div>
+<div>
 
-      <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8 medicListStyle">
-                <table class="table table-hover">
-                    <thead class="table-header">
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Matrícula</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="medicStyle" *ngFor="let medic of filteredMedics" (click)="selectMedic(medic)">
-                            <td>{{ medic.firstName }}</td>
-                            <td>{{ medic.lastName }}</td>
-                            <td>{{ medic.matricula }}</td>
-                          </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="col-md-4" *ngIf="selectedMedic">
-                <div class="medic-details">
-                    <h3>Detalles del Médico</h3>
-                    <form #medicForm="ngForm">
-                        <div class="form-group">
-                            <label>Nombre:</label>
-                            <input type="text" [(ngModel)]="selectedMedic.firstName" name="firstName" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Apellido:</label>
-                            <input type="text" [(ngModel)]="selectedMedic.lastName" name="lastName" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Matrícula:</label>
-                            <input type="text" [(ngModel)]="selectedMedic.matricula" name="matricula" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Email:</label>
-                            <input type="email" [(ngModel)]="selectedMedic.email" name="email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Teléfono:</label>
-                            <input type="tel" [(ngModel)]="selectedMedic.phone" name="phone" class="form-control">
-                        </div>
-                        <div class="button-group">
-                            <button type="button" class="btn btn-success" (click)="updateMedic()">Confirmar</button>
-<!--                             <button type="button" class="btn btn-danger" (click)="deleteMedic()">Eliminar</button>
- -->                        </div>
-                    </form>
-                </div>
+  <div>
+    <div class="row">
+        <div class="col-md-8 medicListStyle">
+            <table class="table table-hover">
+                <thead class="table-header">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Matrícula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="medicStyle" *ngFor="let medic of filteredMedics" (click)="selectMedic(medic)">
+                        <td>{{ medic.firstName }}</td>
+                        <td>{{ medic.lastName }}</td>
+                        <td>{{ medic.matricula }}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="col-md-4" *ngIf="selectedMedic">
+            <div class="medic-details">
+                <h3>Detalles del Médico</h3>
+                <form #medicForm="ngForm">
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input type="text" [(ngModel)]="selectedMedic.firstName" name="firstName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido:</label>
+                        <input type="text" [(ngModel)]="selectedMedic.lastName" name="lastName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Matrícula:</label>
+                        <input type="text" [(ngModel)]="selectedMedic.matricula" name="matricula" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" [(ngModel)]="selectedMedic.email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono:</label>
+                        <input type="tel" [(ngModel)]="selectedMedic.phone" name="phone" class="form-control">
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-success" (click)="updateMedic()">Confirmar</button>
+                             <button type="button" class="btn btn-danger" (click)="deleteMedic()">Eliminar</button>
+                       </div>
+                </form>
             </div>
         </div>
     </div>
-    
-
-    
+</div>
 
