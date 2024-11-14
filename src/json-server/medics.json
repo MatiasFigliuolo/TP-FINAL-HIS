@@ -1,185 +1,166 @@
 {
-    "medicos": [
-      {
-        "id": 1,
-        "nombre": "Carlos",
-        "apellido": "Gomez",
-        "matricula": "M12345",
-        "email": "carlos.gomez@hospital.com",
-        "telefono": "123456789",
-        "contraseña": "password1"
-      },
-      {
-        "id": 2,
-        "nombre": "Ana",
-        "apellido": "Ramirez",
-        "matricula": "M23456",
-        "email": "ana.ramirez@hospital.com",
-        "telefono": "987654321",
-        "contraseña": "password2"
-      },
-      {
-        "id": 3,
-        "nombre": "Luis",
-        "apellido": "Martinez",
-        "matricula": "M34567",
-        "email": "luis.martinez@hospital.com",
-        "telefono": "1122334455",
-        "contraseña": "password3"
-      },
-      {
-        "id": 4,
-        "nombre": "Maria",
-        "apellido": "Lopez",
-        "matricula": "M45678",
-        "email": "maria.lopez@hospital.com",
-        "telefono": "2233445566",
-        "contraseña": "password4"
-      },
-      {
-        "id": 5,
-        "nombre": "Fernando",
-        "apellido": "Sosa",
-        "matricula": "M56789",
-        "email": "fernando.sosa@hospital.com",
-        "telefono": "3344556677",
-        "contraseña": "password5"
-      },
-      {
-        "id": 6,
-        "nombre": "Lucia",
-        "apellido": "Perez",
-        "matricula": "M67890",
-        "email": "lucia.perez@hospital.com",
-        "telefono": "4455667788",
-        "contraseña": "password6"
-      },
-      {
-        "id": 7,
-        "nombre": "Miguel",
-        "apellido": "Fernandez",
-        "matricula": "M78901",
-        "email": "miguel.fernandez@hospital.com",
-        "telefono": "5566778899",
-        "contraseña": "password7"
-      },
-      {
-        "id": 8,
-        "nombre": "Elena",
-        "apellido": "Gimenez",
-        "matricula": "M89012",
-        "email": "elena.gimenez@hospital.com",
-        "telefono": "6677889900",
-        "contraseña": "password8"
-      },
-      {
-        "id": 9,
-        "nombre": "Jorge",
-        "apellido": "Diaz",
-        "matricula": "M90123",
-        "email": "jorge.diaz@hospital.com",
-        "telefono": "7788990011",
-        "contraseña": "password9"
-      },
-      {
-        "id": 10,
-        "nombre": "Laura",
-        "apellido": "Gutierrez",
-        "matricula": "M01234",
-        "email": "laura.gutierrez@hospital.com",
-        "telefono": "8899001122",
-        "contraseña": "password10"
-      },
-      {
-        "id": 11,
-        "nombre": "Diego",
-        "apellido": "Vega",
-        "matricula": "M34521",
-        "email": "diego.vega@hospital.com",
-        "telefono": "9911223344",
-        "contraseña": "password11"
-      },
-      {
-        "id": 12,
-        "nombre": "Sofia",
-        "apellido": "Mendez",
-        "matricula": "M45632",
-        "email": "sofia.mendez@hospital.com",
-        "telefono": "1022334455",
-        "contraseña": "password12"
-      },
-      {
-        "id": 13,
-        "nombre": "Andres",
-        "apellido": "Cruz",
-        "matricula": "M56743",
-        "email": "andres.cruz@hospital.com",
-        "telefono": "2033445566",
-        "contraseña": "password13"
-      },
-      {
-        "id": 14,
-        "nombre": "Clara",
-        "apellido": "Vargas",
-        "matricula": "M67854",
-        "email": "clara.vargas@hospital.com",
-        "telefono": "3044556677",
-        "contraseña": "password14"
-      },
-      {
-        "id": 15,
-        "nombre": "Ricardo",
-        "apellido": "Castro",
-        "matricula": "M78965",
-        "email": "ricardo.castro@hospital.com",
-        "telefono": "4055667788",
-        "contraseña": "password15"
-      },
-      {
-        "id": 16,
-        "nombre": "Marta",
-        "apellido": "Moreno",
-        "matricula": "M89076",
-        "email": "marta.moreno@hospital.com",
-        "telefono": "5066778899",
-        "contraseña": "password16"
-      },
-      {
-        "id": 17,
-        "nombre": "Hector",
-        "apellido": "Ortiz",
-        "matricula": "M90187",
-        "email": "hector.ortiz@hospital.com",
-        "telefono": "6077889900",
-        "contraseña": "password17"
-      },
-      {
-        "id": 18,
-        "nombre": "Alicia",
-        "apellido": "Silva",
-        "matricula": "M01298",
-        "email": "alicia.silva@hospital.com",
-        "telefono": "7088990011",
-        "contraseña": "password18"
-      },
-      {
-        "id": 19,
-        "nombre": "Enrique",
-        "apellido": "Reyes",
-        "matricula": "M12309",
-        "email": "enrique.reyes@hospital.com",
-        "telefono": "8099001122",
-        "contraseña": "password19"
-      },
-      {
-        "id": 20,
-        "nombre": "Silvia",
-        "apellido": "Navarro",
-        "matricula": "M23410",
-        "email": "silvia.navarro@hospital.com",
-        "telefono": "9100112233",
-        "contraseña": "password20"
-      }
-    ]
+  "medicos": [
+    {
+      "nombre": "Carlos",
+      "apellido": "Gomez",
+      "matricula": "M12345",
+      "email": "carlos.gomez@hospital.com",
+      "telefono": "123456789",
+      "contraseña": "password1"
+    },
+    {
+      "nombre": "Ana",
+      "apellido": "Ramirez",
+      "matricula": "M23456",
+      "email": "ana.ramirez@hospital.com",
+      "telefono": "987654321",
+      "contraseña": "password2"
+    },
+    {
+      "nombre": "Luis",
+      "apellido": "Martinez",
+      "matricula": "M34567",
+      "email": "luis.martinez@hospital.com",
+      "telefono": "1122334455",
+      "contraseña": "password3"
+    },
+    {
+      "nombre": "Maria",
+      "apellido": "Lopez",
+      "matricula": "M45678",
+      "email": "maria.lopez@hospital.com",
+      "telefono": "2233445566",
+      "contraseña": "password4"
+    },
+    {
+      "nombre": "Fernando",
+      "apellido": "Sosa",
+      "matricula": "M56789",
+      "email": "fernando.sosa@hospital.com",
+      "telefono": "3344556677",
+      "contraseña": "password5"
+    },
+    {
+      "nombre": "Lucia",
+      "apellido": "Perez",
+      "matricula": "M67890",
+      "email": "lucia.perez@hospital.com",
+      "telefono": "4455667788",
+      "contraseña": "password6"
+    },
+    {
+      "nombre": "Miguel",
+      "apellido": "Fernandez",
+      "matricula": "M78901",
+      "email": "miguel.fernandez@hospital.com",
+      "telefono": "5566778899",
+      "contraseña": "password7"
+    },
+    {
+      "nombre": "Elena",
+      "apellido": "Gimenez",
+      "matricula": "M89012",
+      "email": "elena.gimenez@hospital.com",
+      "telefono": "6677889900",
+      "contraseña": "password8"
+    },
+    {
+      "nombre": "Jorge",
+      "apellido": "Diaz",
+      "matricula": "M90123",
+      "email": "jorge.diaz@hospital.com",
+      "telefono": "7788990011",
+      "contraseña": "password9"
+    },
+    {
+      "nombre": "Laura",
+      "apellido": "Gutierrez",
+      "matricula": "M01234",
+      "email": "laura.gutierrez@hospital.com",
+      "telefono": "8899001122",
+      "contraseña": "password10"
+    },
+    {
+      "nombre": "Diego",
+      "apellido": "Vega",
+      "matricula": "M34521",
+      "email": "diego.vega@hospital.com",
+      "telefono": "9911223344",
+      "contraseña": "password11"
+    },
+    {
+      "nombre": "Sofia",
+      "apellido": "Mendez",
+      "matricula": "M45632",
+      "email": "sofia.mendez@hospital.com",
+      "telefono": "1022334455",
+      "contraseña": "password12"
+    },
+    {
+      "nombre": "Andres",
+      "apellido": "Cruz",
+      "matricula": "M56743",
+      "email": "andres.cruz@hospital.com",
+      "telefono": "2033445566",
+      "contraseña": "password13"
+    },
+    {
+      "nombre": "Clara",
+      "apellido": "Vargas",
+      "matricula": "M67854",
+      "email": "clara.vargas@hospital.com",
+      "telefono": "3044556677",
+      "contraseña": "password14"
+    },
+    {
+      "nombre": "Ricardo",
+      "apellido": "Castro",
+      "matricula": "M78965",
+      "email": "ricardo.castro@hospital.com",
+      "telefono": "4055667788",
+      "contraseña": "password15"
+    },
+    {
+      "nombre": "Marta",
+      "apellido": "Moreno",
+      "matricula": "M89076",
+      "email": "marta.moreno@hospital.com",
+      "telefono": "5066778899",
+      "contraseña": "password16"
+    },
+    {
+      "nombre": "Hector",
+      "apellido": "Ortiz",
+      "matricula": "M90187",
+      "email": "hector.ortiz@hospital.com",
+      "telefono": "6077889900",
+      "contraseña": "password17"
+    },
+    {
+      "nombre": "Alicia",
+      "apellido": "Silva",
+      "matricula": "M01298",
+      "email": "alicia.silva@hospital.com",
+      "telefono": "7088990011",
+      "contraseña": "password18"
+    },
+    {
+      "nombre": "Enrique",
+      "apellido": "Reyes",
+      "matricula": "M12309",
+      "email": "enrique.reyes@hospital.com",
+      "telefono": "8099001122",
+      "contraseña": "password19"
+    },
+    {
+      "nombre": "Silvia",
+      "apellido": "Navarro",
+      "matricula": "M23410",
+      "email": "silvia.navarro@hospital.com",
+      "telefono": "9100112233",
+      "contraseña": "password20"
+    }
+  ]
 }
+
   

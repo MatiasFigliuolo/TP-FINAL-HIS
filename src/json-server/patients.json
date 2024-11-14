@@ -1,7 +1,6 @@
 {
   "pacientes": [
     {
-      "id": 1,
       "dni": "1234567",
       "firstName": "Juan",
       "lastName": "Perez",
@@ -9,10 +8,10 @@
       "address": "Calle Falsa 123",
       "insurance": "OSDE",
       "email": "juan.perez@yahoo.com",
-      "phone": "123456789"
+      "phone": "123456789",
+      "id": "e160"
     },
     {
-      "id": 2,
       "dni": "2345678",
       "firstName": "Maria",
       "lastName": "Lopez",
@@ -20,10 +19,10 @@
       "address": "Avenida Siempre Viva 742",
       "insurance": "Swiss Medical",
       "email": "maria.lopez@gmail.com",
-      "phone": "987654321"
+      "phone": "987654321",
+      "id": "d7a6"
     },
     {
-      "id": 3,
       "dni": "3456789",
       "firstName": "Carlos",
       "lastName": "Gonzalez",
@@ -31,10 +30,10 @@
       "address": "Av. Libertador 555",
       "insurance": "Galeno",
       "email": "carlos.gonzalez@yahoo.com",
-      "phone": "1122334455"
+      "phone": "1122334455",
+      "id": "eff5"
     },
     {
-      "id": 4,
       "dni": "4567890",
       "firstName": "Ana",
       "lastName": "Martinez",
@@ -42,10 +41,10 @@
       "address": "Calle Corrientes 300",
       "insurance": "OSDE",
       "email": "ana.martinez@gmail.com",
-      "phone": "2233445566"
+      "phone": "2233445566",
+      "id": "6afb"
     },
     {
-      "id": 5,
       "dni": "51234567",
       "firstName": "Luis",
       "lastName": "Fernandez",
@@ -53,10 +52,10 @@
       "address": "Diagonal Sur 800",
       "insurance": "IOMA",
       "email": "luis.fernandez@yahoo.com",
-      "phone": "3344556677"
+      "phone": "3344556677",
+      "id": "a6da"
     },
     {
-      "id": 6,
       "dni": "6543210",
       "firstName": "Lucia",
       "lastName": "Gimenez",
@@ -64,10 +63,10 @@
       "address": "San Martin 400",
       "insurance": "Medifé",
       "email": "lucia.gimenez@gmail.com",
-      "phone": "4455667788"
+      "phone": "4455667788",
+      "id": "faf2"
     },
     {
-      "id": 7,
       "dni": "12345678",
       "firstName": "Fernando",
       "lastName": "Sosa",
@@ -75,10 +74,10 @@
       "address": "Belgrano 1200",
       "insurance": "Swiss Medical",
       "email": "fernando.sosa@yahoo.com",
-      "phone": "5566778899"
+      "phone": "5566778899",
+      "id": "5bcc"
     },
     {
-      "id": 8,
       "dni": "7654321",
       "firstName": "Marta",
       "lastName": "Diaz",
@@ -86,10 +85,10 @@
       "address": "Rivadavia 900",
       "insurance": "OSDE",
       "email": "marta.diaz@gmail.com",
-      "phone": "6677889900"
+      "phone": "6677889900",
+      "id": "5553"
     },
     {
-      "id": 9,
       "dni": "5123456",
       "firstName": "Jorge",
       "lastName": "Alvarez",
@@ -97,10 +96,10 @@
       "address": "Avenida de Mayo 500",
       "insurance": "Galeno",
       "email": "jorge.alvarez@yahoo.com",
-      "phone": "7788990011"
+      "phone": "7788990011",
+      "id": "0294"
     },
     {
-      "id": 10,
       "dni": "8765432",
       "firstName": "Laura",
       "lastName": "Ortiz",
@@ -108,10 +107,10 @@
       "address": "Entre Rios 650",
       "insurance": "Medicus",
       "email": "laura.ortiz@gmail.com",
-      "phone": "8899001122"
+      "phone": "8899001122",
+      "id": "1a8d"
     },
     {
-      "id": 11,
       "dni": "4321098",
       "firstName": "Rosa",
       "lastName": "Castro",
@@ -119,10 +118,10 @@
       "address": "Salta 700",
       "insurance": "OSDE",
       "email": "rosa.castro@yahoo.com",
-      "phone": "9911223344"
+      "phone": "9911223344",
+      "id": "a9d4"
     },
     {
-      "id": 12,
       "dni": "50123456",
       "firstName": "Diego",
       "lastName": "Ramirez",
@@ -130,10 +129,10 @@
       "address": "Jujuy 890",
       "insurance": "IOMA",
       "email": "diego.ramirez@gmail.com",
-      "phone": "1022334455"
+      "phone": "1022334455",
+      "id": "f628"
     },
     {
-      "id": 13,
       "dni": "2345678",
       "firstName": "Silvana",
       "lastName": "Perez",
@@ -141,10 +140,10 @@
       "address": "San Juan 1000",
       "insurance": "Galeno",
       "email": "silvana.perez@yahoo.com",
-      "phone": "2033445566"
+      "phone": "2033445566",
+      "id": "5958"
     },
     {
-      "id": 14,
       "dni": "3456721",
       "firstName": "Eduardo",
       "lastName": "Gutierrez",
@@ -152,10 +151,10 @@
       "address": "Buenos Aires 350",
       "insurance": "Swiss Medical",
       "email": "eduardo.gutierrez@gmail.com",
-      "phone": "3044556677"
+      "phone": "3044556677",
+      "id": "7a28"
     },
     {
-      "id": 15,
       "dni": "5012345",
       "firstName": "Clara",
       "lastName": "Paz",
@@ -163,10 +162,10 @@
       "address": "Mitre 250",
       "insurance": "Medifé",
       "email": "clara.paz@yahoo.com",
-      "phone": "4055667788"
+      "phone": "4055667788",
+      "id": "0420"
     },
     {
-      "id": 16,
       "dni": "8765432",
       "firstName": "Alberto",
       "lastName": "Rey",
@@ -174,10 +173,10 @@
       "address": "Urquiza 660",
       "insurance": "OSDE",
       "email": "alberto.rey@gmail.com",
-      "phone": "5066778899"
+      "phone": "5066778899",
+      "id": "b232"
     },
     {
-      "id": 17,
       "dni": "4321012",
       "firstName": "Daniela",
       "lastName": "Moreno",
@@ -185,10 +184,10 @@
       "address": "Brown 120",
       "insurance": "Medicus",
       "email": "daniela.moreno@yahoo.com",
-      "phone": "6077889900"
+      "phone": "6077889900",
+      "id": "5e80"
     },
     {
-      "id": 18,
       "dni": "1234509",
       "firstName": "Gustavo",
       "lastName": "Ayala",
@@ -196,10 +195,10 @@
       "address": "Alsina 780",
       "insurance": "IOMA",
       "email": "gustavo.ayala@gmail.com",
-      "phone": "7088990011"
+      "phone": "7088990011",
+      "id": "9e8d"
     },
     {
-      "id": 19,
       "dni": "2345670",
       "firstName": "Elsa",
       "lastName": "Vega",
@@ -207,10 +206,10 @@
       "address": "Viamonte 400",
       "insurance": "Galeno",
       "email": "elsa.vega@yahoo.com",
-      "phone": "8099001122"
+      "phone": "8099001122",
+      "id": "7432"
     },
     {
-      "id": 20,
       "dni": "4321098",
       "firstName": "Federico",
       "lastName": "Sanchez",
@@ -218,10 +217,10 @@
       "address": "Cordoba 500",
       "insurance": "Medifé",
       "email": "federico.sanchez@gmail.com",
-      "phone": "9100112233"
+      "phone": "9100112233",
+      "id": "3fcf"
     },
     {
-      "id": "6eb4",
       "dni": 44858933,
       "firstName": "Luna",
       "lastName": "De Noia",
@@ -229,10 +228,10 @@
       "address": "san juan 349",
       "email": "denoialuna@gmail.com",
       "phone": 2235250554,
-      "insurance": "swiss medical"
+      "insurance": "swiss medical",
+      "id": "fc12"
     },
     {
-      "id": "21de",
       "dni": 2322384,
       "firstName": "Abril",
       "lastName": "Pipi",
@@ -240,10 +239,10 @@
       "address": "san juan 349",
       "email": "denoialuna@gmail.com",
       "phone": 2235250554,
-      "insurance": "swiss medical"
+      "insurance": "swiss medical",
+      "id": "fd7f"
     },
     {
-      "id": "1ccd",
       "dni": 2322384,
       "firstName": "Abril",
       "lastName": "De Noia",
@@ -251,7 +250,41 @@
       "address": "san juan 349",
       "email": "denoialuna@gmail.com",
       "phone": 2235250554,
-      "insurance": "swiss medical"
+      "insurance": "swiss medical",
+      "id": "cf52"
+    },
+    {
+      "dni": 38828968,
+      "firstName": "Juan Cruz",
+      "lastName": "Morales",
+      "birthDate": "05/03/1995",
+      "address": "Gutierrez 945",
+      "email": "jcmxu@hotmail.com",
+      "phone": 2235674659,
+      "insurance": "swiss medical",
+      "id": "a92f"
+    },
+    {
+      "id": "dc4d",
+      "dni": 38828968,
+      "firstName": "Juan Cruz",
+      "lastName": "Morales",
+      "birthDate": "05/03/1995",
+      "address": "Los Ceibos 6165",
+      "email": "jcmxu95@gmail.com",
+      "phone": 2235050264,
+      "insurance": "OSEPJANA"
+    },
+    {
+      "id": "b2ee",
+      "dni": 38828968,
+      "firstName": "pepe",
+      "lastName": "Morales",
+      "birthDate": "05/03/1995",
+      "address": "Los Ceibos 6165",
+      "email": "jcmxu95@gmail.com",
+      "phone": 2235050264,
+      "insurance": "sdf"
     }
   ]
 }
