@@ -17,3 +17,21 @@ export class Patient {
   phone: number = 0;
   insurance: string = '';
 }
+
+export class Appointment
+{
+  creationDate: Date = new Date();
+  patientDni: String = '';
+  medicId: String = '';
+  appointmentDate : Date = new Date();
+  State: AppointmentState = AppointmentState.Pending;
+  hour: Number = 0;
+}
+
+export enum AppointmentState
+{
+  Confirm = 'Confirmado',
+  Pending = 'Pendiente',
+  Cancel = 'Cancelado',
+  Done = 'Realizado'
+}

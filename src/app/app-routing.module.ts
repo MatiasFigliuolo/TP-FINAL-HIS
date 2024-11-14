@@ -6,6 +6,7 @@ import { AddMedicComponent } from './add-medic/add-medic.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicListComponent } from './medic-list/medic-list.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
+import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
 
 const routes: Routes = [
   {path: 'log-in', component: LogInComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'list-medics', component: MedicListComponent},
   {path: 'add-medic', component: AddMedicComponent},
   {path: 'list-patients', component: ListPatientComponent},
+  {path: 'add-appointment', component: AddAppointmentComponent},
   {path: 'add-patient', component: AddPatientComponent},
   {path: '', redirectTo: 'log-in', pathMatch: 'full'},
   {path: '**', component: PageTransitionEvent}

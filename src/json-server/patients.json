@@ -1,225 +1,290 @@
 {
-    "pacientes": [
-      {
-        "id": 1,
-        "dni": "1234567",
-        "nombre": "Juan",
-        "apellido": "Perez",
-        "fecha_nacimiento": "1985-03-25",
-        "direccion": "Calle Falsa 123",
-        "obra_social": "OSDE",
-        "email": "juan.perez@yahoo.com",
-        "telefono": "123456789"
-      },
-      {
-        "id": 2,
-        "dni": "2345678",
-        "nombre": "Maria",
-        "apellido": "Lopez",
-        "fecha_nacimiento": "1990-07-14",
-        "direccion": "Avenida Siempre Viva 742",
-        "obra_social": "Swiss Medical",
-        "email": "maria.lopez@gmail.com",
-        "telefono": "987654321"
-      },
-      {
-        "id": 3,
-        "dni": "3456789",
-        "nombre": "Carlos",
-        "apellido": "Gonzalez",
-        "fecha_nacimiento": "1975-12-09",
-        "direccion": "Av. Libertador 555",
-        "obra_social": "Galeno",
-        "email": "carlos.gonzalez@yahoo.com",
-        "telefono": "1122334455"
-      },
-      {
-        "id": 4,
-        "dni": "4567890",
-        "nombre": "Ana",
-        "apellido": "Martinez",
-        "fecha_nacimiento": "1988-02-22",
-        "direccion": "Calle Corrientes 300",
-        "obra_social": "OSDE",
-        "email": "ana.martinez@gmail.com",
-        "telefono": "2233445566"
-      },
-      {
-        "id": 5,
-        "dni": "51234567",
-        "nombre": "Luis",
-        "apellido": "Fernandez",
-        "fecha_nacimiento": "1970-11-02",
-        "direccion": "Diagonal Sur 800",
-        "obra_social": "IOMA",
-        "email": "luis.fernandez@yahoo.com",
-        "telefono": "3344556677"
-      },
-      {
-        "id": 6,
-        "dni": "6543210",
-        "nombre": "Lucia",
-        "apellido": "Gimenez",
-        "fecha_nacimiento": "1995-05-16",
-        "direccion": "San Martin 400",
-        "obra_social": "Medifé",
-        "email": "lucia.gimenez@gmail.com",
-        "telefono": "4455667788"
-      },
-      {
-        "id": 7,
-        "dni": "12345678",
-        "nombre": "Fernando",
-        "apellido": "Sosa",
-        "fecha_nacimiento": "1982-09-07",
-        "direccion": "Belgrano 1200",
-        "obra_social": "Swiss Medical",
-        "email": "fernando.sosa@yahoo.com",
-        "telefono": "5566778899"
-      },
-      {
-        "id": 8,
-        "dni": "7654321",
-        "nombre": "Marta",
-        "apellido": "Diaz",
-        "fecha_nacimiento": "1965-06-21",
-        "direccion": "Rivadavia 900",
-        "obra_social": "OSDE",
-        "email": "marta.diaz@gmail.com",
-        "telefono": "6677889900"
-      },
-      {
-        "id": 9,
-        "dni": "5123456",
-        "nombre": "Jorge",
-        "apellido": "Alvarez",
-        "fecha_nacimiento": "1983-08-19",
-        "direccion": "Avenida de Mayo 500",
-        "obra_social": "Galeno",
-        "email": "jorge.alvarez@yahoo.com",
-        "telefono": "7788990011"
-      },
-      {
-        "id": 10,
-        "dni": "8765432",
-        "nombre": "Laura",
-        "apellido": "Ortiz",
-        "fecha_nacimiento": "1991-01-30",
-        "direccion": "Entre Rios 650",
-        "obra_social": "Medicus",
-        "email": "laura.ortiz@gmail.com",
-        "telefono": "8899001122"
-      },
-      {
-        "id": 11,
-        "dni": "4321098",
-        "nombre": "Rosa",
-        "apellido": "Castro",
-        "fecha_nacimiento": "1976-10-05",
-        "direccion": "Salta 700",
-        "obra_social": "OSDE",
-        "email": "rosa.castro@yahoo.com",
-        "telefono": "9911223344"
-      },
-      {
-        "id": 12,
-        "dni": "50123456",
-        "nombre": "Diego",
-        "apellido": "Ramirez",
-        "fecha_nacimiento": "1969-04-15",
-        "direccion": "Jujuy 890",
-        "obra_social": "IOMA",
-        "email": "diego.ramirez@gmail.com",
-        "telefono": "1022334455"
-      },
-      {
-        "id": 13,
-        "dni": "2345678",
-        "nombre": "Silvana",
-        "apellido": "Perez",
-        "fecha_nacimiento": "1993-11-23",
-        "direccion": "San Juan 1000",
-        "obra_social": "Galeno",
-        "email": "silvana.perez@yahoo.com",
-        "telefono": "2033445566"
-      },
-      {
-        "id": 14,
-        "dni": "3456721",
-        "nombre": "Eduardo",
-        "apellido": "Gutierrez",
-        "fecha_nacimiento": "1981-03-12",
-        "direccion": "Buenos Aires 350",
-        "obra_social": "Swiss Medical",
-        "email": "eduardo.gutierrez@gmail.com",
-        "telefono": "3044556677"
-      },
-      {
-        "id": 15,
-        "dni": "5012345",
-        "nombre": "Clara",
-        "apellido": "Paz",
-        "fecha_nacimiento": "1997-07-17",
-        "direccion": "Mitre 250",
-        "obra_social": "Medifé",
-        "email": "clara.paz@yahoo.com",
-        "telefono": "4055667788"
-      },
-      {
-        "id": 16,
-        "dni": "8765432",
-        "nombre": "Alberto",
-        "apellido": "Rey",
-        "fecha_nacimiento": "1979-02-18",
-        "direccion": "Urquiza 660",
-        "obra_social": "OSDE",
-        "email": "alberto.rey@gmail.com",
-        "telefono": "5066778899"
-      },
-      {
-        "id": 17,
-        "dni": "4321012",
-        "nombre": "Daniela",
-        "apellido": "Moreno",
-        "fecha_nacimiento": "1994-09-29",
-        "direccion": "Brown 120",
-        "obra_social": "Medicus",
-        "email": "daniela.moreno@yahoo.com",
-        "telefono": "6077889900"
-      },
-      {
-        "id": 18,
-        "dni": "1234509",
-        "nombre": "Gustavo",
-        "apellido": "Ayala",
-        "fecha_nacimiento": "1986-05-04",
-        "direccion": "Alsina 780",
-        "obra_social": "IOMA",
-        "email": "gustavo.ayala@gmail.com",
-        "telefono": "7088990011"
-      },
-      {
-        "id": 19,
-        "dni": "2345670",
-        "nombre": "Elsa",
-        "apellido": "Vega",
-        "fecha_nacimiento": "1968-12-24",
-        "direccion": "Viamonte 400",
-        "obra_social": "Galeno",
-        "email": "elsa.vega@yahoo.com",
-        "telefono": "8099001122"
-      },
-      {
-        "id": 20,
-        "dni": "4321098",
-        "nombre": "Federico",
-        "apellido": "Sanchez",
-        "fecha_nacimiento": "1992-06-30",
-        "direccion": "Cordoba 500",
-        "obra_social": "Medifé",
-        "email": "federico.sanchez@gmail.com",
-        "telefono": "9100112233"
-      }
-    ]
-  }
-  
+  "pacientes": [
+    {
+      "id": "1",
+      "dni": "1234567",
+      "firstName": "Juan",
+      "lastName": "Perez",
+      "birthDate": "1985-03-25",
+      "address": "Calle Falsa 123",
+      "insurance": "OSDE",
+      "email": "juan.perez@yahoo.com",
+      "phone": "123456789"
+    },
+    {
+      "id": "2",
+      "dni": "2345678",
+      "firstName": "Maria",
+      "lastName": "Lopez",
+      "birthDate": "1990-07-14",
+      "address": "Avenida Siempre Viva 742",
+      "insurance": "Swiss Medical",
+      "email": "maria.lopez@gmail.com",
+      "phone": "987654321"
+    },
+    {
+      "id": "3",
+      "dni": "3456789",
+      "firstName": "Carlos",
+      "lastName": "Gonzalez",
+      "birthDate": "1975-12-09",
+      "address": "Av. Libertador 555",
+      "insurance": "Galeno",
+      "email": "carlos.gonzalez@yahoo.com",
+      "phone": "1122334455"
+    },
+    {
+      "id": "4",
+      "dni": "4567890",
+      "firstName": "Ana",
+      "lastName": "Martinez",
+      "birthDate": "1988-02-22",
+      "address": "Calle Corrientes 300",
+      "insurance": "OSDE",
+      "email": "ana.martinez@gmail.com",
+      "phone": "2233445566"
+    },
+    {
+      "id": "5",
+      "dni": "51234567",
+      "firstName": "Luis",
+      "lastName": "Fernandez",
+      "birthDate": "1970-11-02",
+      "address": "Diagonal Sur 800",
+      "insurance": "IOMA",
+      "email": "luis.fernandez@yahoo.com",
+      "phone": "3344556677"
+    },
+    {
+      "id": "6",
+      "dni": "6543210",
+      "firstName": "Lucia",
+      "lastName": "Gimenez",
+      "birthDate": "1995-05-16",
+      "address": "San Martin 400",
+      "insurance": "Medifé",
+      "email": "lucia.gimenez@gmail.com",
+      "phone": "4455667788"
+    },
+    {
+      "id": "7",
+      "dni": "12345678",
+      "firstName": "Fernando",
+      "lastName": "Sosa",
+      "birthDate": "1982-09-07",
+      "address": "Belgrano 1200",
+      "insurance": "Swiss Medical",
+      "email": "fernando.sosa@yahoo.com",
+      "phone": "5566778899"
+    },
+    {
+      "id": "8",
+      "dni": "7654321",
+      "firstName": "Marta",
+      "lastName": "Diaz",
+      "birthDate": "1965-06-21",
+      "address": "Rivadavia 900",
+      "insurance": "OSDE",
+      "email": "marta.diaz@gmail.com",
+      "phone": "6677889900"
+    },
+    {
+      "id": "9",
+      "dni": "5123456",
+      "firstName": "Jorge",
+      "lastName": "Alvarez",
+      "birthDate": "1983-08-19",
+      "address": "Avenida de Mayo 500",
+      "insurance": "Galeno",
+      "email": "jorge.alvarez@yahoo.com",
+      "phone": "7788990011"
+    },
+    {
+      "id": "10",
+      "dni": "8765432",
+      "firstName": "Laura",
+      "lastName": "Ortiz",
+      "birthDate": "1991-01-30",
+      "address": "Entre Rios 650",
+      "insurance": "Medicus",
+      "email": "laura.ortiz@gmail.com",
+      "phone": "8899001122"
+    },
+    {
+      "id": "11",
+      "dni": "4321098",
+      "firstName": "Rosa",
+      "lastName": "Castro",
+      "birthDate": "1976-10-05",
+      "address": "Salta 700",
+      "insurance": "OSDE",
+      "email": "rosa.castro@yahoo.com",
+      "phone": "9911223344"
+    },
+    {
+      "id": "12",
+      "dni": "50123456",
+      "firstName": "Diego",
+      "lastName": "Ramirez",
+      "birthDate": "1969-04-15",
+      "address": "Jujuy 890",
+      "insurance": "IOMA",
+      "email": "diego.ramirez@gmail.com",
+      "phone": "1022334455"
+    },
+    {
+      "id": "13",
+      "dni": "2345678",
+      "firstName": "Silvana",
+      "lastName": "Perez",
+      "birthDate": "1993-11-23",
+      "address": "San Juan 1000",
+      "insurance": "Galeno",
+      "email": "silvana.perez@yahoo.com",
+      "phone": "2033445566"
+    },
+    {
+      "id": "14",
+      "dni": "3456721",
+      "firstName": "Eduardo",
+      "lastName": "Gutierrez",
+      "birthDate": "1981-03-12",
+      "address": "Buenos Aires 350",
+      "insurance": "Swiss Medical",
+      "email": "eduardo.gutierrez@gmail.com",
+      "phone": "3044556677"
+    },
+    {
+      "id": "15",
+      "dni": "5012345",
+      "firstName": "Clara",
+      "lastName": "Paz",
+      "birthDate": "1997-07-17",
+      "address": "Mitre 250",
+      "insurance": "Medifé",
+      "email": "clara.paz@yahoo.com",
+      "phone": "4055667788"
+    },
+    {
+      "id": "16",
+      "dni": "8765432",
+      "firstName": "Alberto",
+      "lastName": "Rey",
+      "birthDate": "1979-02-18",
+      "address": "Urquiza 660",
+      "insurance": "OSDE",
+      "email": "alberto.rey@gmail.com",
+      "phone": "5066778899"
+    },
+    {
+      "id": "17",
+      "dni": "4321012",
+      "firstName": "Daniela",
+      "lastName": "Moreno",
+      "birthDate": "1994-09-29",
+      "address": "Brown 120",
+      "insurance": "Medicus",
+      "email": "daniela.moreno@yahoo.com",
+      "phone": "6077889900"
+    },
+    {
+      "id": "18",
+      "dni": "1234509",
+      "firstName": "Gustavo",
+      "lastName": "Ayala",
+      "birthDate": "1986-05-04",
+      "address": "Alsina 780",
+      "insurance": "IOMA",
+      "email": "gustavo.ayala@gmail.com",
+      "phone": "7088990011"
+    },
+    {
+      "id": "19",
+      "dni": "2345670",
+      "firstName": "Elsa",
+      "lastName": "Vega",
+      "birthDate": "1968-12-24",
+      "address": "Viamonte 400",
+      "insurance": "Galeno",
+      "email": "elsa.vega@yahoo.com",
+      "phone": "8099001122"
+    },
+    {
+      "id": "20",
+      "dni": "4321098",
+      "firstName": "Federico",
+      "lastName": "Sanchez",
+      "birthDate": "1992-06-30",
+      "address": "Cordoba 500",
+      "insurance": "Medifé",
+      "email": "federico.sanchez@gmail.com",
+      "phone": "9100112233"
+    },
+    {
+      "id": "6eb4",
+      "dni": 44858933,
+      "firstName": "Luna",
+      "lastName": "De Noia",
+      "birthDate": "11/05/2003",
+      "address": "san juan 349",
+      "email": "denoialuna@gmail.com",
+      "phone": 2235250554,
+      "insurance": "swiss medical"
+    },
+    {
+      "id": "21de",
+      "dni": 2322384,
+      "firstName": "Abril",
+      "lastName": "Pipi",
+      "birthDate": "22/10/200",
+      "address": "san juan 349",
+      "email": "denoialuna@gmail.com",
+      "phone": 2235250554,
+      "insurance": "swiss medical"
+    },
+    {
+      "id": "1ccd",
+      "dni": 2322384,
+      "firstName": "Abril",
+      "lastName": "De Noia",
+      "birthDate": "11/05/2003",
+      "address": "san juan 349",
+      "email": "denoialuna@gmail.com",
+      "phone": 2235250554,
+      "insurance": "swiss medical"
+    },
+    {
+      "id": "5f6d",
+      "dni": 41149466,
+      "firstName": "Matias",
+      "lastName": "Figliuolo",
+      "birthDate": "12312",
+      "address": "Lavalle 4343",
+      "email": "matias.figliuolo1@gmail.com",
+      "phone": 2235134158,
+      "insurance": "osde"
+    },
+    {
+      "id": "abd8",
+      "dni": 12314151,
+      "firstName": "POablo",
+      "lastName": "Figliuolo",
+      "birthDate": "12312",
+      "address": "Lavalle 4343",
+      "email": "matias.figliuolo1@gmail.com",
+      "phone": 2235134158,
+      "insurance": "osde"
+    },
+    {
+      "id": "be3d",
+      "dni": 23223834,
+      "firstName": "natalia",
+      "lastName": "piastrellini",
+      "birthDate": "30/08/1973",
+      "address": "san juan 349",
+      "email": "denoialuna@gmail.com",
+      "phone": 2235250554,
+      "insurance": "omint"
+    }
+  ]
+}

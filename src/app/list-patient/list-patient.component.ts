@@ -17,7 +17,16 @@ export class ListPatientComponent implements OnInit {
   constructor(private patientService : PatientService){};
   
   ngOnInit(): void {
-    this.patientList= this.patientService.getAll();
+    this.patientService.getAll().subscribe((patients: Patient[]) => {
+      this.patientList = patients;
+      this.filteredPatients = patients; 
+    });
+
+    // Suscribirse al observable para recibir actualizaciones de la lista
+    this.patientService.patientList$.subscribe((updatedPatients: Patient[]) => {
+      this.patientList = updatedPatients;
+      this.filteredPatients = updatedPatients; // Actualizar la lista filtrada si es necesario
+    });
   }
 
   selectPatient(patient: Patient): void {
@@ -37,3 +46,5 @@ export class ListPatientComponent implements OnInit {
     );
   }
 }
+
+

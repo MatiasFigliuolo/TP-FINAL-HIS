@@ -3,13 +3,13 @@ import { MedicServiceService } from '../service/medic-service.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Medic } from '../modules/modules.module';
 
+
 @Component({
   selector: 'app-add-medic',
   templateUrl: './add-medic.component.html',
   styleUrl: './add-medic.component.css'
 })
 export class AddMedicComponent implements OnInit {
-
   medicForm = new FormGroup ({
     firstName: new FormControl('',[Validators.required]),
     lastName: new FormControl('',[Validators.required]),
@@ -18,11 +18,12 @@ export class AddMedicComponent implements OnInit {
     phone: new FormControl(''),
     password: new FormControl('',[Validators.required])
   });
+
   constructor(private medicService : MedicServiceService) {}
 
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+ 
   }
 
   onSumbit()
@@ -35,9 +36,18 @@ export class AddMedicComponent implements OnInit {
     medic.phone = Number(this.medicForm.get('phone')?.value) || 0;
     medic.password = this.medicForm.get('password')?.value || '';
 
-    this.medicService.add(medic);
-
+    this.medicService.add(medic).subscribe({
+      next: (newMedic: Medic) => {
+        console.log('Medico agregado:', newMedic);
+        this.medicService.updateMedicList();
+        this.medicForm.reset(); 
+      },
+      error: (err: any) => {
+        console.error('Error al agregar el medico:', err);
+      }
+    });
   }
 
-
 }
+
+

@@ -1,0 +1,46 @@
+<app-nav></app-nav>
+<br><br><br><br>
+<form [formGroup]="appointmentForm" class="backgroundStyle" (ngSubmit)="onSubmit()">
+  <div class="input-group mb-3 medicPatientStyle">
+    <label class="input-group-text" for="inputGroupSelect01">Medico</label>
+    <select class="form-select" id="inputGroupSelect01" formControlName="matricula">
+      <option value="" disabled selected>Elegir Medico</option>
+      <option *ngFor="let medic of medicList" [value]="medic.matricula">
+        {{ medic.firstName }} {{ medic.lastName }}
+      </option>
+    </select>
+  </div>
+
+  <div class="input-group mb-3 medicPatientStyle">
+    <label class="input-group-text" for="inputGroupSelect02">Paciente</label>
+    <select class="form-select" id="inputGroupSelect02" formControlName="dni">
+      <option value="" disabled selected>Elegir Paciente</option>
+      <option *ngFor="let patient of patientList" [value]="patient.dni">
+        {{ patient.firstName }} {{ patient.lastName }}
+      </option>
+    </select>
+  </div>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="hourStyle" *ngIf="appointmentForm.get('matricula')?.value">
+ 
+    <select class="form-select" id="inputGroupSelect02" formControlName="hour">
+      <option value="" disabled selected>Hora</option>
+      <option *ngFor="let hour of updatedHours" [value]="hour">{{ hour }}</option>
+    </select>
+
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+  </div>
+
+  
+</form>
+
+<div class="calendar">
+  <full-calendar [options]="calendarOptions"></full-calendar>
+</div>
+
