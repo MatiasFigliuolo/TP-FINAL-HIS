@@ -43,7 +43,6 @@ export class MedicServiceService implements OnInit {
         return medics.length > 0;  // Si el array tiene al menos un médico con esa matrícula, retorna true
       }),
       catchError(() => {
-        console.log('Error al consultar matrícula');
         return of(false);  // Si ocurre un error, asumimos que no existe
       })
     );
@@ -55,5 +54,30 @@ export class MedicServiceService implements OnInit {
       this.medicListSubject.next(medics);  // Emite la lista actualizada
     });
   }
+
+  updateMedic(medic: Medic): Observable<Medic> {
+    const url = `${this.apiUrl}/${medic.id}`;  // Asegúrate de que 'matricula' sea el identificador en el servidor
+    return this.http.put<Medic>(url, medic, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    }).pipe(
+      tap(() => this.updateMedicList()),  // Actualiza la lista tras la modificación
+      catchError((error) => {
+        console.error('Error al actualizar el médico:', error);
+        return of(medic);  // Retorna el médico original en caso de error
+      })
+    );
+  }
+  
+  deleteMedic(medic: Medic): Observable<Medic> {
+    const url = `${this.apiUrl}/${medic.id}`;
+    return this.http.delete<Medic>(url).pipe(
+      tap(() => this.updateMedicList()),  // Actualiza la lista tras la eliminación
+      catchError((error) => {
+        console.error('Error al eliminar el médico:', error);
+        return of(medic);  // Retorna el médico eliminado en caso de error
+      })
+    );
+  }
+  
 }
 

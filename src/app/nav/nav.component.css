@@ -15,7 +15,7 @@
   background-color: #512da8;
   background: linear-gradient(to right, #5c6bc0, #512da8);
   padding: 10px 0;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   /* position: relative; */
   top: 0;
   left: 0;
@@ -23,7 +23,7 @@
   border-bottom-left-radius: 20px; 
   border-bottom-right-radius: 20px; 
   overflow: hidden; 
-  height: 12%;
+  height: auto;
 }
 
 .navbar-toggler{
