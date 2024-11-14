@@ -3,11 +3,12 @@
     <div class="searchContainer">
         <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
           (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
-      </div>
+    </div>
 
-      <div class="container-fluid">
+    <div>
+
+      <div class="listStyle">
         <div class="row">
-            <!-- Lista de Médicos -->
             <div class="col-md-8 medicListStyle">
                 <table class="table table-hover">
                     <thead class="table-header">
@@ -18,17 +19,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="medicStyle" *ngFor="let medic of filteredMedics.length > 0 ? filteredMedics : medicList"
-                            (click)="selectMedic(medic)">
+                        <tr class="medicStyle" *ngFor="let medic of filteredMedics" (click)="selectMedic(medic)">
                             <td>{{ medic.firstName }}</td>
                             <td>{{ medic.lastName }}</td>
                             <td>{{ medic.matricula }}</td>
-                        </tr>
+                          </tr>
                     </tbody>
                 </table>
             </div>
             
-            <!-- Información del Médico Seleccionado -->
             <div class="col-md-4" *ngIf="selectedMedic">
                 <div class="medic-details">
                     <h3>Detalles del Médico</h3>
@@ -55,12 +54,14 @@
                         </div>
                         <div class="button-group">
                             <button type="button" class="btn btn-success" (click)="updateMedic()">Confirmar</button>
-                            <button type="button" class="btn btn-danger" (click)="deleteMedic()">Eliminar</button>
-                        </div>
+<!--                             <button type="button" class="btn btn-danger" (click)="deleteMedic()">Eliminar</button>
+ -->                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    
+
     
 

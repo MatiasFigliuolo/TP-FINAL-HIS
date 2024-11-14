@@ -33,7 +33,10 @@ export class AddAppointmentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.medicList = this.medicService.getAll();
+    this.medicService.getAll().subscribe((medics: Medic[]) => {
+      console.log('Medics received in ngOnInit:', medics);  // Asegúrate de que los datos lleguen a esta parte
+      this.medicList = medics;
+    });
     this.patientService.getAll().subscribe((patients: Patient[]) => {
       this.patientList = patients;
     });
@@ -43,8 +46,7 @@ export class AddAppointmentComponent implements OnInit {
       this.updateHours();
       this.loadEventsForMedic(String(medic));
     });
-    
-
+  
     this.appointmentForm.get('date')?.valueChanges.subscribe(date => {
       this.updateHours();
     });
