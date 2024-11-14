@@ -188,6 +188,15 @@
       "email": "denoialuna@gmail.com",
       "phone": 2235250554,
       "password": "ssssss"
+    },
+    {
+      "id": "7fb9",
+      "matricula": "M111090",
+      "firstName": "Matias",
+      "lastName": "Figliuolo",
+      "email": "matias.figliuolo1@gmail.com",
+      "phone": 2235134158,
+      "password": "Matias1234"
     }
   ]
 }

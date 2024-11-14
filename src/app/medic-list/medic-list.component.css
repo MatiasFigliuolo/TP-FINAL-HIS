@@ -30,7 +30,7 @@
 /* Estilo de la lista de médicos */
 .medicListStyle {
     background-color: transparent;
-    margin-top: 150px;
+    margin-top: 170px;
 
 }
 
@@ -94,9 +94,9 @@
     position: fixed;
     top: 13%;
     left: 1%;
+    margin-top: 17px;
     margin-bottom: 20px;
     width: 100%;
-
 }
 
 .searchBar {

@@ -7,14 +7,14 @@ import { MedicServiceService } from '../service/medic-service.service';
   templateUrl: './medic-list.component.html',
   styleUrls: ['./medic-list.component.css']
 })
-export class MedicListComponent implements OnInit{
+export class MedicListComponent implements OnInit {
   medicList: Array<Medic> = [];
   selectedMedic: Medic | null = null;
-  filteredMedics: Medic[] = [];  
+  filteredMedics: Medic[] = [];
   searchTerm: string = '';
 
-  constructor(private medicService : MedicServiceService){}
-  
+  constructor(private medicService: MedicServiceService) { }
+
   ngOnInit(): void {
     this.medicService.getAll().subscribe((medics: Medic[]) => {
       console.log('Medics received in ngOnInit:', medics);  // Asegúrate de que los datos lleguen a esta parte
@@ -22,25 +22,25 @@ export class MedicListComponent implements OnInit{
       this.filteredMedics = [...medics];  // Inicializa la lista filtrada
       this.filterMedics();  // Llamar a filterMedics para aplicar el filtro si existe algún término de búsqueda
     });
-  
+
     // Suscribirse a las actualizaciones de la lista de médicos
     this.medicService.medicList$.subscribe((updatedMedics: Medic[]) => {
       console.log('Updated medics received ngonInit:', updatedMedics);
       this.medicList = updatedMedics;
       this.filteredMedics = updatedMedics;
     });
-  
+
     this.medicService.updateMedicList();
   }
-  
-  
+
+
 
   selectMedic(medic: Medic): void {
     this.selectedMedic = medic;
   }
 
   onSearchEnter() {
-    this.filterMedics(); 
+    this.filterMedics();
   }
 
   filterMedics(): void {
@@ -54,17 +54,15 @@ export class MedicListComponent implements OnInit{
         medic.matricula.toString().includes(term)
       );
     }
-  }  
+  }
 
   updateMedic(): void {
-    /* if (this.selectedMedic) {
+    if (this.selectedMedic) {
       const index = this.medicList.findIndex(m => m.matricula === this.selectedMedic?.matricula);
       if (index !== -1) {
         this.medicList[index] = { ...this.selectedMedic };
       }
       this.selectedMedic = null;
-    } */
+    }
   }
-
 }
-
