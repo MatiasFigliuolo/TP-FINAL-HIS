@@ -274,6 +274,17 @@
       "email": "matias.figliuolo1@gmail.com",
       "phone": 2235134158,
       "insurance": "osde"
+    },
+    {
+      "id": "be3d",
+      "dni": 23223834,
+      "firstName": "natalia",
+      "lastName": "piastrellini",
+      "birthDate": "30/08/1973",
+      "address": "san juan 349",
+      "email": "denoialuna@gmail.com",
+      "phone": 2235250554,
+      "insurance": "omint"
     }
   ]
 }

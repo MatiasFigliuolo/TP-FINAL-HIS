@@ -46,3 +46,5 @@ export class ListPatientComponent implements OnInit {
     );
   }
 }
+
+

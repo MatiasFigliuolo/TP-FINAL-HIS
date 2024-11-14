@@ -33,7 +33,7 @@ export class AddAppointmentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.medicList = this.medicService.getAll();
+    /* this.medicList = this.medicService.getAll(); */
     this.patientService.getAll().subscribe((patients: Patient[]) => {
       this.patientList = patients;
     });
