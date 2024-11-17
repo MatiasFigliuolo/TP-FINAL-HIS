@@ -96,9 +96,9 @@
 /* Barra de búsqueda */
 .searchContainer {
     position: fixed;
-    top: 9%;
+    top: 12%;
     left: 1%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     width: 100%;
     padding: 10px 0;
     z-index: 10;

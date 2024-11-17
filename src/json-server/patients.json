@@ -285,6 +285,17 @@
       "email": "denoialuna@gmail.com",
       "phone": 2235250554,
       "insurance": "omint"
+    },
+    {
+      "dni": 41149466,
+      "firstName": "Matias",
+      "lastName": "Figliuolo",
+      "birthDate": "12312",
+      "address": "Lavalle 4343",
+      "email": "matias.figliuolo1@gmail.com",
+      "phone": 2235134158,
+      "insurance": "osde",
+      "id": "GhUIRU6"
     }
   ]
 }

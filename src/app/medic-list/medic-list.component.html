@@ -1,12 +1,10 @@
 <app-nav></app-nav>
-
 <div class="searchContainer">
     <input type="text" placeholder="Ingrese Nombre, Apellido, o Matrícula del médico" [(ngModel)]="searchTerm"
       (ngModelChange)="filterMedics()" (keydown.enter)="onSearchEnter()" class="searchBar" />
 </div>
 
 <div>
-
       <div class="listStyle">
         <div class="row">
             <div class="col-md-8 medicListStyle">
@@ -54,8 +52,8 @@
                         </div>
                         <div class="button-group">
                             <button type="button" class="btn btn-success" (click)="updateMedic()">Confirmar</button>
-<!--                             <button type="button" class="btn btn-danger" (click)="deleteMedic()">Eliminar</button>
- -->                        </div>
+                             <button type="button" class="btn btn-danger" (click)="deleteMedic()">Eliminar</button>
+                       </div>
                     </form>
                 </div>
             </div>
