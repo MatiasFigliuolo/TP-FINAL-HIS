@@ -16,7 +16,7 @@ export class AddMedicComponent implements OnInit {
     firstName: new FormControl('',[Validators.required]),
     lastName: new FormControl('',[Validators.required]),
     matricula: new FormControl('',[Validators.required],[CustomValidators.medicExist(inject(MedicServiceService))]),
-    email: new FormControl(''),
+    email: new FormControl('', [Validators.email]),
     phone: new FormControl(''),
     password: new FormControl('',[Validators.required])
   });
