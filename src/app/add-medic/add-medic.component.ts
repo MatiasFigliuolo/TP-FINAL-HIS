@@ -49,14 +49,15 @@ export class AddMedicComponent implements OnInit {
       next: (newMedic: Medic) => {
         console.log('Medico agregado:', newMedic);
         this.medicService.updateMedicList();
-        this.medicForm.reset(); 
+        this.medicForm.reset();
+        swal("Medico Agregado Exitosamente!",'',"success");
       },
       error: (err: any) => {
         console.error('Error al agregar el medico:', err);
       }
     });
 
-    swal("Medico Agregado Exitosamente!",'',"success");
+  
   }
 
 }

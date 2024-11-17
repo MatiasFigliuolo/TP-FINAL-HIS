@@ -67,5 +67,12 @@
                 </div>
             </div>
         </div>
+        <div class="row" *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+            <div class="col-lg-12">email
+                <div class="alert alert-danger" role="alert" *ngIf="email?.errors?.['email']">
+                    Formato de email invalido
+                </div>
+            </div>
+        </div>
     </form>
 </div>

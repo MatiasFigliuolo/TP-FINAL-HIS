@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { PatientService } from '../services/patient.service';
 import { AppointmentServiceService } from '../services/appointment-service.service';
 import { Appointment, AppointmentState, Medic, Patient } from '../modules/modules.module';
 import { MedicServiceService } from '../service/medic-service.service';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { NgFor } from '@angular/common';
+import { CustomValidators } from '../validators/custom-validators';
 
 @Component({
   selector: 'app-add-appointment',
@@ -34,7 +33,7 @@ export class AddAppointmentComponent implements OnInit {
 
   ngOnInit(): void {
     this.medicService.getAll().subscribe((medics: Medic[]) => {
-      console.log('Medics received in ngOnInit:', medics);  // Asegúrate de que los datos lleguen a esta parte
+      console.log('Medics received in ngOnInit:', medics);  
       this.medicList = medics;
     });
     this.patientService.getAll().subscribe((patients: Patient[]) => {
@@ -55,24 +54,32 @@ export class AddAppointmentComponent implements OnInit {
   }
 
   appointmentForm = new FormGroup({
-    matricula: new FormControl('',Validators.required),
-    dni: new FormControl('',Validators.required),
-    date: new FormControl(new Date(),Validators.required),
-    hour: new FormControl('',Validators.required)
+    matricula: new FormControl('',[Validators.required]),
+    dni: new FormControl('',[Validators.required]),
+    date: new FormControl(new Date(),[Validators.required], [CustomValidators.checkDate(inject(AppointmentServiceService))]),
+    hour: new FormControl('',[Validators.required])
   });
+
+
+  get matricula() {return this.appointmentForm.get('matricula')}
+  get dni() {return this.appointmentForm.get('dni')}
+  get date() {return this.appointmentForm.get('date')}
+  get hour() {return this.appointmentForm.get('hour')}
   
   onSubmit()
   {
     let appointment = new Appointment;
     appointment.State = AppointmentState.Confirm;
     appointment.creationDate = new Date();
-    appointment.appointmentDate = this.appointmentForm.get('date')?.value || new Date();
-    appointment.medicId = this.appointmentForm.get('matricula')?.value || '';
-    appointment.patientDni = this.appointmentForm.get('dni')?.value || '';
-    appointment.hour = Number(this.appointmentForm.get('hour')?.value);
+    appointment.appointmentDate = this.date?.value!;
+    appointment.medicId = this.matricula?.value!;
+    appointment.patientDni =this.dni?.value!;
+    appointment.hour = Number(this.hour?.value!);
     this.appointmentService.add(appointment);
     console.log(appointment);
     this.appointmentForm.reset();
+
+    swal("Turno generado Exitosamente!",'',"success");
   }
 
   updateHours(): void {
