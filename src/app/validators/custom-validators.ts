@@ -1,6 +1,8 @@
 import { AbstractControl, AsyncValidatorFn, ValidationErrors, ValidatorFn } from "@angular/forms";
 import { MedicServiceService } from "../service/medic-service.service";
 import { Observable, catchError, map, of } from "rxjs";
+import { PatientService } from "../services/patient.service";
+import { AppointmentServiceService } from "../services/appointment-service.service";
 
 export class CustomValidators {
 
@@ -23,4 +25,32 @@ export class CustomValidators {
         };
       }
       
+      static dniExist(patientService : PatientService): AsyncValidatorFn{
+        return(control: AbstractControl): Observable<ValidationErrors | null> => {
+          if(control.value === '')
+          {
+            return of (null);
+          }else {
+            return patientService.getByDni(control.value).pipe(
+              map((exist: boolean) => {
+                console.log('Valor de exist en dniExist:', exist);
+                return exist ? {dniExist : {value: control.value}} : null;
+              }),
+              catchError(() => {
+                console.log('Error en el validador de dni');
+                return of(null);
+              })
+            )
+          }
+        }
+      }
+
+      static checkDate(appointmentService: AppointmentServiceService): AsyncValidatorFn {
+        return (control: AbstractControl): Observable<ValidationErrors | null> => {
+          if (!control.value) {
+            return of(null); // Si no hay valor, no se valida
+          }
+          return appointmentService.fechaNoPasada(control.value);
+        };
+      }
 }

@@ -35,5 +35,51 @@
             <input type="text" name="insurance" formControlName="insurance">
         </div>
         <button type="submit" class="buttonClass buttonConfirmar" [disabled]="!patientForm.valid">Agregar</button>
+
+        <div class="row" *ngIf="!dni?.valid && (dni?.dirty || dni?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="dni?.errors?.['required']">
+                    Dni es requerido
+                </div>
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="dni?.errors?.['dniExist']">
+                Este Dni ya esta registrado
+            </div>
+        </div>
+        <div class="row" *ngIf="!birthDate?.valid && (birthDate?.dirty || birthDate?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="birthDate?.errors?.['required']">
+                    La Fecha de Nacimiento es requerida
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="email?.errors?.['email']">
+                    Formato de email invalido
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!lastName?.valid && (lastName?.dirty || lastName?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="lastName?.errors?.['required']">
+                    El Apellido es requerido
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="firstName?.errors?.['required']">
+                    El Nombre es requerido
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="email?.errors?.['required']">
+                    El Email es requerido
+                </div>
+            </div>
+        </div>
     </form>
 </div>

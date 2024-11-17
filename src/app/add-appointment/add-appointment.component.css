@@ -13,7 +13,8 @@
     max-width: 150%;
     max-height: 600px;
     position: absolute;
-    top: 32%;
+    margin-top: 8%;
+    top: 24%;
     left: 27%;
     transform: translate(-50%, -50%);
 
@@ -29,13 +30,14 @@
 
 
 .calendar {
-    position: relative;
+    position: absolute;
     display: inline-block;
-    margin-top: 17%;
-    width: 80%;
+    top: 0%;
+    right: 4%;
+    margin-top: 7%;
+    width: 40%;
     /* Ajusta según el tamaño deseado */
-    height: 400px;
-    width: 50%;
+    height: 21%;
     transform-origin: top left;
     /* Asegura que el escalado se haga desde la esquina superior izquierda */
 }

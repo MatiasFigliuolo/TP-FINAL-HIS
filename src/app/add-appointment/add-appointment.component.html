@@ -27,20 +27,45 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
-  <div class="hourStyle" *ngIf="appointmentForm.get('matricula')?.value">
- 
+  <div class="hourStyle" *ngIf="appointmentForm.get('matricula')?.value && appointmentForm.get('dni')?.value">
+
     <select class="form-select" id="inputGroupSelect02" formControlName="hour">
       <option value="" disabled selected>Hora</option>
       <option *ngFor="let hour of updatedHours" [value]="hour">{{ hour }}</option>
     </select>
 
-    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button type="submit" [disabled]="!appointmentForm.valid" mat-raised-button color="primary">Submit</button>
   </div>
 
+  <div class="row" *ngIf="!matricula?.valid && (matricula?.dirty || matricula?.touched)">
+    <div class="col-lg-12">
+      <div class="alert alert-danger" role="alert" *ngIf="matricula?.errors?.['required']">
+        Doctor requerido
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="!dni?.valid && (dni?.dirty || dni?.touched)">
+    <div class="col-lg-12">
+      <div class="alert alert-danger" role="alert" *ngIf="dni?.errors?.['required']">
+        Paciente requerido
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="!date?.valid && (date?.dirty || date?.touched)">
+    <div class="col-lg-12">
+      <div class="alert alert-danger" role="alert" *ngIf="date?.errors?.['required']">
+        Fecha requerida
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="alert alert-danger" role="alert" *ngIf="date?.errors?.['checkDate']">
+        No se puede introducir fechas del pasado
+      </div>
+    </div>
+  </div>
   
 </form>
 
 <div class="calendar">
   <full-calendar [options]="calendarOptions"></full-calendar>
 </div>
-
