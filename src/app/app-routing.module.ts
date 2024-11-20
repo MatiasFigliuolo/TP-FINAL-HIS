@@ -7,17 +7,18 @@ import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicListComponent } from './medic-list/medic-list.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
+import { authAdminGuard} from './guard/auth.guard';
 
 const routes: Routes = [
   {path: 'log-in', component: LogInComponent},
-  {path: 'main-page', component: MainPageComponent},
+  {path: 'main-page', component: MainPageComponent, canActivate: [authAdminGuard]},
   {path: 'list-medics', component: MedicListComponent},
   {path: 'add-medic', component: AddMedicComponent},
   {path: 'list-patients', component: ListPatientComponent},
   {path: 'add-appointment', component: AddAppointmentComponent},
   {path: 'add-patient', component: AddPatientComponent},
   {path: '', redirectTo: 'log-in', pathMatch: 'full'},
-  {path: '**', component: PageTransitionEvent}
+  {path: '**', redirectTo: 'log-in'}
 ];
 
 @NgModule({

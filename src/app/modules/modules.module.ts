@@ -36,3 +36,9 @@ export enum AppointmentState
   Cancel = 'Cancelado',
   Done = 'Realizado'
 }
+
+export class Admin
+{
+  adminId: string = '';
+  password: string = '';
+}
