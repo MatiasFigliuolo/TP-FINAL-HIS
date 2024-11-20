@@ -1,8 +1,8 @@
 import { AbstractControl, AsyncValidatorFn, ValidationErrors, ValidatorFn } from "@angular/forms";
-import { MedicServiceService } from "../service/medic-service.service";
+import { MedicServiceService } from "../services/medic-service/medic-service.service";
 import { Observable, catchError, map, of } from "rxjs";
-import { PatientService } from "../services/patient.service";
-import { AppointmentServiceService } from "../services/appointment-service.service";
+import { PatientService } from "../services/patient-service/patient.service";
+import { AppointmentServiceService } from "../services/appointment-service/appointment-service.service";
 
 export class CustomValidators {
 

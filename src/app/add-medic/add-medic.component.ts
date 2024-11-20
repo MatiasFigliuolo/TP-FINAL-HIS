@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { MedicServiceService } from '../service/medic-service.service';
+import { MedicServiceService } from '../services/medic-service/medic-service.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Medic } from '../modules/modules.module';
 import { CustomValidators } from '../validators/custom-validators';
