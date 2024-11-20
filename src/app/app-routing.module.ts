@@ -12,11 +12,11 @@ import { authAdminGuard} from './guard/auth.guard';
 const routes: Routes = [
   {path: 'log-in', component: LogInComponent},
   {path: 'main-page', component: MainPageComponent, canActivate: [authAdminGuard]},
-  {path: 'list-medics', component: MedicListComponent},
-  {path: 'add-medic', component: AddMedicComponent},
-  {path: 'list-patients', component: ListPatientComponent},
-  {path: 'add-appointment', component: AddAppointmentComponent},
-  {path: 'add-patient', component: AddPatientComponent},
+  {path: 'list-medics', component: MedicListComponent,canActivate: [authAdminGuard]},
+  {path: 'add-medic', component: AddMedicComponent,canActivate: [authAdminGuard]},
+  {path: 'list-patients', component: ListPatientComponent,canActivate: [authAdminGuard]},
+  {path: 'add-appointment', component: AddAppointmentComponent,canActivate: [authAdminGuard]},
+  {path: 'add-patient', component: AddPatientComponent,canActivate: [authAdminGuard]},
   {path: '', redirectTo: 'log-in', pathMatch: 'full'},
   {path: '**', redirectTo: 'log-in'}
 ];
