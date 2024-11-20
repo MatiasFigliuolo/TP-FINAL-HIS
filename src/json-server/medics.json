@@ -155,7 +155,7 @@
     },
     {
       "id": "e126",
-      "matricula": "5555",
+      "matricula": "M58230",
       "firstName": "Luna",
       "lastName": "De Noia",
       "email": "denoialuna@gmail.com",
@@ -164,21 +164,12 @@
     },
     {
       "id": "3776",
-      "matricula": "2525252525",
+      "matricula": "M25869",
       "firstName": "Juan Cruz",
       "lastName": "Morales",
       "email": "jcmxu95@gmail.com",
       "phone": 2235050264,
       "password": "234"
-    },
-    {
-      "matricula": "151521",
-      "firstName": "Pepe",
-      "lastName": "Figliuolo",
-      "email": "matias.figliuolo1@gmail.com",
-      "phone": "1412412",
-      "password": "132124",
-      "id": "esk8tWw"
     },
     {
       "matricula": "151521897",

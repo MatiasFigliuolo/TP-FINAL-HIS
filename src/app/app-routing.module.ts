@@ -19,6 +19,7 @@ const routes: Routes = [
   {path: 'add-patient', component: AddPatientComponent,canActivate: [authAdminGuard]},
   {path: '', redirectTo: 'log-in', pathMatch: 'full'},
   {path: '**', redirectTo: 'log-in'}
+
 ];
 
 @NgModule({

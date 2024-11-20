@@ -28,7 +28,8 @@
             
             <div class="col-md-4" *ngIf="selectedMedic">
                 <div class="medic-details">
-                    <h3>Detalles del Médico</h3>
+                    <button class="close-button" (click)="closeDetails()">×</button>
+                    <h4>Detalles del Médico</h4>
                     <form #medicForm="ngForm">
                         <div class="form-group">
                             <label>Nombre:</label>
@@ -60,4 +61,5 @@
         </div>
     </div>
 </div>
+
 

@@ -20,18 +20,20 @@
 
 /* Configuración general de la tabla */
 .table {
+    position: relative;
     border-collapse: separate;
     border-spacing: 0;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
-
+    margin-left: 2%;
 }
 
-/* Estilo de la lista de médicos */
+
 .medicListStyle {
     background-color: transparent;
     margin-top: 170px;
-
+    flex: 1;
+    overflow: hidden;
 }
 
 /* Scroll en tbody */
@@ -39,7 +41,6 @@
     display: block;
     max-height: 350px;
     overflow-y: auto;
-
 }
 
 .table thead,
@@ -48,33 +49,36 @@
     width: 100%;
     table-layout: fixed;
 }
+
 .table-header {
     background: linear-gradient(to right, #5c6bc0, #512da8);
     color: #fff;
 }
 
-/* Estilo del formulario de detalles del médico */
 .medic-details {
     padding: 20px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    margin-top: 100px;
+    margin-top: 23%;
     max-width: 200%;
     text-align: left;
+    flex: 2;
+    height: 81%;
 }
 
-.medic-details h3 {
+.medic-details h4 {
     color: #512da8;
-
+    margin-top: 0%;
 }
 
 .medic-details label {
     font-weight: bold;
-
+    font-size: 13px;
 }
 
 .medic-details input {
+    position: relative;
     display: block;
     width: 100%;
     margin-bottom: 10px;
@@ -82,7 +86,6 @@
     border-radius: 8px;
     border: 1px solid #ddd;
     font-size: 14px;
-
 }
 
 /* Botones */
@@ -96,7 +99,7 @@
 /* Barra de búsqueda */
 .searchContainer {
     position: fixed;
-    top: 12%;
+    top: 16%;
     left: 1%;
     margin-bottom: 5px;
     width: 100%;
@@ -113,3 +116,26 @@
 
 }
 
+.listStyle {
+    display: flex;
+    /* Activa el diseño de flexbox */
+    gap: 20px;
+    /* Espaciado entre las columnas */
+}
+
+.close-button {
+    position: absolute;
+    top: 105px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    font-weight: bold;
+    color: #512da8;
+    cursor: pointer;
+    z-index: 200;
+}
+
+/* .close-button:hover {
+    color: #ff0000;
+  } */

@@ -14,7 +14,7 @@
     max-height: 600px;
     position: absolute;
     margin-top: 8%;
-    top: 24%;
+    top: 27%;
     left: 27%;
     transform: translate(-50%, -50%);
 
@@ -26,8 +26,6 @@
     width: 60%;
     position: relative;
 }
-
-
 
 .calendar {
     position: absolute;
@@ -42,10 +40,29 @@
     /* Asegura que el escalado se haga desde la esquina superior izquierda */
 }
 
-.hourStyle
-{
+.hourStyle{
     display: inline-block;
     position: relative;
     width: 15%;
     margin-left: 50px;
+}
+
+.form-field-container{
+    position: relative;
+    left: 2%;
+}
+
+.custom-button {
+    border-radius: 25px; /* Bordes redondeados */
+    background-color: #6200ea; /* Fondo morado, puedes cambiar el color */
+    color: white; /* Color de las letras */
+    padding: 8px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de letra */
+    font-weight: bold; /* Letra en negrita */ 
+    border: none; /* Elimina bordes predeterminados */
+    transition: background-color 0.3s ease; /* Efecto suave al cambiar el color */
+}
+
+.custom-button:hover {
+    cursor: pointer;
 }
