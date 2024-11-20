@@ -48,7 +48,7 @@ export class AddPatientComponent {
         console.log('Paciente agregado:', newPatient);
         this.patientService.updatePatientList();
         this.patientForm.reset();
-        swal("Paciente Agregado Exitosamente!",'',"success");
+        swal("Paciente agregado exitosamente!",'',"success");
       },
       error: (err: any) => {
         console.error('Error al agregar el paciente:', err);
