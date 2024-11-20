@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { MedicServiceService } from '../services/medic-service/medic-service.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Medic } from '../modules/modules.module';
 import { CustomValidators } from '../validators/custom-validators';
 import swal from 'sweetalert';
+import { MedicServiceService } from '../services/medic-service/medic-service.service';
 
 
 @Component({

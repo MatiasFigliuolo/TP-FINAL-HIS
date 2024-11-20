@@ -118,9 +118,7 @@
 
 .listStyle {
     display: flex;
-    /* Activa el diseño de flexbox */
     gap: 20px;
-    /* Espaciado entre las columnas */
 }
 
 .close-button {
@@ -135,7 +133,3 @@
     cursor: pointer;
     z-index: 200;
 }
-
-/* .close-button:hover {
-    color: #ff0000;
-  } */
