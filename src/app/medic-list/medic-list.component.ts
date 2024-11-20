@@ -72,4 +72,8 @@ export class MedicListComponent implements OnInit {
       });
     }
   }
+
+  closeDetails() {
+    this.selectedMedic = null;
+  }
 }
