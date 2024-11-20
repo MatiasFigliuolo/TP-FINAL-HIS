@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
-import { Medic } from '../modules/modules.module';
+import { Medic } from '../../modules/modules.module';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable,Subject, BehaviorSubject } from 'rxjs';
 import { tap, catchError, map } from 'rxjs/operators'; // Importa los operadores

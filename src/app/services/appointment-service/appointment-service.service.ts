@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Appointment } from '../modules/modules.module';
+import { Appointment } from '../../modules/modules.module';
 import { Observable, of } from 'rxjs';
 import { ValidationErrors } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';

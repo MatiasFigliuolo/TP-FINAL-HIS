@@ -4,7 +4,6 @@ import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PatientService } from './services/patient.service';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
