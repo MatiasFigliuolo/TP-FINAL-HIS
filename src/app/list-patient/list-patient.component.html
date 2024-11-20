@@ -1,40 +1,75 @@
-<body>
-  <app-nav></app-nav>
-
-  <div class="searchContainer">
+<app-nav></app-nav>
+<div class="searchContainer">
     <input type="text" placeholder="Ingrese Nombre, Apellido, o DNI del paciente" [(ngModel)]="searchTerm"
       (ngModelChange)="filterPatients()" (keydown.enter)="onSearchEnter()" class="searchBar" />
-  </div>
+</div>
 
-  <div class="patientListStyle">
-    <table class="table table-striped patientListStyle">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>DNI</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="patientStyle" *ngFor="let patient of filteredPatients.length > 0 ? filteredPatients : patientList"
-          (click)="selectPatient(patient)">
-          <td>{{ patient.firstName }}</td>
-          <td>{{ patient.lastName }}</td>
-          <td>{{ patient.dni }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-  <div class="patientInfo" *ngIf="selectedPatient">
-    <p>Nombre: {{ selectedPatient.firstName }}</p>
-    <p>Apellido: {{ selectedPatient.lastName }}</p>
-    <p>DNI: {{ selectedPatient.dni }}</p>
-    <p>Email: {{ selectedPatient.email }}</p>
-    <p>Teléfono: {{ selectedPatient.phone }}</p>
-    <p>Obra Social: {{ selectedPatient.insurance }}</p>
-    <p>Dirección: {{ selectedPatient.address }}</p>
-    <p>Fecha de Nacimiento: {{ selectedPatient.birthDate }}</p>
-  </div>
-</body>
+<div>
+    <div class="listStyle">
+        <div class="row">
+            <div class="col-md-8 patientListStyle">
+                <table class="table table-hover">
+                    <thead class="table-header">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>DNI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="patientStyle" *ngFor="let patient of filteredPatients" (click)="selectPatient(patient)">
+                            <td>{{ patient.firstName }}</td>
+                            <td>{{ patient.lastName }}</td>
+                            <td>{{ patient.dni }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="col-md-4" *ngIf="selectedPatient">
+                <div class="patient-details">
+                    <button class="close-button" (click)="closeDetails()">×</button>
+                    <h4>Detalles del Paciente</h4>
+                    <form #patientForm="ngForm">
+                        <div class="form-group">
+                            <label>Nombre:</label>
+                            <input type="text" [(ngModel)]="selectedPatient.firstName" name="firstName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido:</label>
+                            <input type="text" [(ngModel)]="selectedPatient.lastName" name="lastName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>DNI:</label>
+                            <input type="text" [(ngModel)]="selectedPatient.dni" name="dni" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="email" [(ngModel)]="selectedPatient.email" name="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Teléfono:</label>
+                            <input type="tel" [(ngModel)]="selectedPatient.phone" name="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Obra Social:</label>
+                            <input type="text" [(ngModel)]="selectedPatient.insurance" name="insurance" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Dirección:</label>
+                            <input type="text" [(ngModel)]="selectedPatient.address" name="address" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de Nacimiento:</label>
+                            <input type="date" [(ngModel)]="selectedPatient.birthDate" name="birthDate" class="form-control">
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn btn-success" (click)="updatePatient()">Confirmar</button>
+                            <button type="button" class="btn btn-danger" (click)="deletePatient()">Eliminar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

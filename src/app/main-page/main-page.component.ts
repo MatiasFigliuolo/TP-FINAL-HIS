@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Appointment, Patient } from '../modules/modules.module';
-import { AppointmentServiceService } from '../services/appointment-service.service';
-import { MedicServiceService } from '../service/medic-service.service';
-import { PatientService } from '../services/patient.service';
+import { AppointmentServiceService } from '../services/appointment-service/appointment-service.service';
+import { MedicServiceService } from '../services/medic-service/medic-service.service';
+import { PatientService } from '../services/patient-service/patient.service';
 
 @Component({
   selector: 'app-main-page',

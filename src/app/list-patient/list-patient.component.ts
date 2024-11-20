@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PatientService } from '../services/patient-service/patient.service';
 import { Patient } from '../modules/modules.module';
+import { PatientService } from '../services/patient-service/patient.service';
 
 @Component({
   selector: 'app-list-patient',
@@ -44,6 +44,28 @@ export class ListPatientComponent implements OnInit {
       patient.lastName.toLowerCase().includes(term) ||
       patient.dni.toString().includes(term)
     );
+  }
+
+  updatePatient(): void {
+    if (this.selectedPatient) {
+      this.patientService.updatePatient(this.selectedPatient).subscribe(() => {
+        console.log('Paciente actualizado con éxito');
+        this.selectedPatient = null;  
+      });
+    }
+  }
+
+  deletePatient(): void {
+    if (this.selectedPatient) {
+      this.patientService.deletePatient(this.selectedPatient).subscribe(() => {
+        console.log('Paciente eliminado con éxito');
+        this.selectedPatient = null;  
+      });
+    }
+  }
+
+  closeDetails() {
+    this.selectedPatient = null;
   }
 }
 
