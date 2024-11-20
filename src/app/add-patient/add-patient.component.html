@@ -45,6 +45,9 @@
             <div class="alert alert-danger" role="alert" *ngIf="dni?.errors?.['dniExist']">
                 Este Dni ya esta registrado
             </div>
+            <div class="alert alert-danger" role="alert" *ngIf="dni?.errors?.['dniLenght']">
+                Este Dni debe tener entre 7 y 8 caracteres
+            </div>
         </div>
         <div class="row" *ngIf="!birthDate?.valid && (birthDate?.dirty || birthDate?.touched)">
             <div class="col-lg-12">

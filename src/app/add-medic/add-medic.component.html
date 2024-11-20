@@ -65,6 +65,9 @@
                 <div class="alert alert-danger" role="alert" *ngIf="matricula?.errors?.['medicExist']">
                     Esta matricula ya esta asignada a un medico
                 </div>
+                <div class="alert alert-danger" role="alert" *ngIf="matricula?.errors?.['matriculaLenght']">
+                    La matricula debe tener entre 4 y 5 caracteres
+                </div>
             </div>
         </div>
         <div class="row" *ngIf="!email?.valid && (email?.dirty || email?.touched)">

@@ -11,7 +11,7 @@ import { CustomValidators } from '../validators/custom-validators';
 })
 export class AddPatientComponent {
   patientForm = new FormGroup({
-    dni: new FormControl('', [Validators.required],[CustomValidators.dniExist(inject(PatientService))]),
+    dni: new FormControl('', [Validators.required, CustomValidators.dniLenght()],[CustomValidators.dniExist(inject(PatientService))]),
     firstName: new FormControl('', [Validators.required]), 
     lastName: new FormControl('', [Validators.required]),
     birthDate: new FormControl('', [Validators.required]),

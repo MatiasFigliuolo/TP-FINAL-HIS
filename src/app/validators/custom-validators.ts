@@ -53,4 +53,29 @@ export class CustomValidators {
           return appointmentService.fechaNoPasada(control.value);
         };
       }
+
+      static dniLenght(): ValidatorFn {
+        return (control: AbstractControl): ValidationErrors | null => {
+          const value = control.value;
+      
+          // Validar que el valor sea un string con entre 7 y 8 caracteres
+          if (!value || value.length < 7 || value.length > 8) {
+            return { dniLenght: true }; // Error si no cumple
+          }
+      
+          return null; // Válido si cumple
+        };
+      }
+
+      static matriculaLenght(): ValidatorFn 
+      {
+        return (control: AbstractControl): ValidationErrors | null => {
+          const value = control.value;
+          if (!value || value.length < 4 || value.length > 5){
+            return {matriculaLenght : true}
+          }
+
+          return null;
+        };
+      }
 }

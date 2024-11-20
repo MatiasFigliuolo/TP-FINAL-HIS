@@ -15,7 +15,7 @@ export class AddMedicComponent implements OnInit {
   medicForm = new FormGroup ({
     firstName: new FormControl('',[Validators.required]),
     lastName: new FormControl('',[Validators.required]),
-    matricula: new FormControl('',[Validators.required],[CustomValidators.medicExist(inject(MedicServiceService))]),
+    matricula: new FormControl('',[Validators.required,CustomValidators.matriculaLenght()],[CustomValidators.medicExist(inject(MedicServiceService))]),
     email: new FormControl('', [Validators.email]),
     phone: new FormControl(''),
     password: new FormControl('',[Validators.required])
