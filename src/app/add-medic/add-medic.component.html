@@ -1,7 +1,7 @@
 <app-nav></app-nav>
-<br><br>
-<br><br>
-<h1>Agregar nuevo Médico</h1>
+<div class="addMedic">
+    <h4>Agregar nuevo Médico:</h4> 
+</div>
 
 <div class="formBox">
     <form [formGroup]="medicForm" (ngSubmit)="onSumbit()">
@@ -30,6 +30,52 @@
             <input type="password" name="password" formControlName="password">
         </div>
 
-        <button type="submit" class="buttonClass buttonConfirmar" [disabled]="!medicForm.valid" style="grid-column: 2;">Agregar</button>
+
+        <button type="submit" class="buttonClass buttonConfirmar" [disabled]="!medicForm.valid"
+            style="grid-column: 2;">Agregar</button>
+
+
+
+        <div class="row" *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="firstName?.errors?.['required']">
+                    Nombre es requerido
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!lastName?.valid && (lastName?.dirty || lastName?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="lastName?.errors?.['required']">
+                    Apellido es requerido
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="password?.errors?.['required']">
+                    Contraseña requerida
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!matricula?.valid && (matricula?.dirty || matricula?.touched)">
+            <div class="col-lg-12">
+                <div class="alert alert-danger" role="alert" *ngIf="matricula?.errors?.['required']">
+                    matricula es requerido
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="matricula?.errors?.['medicExist']">
+                    Esta matricula ya esta asignada a un medico
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="matricula?.errors?.['matriculaLenght']">
+                    La matricula debe tener entre 4 y 5 caracteres
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+            <div class="col-lg-12">email
+                <div class="alert alert-danger" role="alert" *ngIf="email?.errors?.['email']">
+                    Formato de email invalido
+                </div>
+            </div>
+        </div>
     </form>
 </div>

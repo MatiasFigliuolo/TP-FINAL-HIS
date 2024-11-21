@@ -1,0 +1,68 @@
+
+
+.backgroundStyle {
+
+    background-color: rgb(229, 239, 248);
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+    max-width: 150%;
+    max-height: 600px;
+    position: absolute;
+    margin-top: 8%;
+    top: 27%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.medicPatientStyle {
+    left: 2%;
+    width: 60%;
+    position: relative;
+}
+
+.calendar {
+    position: absolute;
+    display: inline-block;
+    top: 0%;
+    right: 4%;
+    margin-top: 7%;
+    width: 40%;
+    /* Ajusta según el tamaño deseado */
+    height: 21%;
+    transform-origin: top left;
+    /* Asegura que el escalado se haga desde la esquina superior izquierda */
+}
+
+.hourStyle{
+    display: inline-block;
+    position: relative;
+    width: 15%;
+    margin-left: 50px;
+}
+
+.form-field-container{
+    position: relative;
+    left: 2%;
+}
+
+.custom-button {
+    border-radius: 25px; /* Bordes redondeados */
+    background-color: #6200ea; /* Fondo morado, puedes cambiar el color */
+    color: white; /* Color de las letras */
+    padding: 8px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de letra */
+    font-weight: bold; /* Letra en negrita */ 
+    border: none; /* Elimina bordes predeterminados */
+    transition: background-color 0.3s ease; /* Efecto suave al cambiar el color */
+}
+
+.custom-button:hover {
+    cursor: pointer;
+}

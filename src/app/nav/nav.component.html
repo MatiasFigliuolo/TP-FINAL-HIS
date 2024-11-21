@@ -1,20 +1,6 @@
-<nav class="navbarNav">
-  <div class="navbarNav-content">
-      <a href="#" class="navbarNav-brand">Atlantic Health</a>
-      <ul class="navbarNav-nav">
-        <li class="nav-item"><a [routerLink]="[ '/add-patient']">Agregar Paciente </a></li>
-        <li class="nav-item"><a [routerLink]="[ '/add-medic']">Agregar Medico</a></li>
-        <li class="nav-item"><a [routerLink]="[ '/list-medics']">Mostrar Medicos</a></li>
-        <li class="nav-item"><a [routerLink]="[ '/list-patients']">Mostrar Pacientes</a></li>
-      </ul>
-  </div>
-</nav>
-
-
-
-<!-- <nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Atlantic Health</a>
+    <a class="navbar-brand" routerLink="main-page">Atlantic Health</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,8 +12,8 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
+            <a class="nav-link active home-link" aria-current="page" routerLink="main-page">Home</a>
+          </li>          
           <br>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,11 +34,17 @@
               <li><a class="dropdown-item" [routerLink]="['/add-medic']">Agregar un médico</a></li>
             </ul>
           </li>
+          <br>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Turnos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['/add-appointment']">Sacar un turno</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </div>
-</nav> -->
-
-
-
+</nav>

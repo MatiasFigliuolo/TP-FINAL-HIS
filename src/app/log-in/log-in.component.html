@@ -12,16 +12,14 @@
 
     <div class="container" [class.active]="isActive" id="container">
         <div class="form-container sign-up">
-            <form>
-                <h1>Crear cuenta</h1>
+            <form [formGroup]="adminLogInForm" (ngSubmit)="onSubmitAdmin()">
+                <h1>Admin LogIn</h1>
                 <div class="welcome-message">
-                    <h2>Bienvenido a nuestro HIS</h2>
-                    <p>Creá tu cuenta para usar todas nuestras herramientas.</p>
+                    <p>Porfavor Ingresar id y contraseña admin</p>
                 </div>
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Contraseña">
-                <button [routerLink]="[ '/main-page' ]">Registrarse</button>
+                <input type="text" placeholder="adminId" formControlName="adminId">
+                <input type="password" placeholder="Contraseña" formControlName="password">
+                <button type="submit">Iniciar Sesion</button>
             </form>
         </div>
         
