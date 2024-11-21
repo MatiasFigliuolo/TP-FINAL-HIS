@@ -17,7 +17,7 @@ export class AddAppointmentComponent implements OnInit {
   medicList: Array<Medic> = [];
   patientList: Array<Patient> = [];
   appointmentList: Array<Appointment> = [];
-  availableHours: Array<Number>= [12,1,2,3,4,5,6,7,8,9];
+  availableHours: Array<Number>= [8,9,10,11,12,13,14,15,16,17,18];
   updatedHours: Array<Number> = [];
 
   calendarOptions : any = {
@@ -28,12 +28,12 @@ export class AddAppointmentComponent implements OnInit {
   constructor(
     private medicService: MedicServiceService,
     private patientService: PatientService,
-    private appointmentService: AppointmentServiceService
-  ) { }
+    private appointmentService: AppointmentServiceService,
+  ) {}
 
   ngOnInit(): void {
     this.medicService.getAll().subscribe((medics: Medic[]) => {
-      console.log('Medics received in ngOnInit:', medics);  
+    
       this.medicList = medics;
     });
     this.patientService.getAll().subscribe((patients: Patient[]) => {
@@ -41,11 +41,13 @@ export class AddAppointmentComponent implements OnInit {
     });
 
     this.appointmentForm.get('matricula')?.valueChanges.subscribe(medic => {
+      this.refrescarLista();
       this.updateHours();
       this.loadEventsForMedic(String(medic));
     });
   
     this.appointmentForm.get('date')?.valueChanges.subscribe(date => {
+      this.refrescarLista();
       this.updateHours();
     });
 
@@ -54,6 +56,14 @@ export class AddAppointmentComponent implements OnInit {
       this.appointmentList = appointment;
     });
 
+  }
+
+  refrescarLista()
+  {
+    this.appointmentService.getAll().subscribe((appointment : Appointment[]) =>
+      {
+        this.appointmentList = appointment;
+      });
   }
 
   appointmentForm = new FormGroup({
@@ -78,15 +88,25 @@ export class AddAppointmentComponent implements OnInit {
     appointment.medicId = this.matricula?.value!;
     appointment.patientDni =Number(this.dni?.value!);
     appointment.hour = Number(this.hour?.value!);
-    this.appointmentService.add(appointment);
-    this.appointmentForm.reset();
+    this.appointmentService.add(appointment).subscribe({
+      next: () => {
+    
+        this.appointmentForm.reset();
+        swal("Turno agregado exitosamente!",'',"success");
+      },
+      error: (err: any) => {
+        console.error('Error al agregar el Turno:', err);
+      }
+    });;
+    
 
-    swal("Turno generado Exitosamente!",'',"success");
   }
 
   updateHours(): void {
-    const medicId = this.matricula?.value!;
-    const date = this.date?.value!;
+    const medicId = this.appointmentForm.get('matricula')?.value || '';
+    const date = this.appointmentForm.get('date')?.value || new Date();
+    console.log(medicId);
+    console.log(date);
     this.hourFilter(medicId, date);
   }
 
@@ -105,8 +125,8 @@ export class AddAppointmentComponent implements OnInit {
           elementDate.getMonth() === selectedDate.getMonth() &&
           elementDate.getDate() === selectedDate.getDate()
         ) {
+    
           this.updatedHours = this.updatedHours.filter(hour => hour !== element.hour);
-          console.log(this.updateHours);
         }
       }
     });
