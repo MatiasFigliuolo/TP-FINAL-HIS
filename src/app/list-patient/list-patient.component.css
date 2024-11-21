@@ -50,12 +50,13 @@
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin-top: 23%;
-    max-width: 200%;  
+    max-width: 200%;
     text-align: left;
     flex: 2;
-    height: 60%;  
-    overflow-y: auto; 
+    height: auto; 
+    overflow: visible;  
 }
+
 
 .patient-details h4 {
     color: #512da8;
