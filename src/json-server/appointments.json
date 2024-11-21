@@ -241,6 +241,24 @@
       "State": "Confirmado",
       "hour": 10,
       "id": "ygFgewq"
+    },
+    {
+      "creationDate": "2024-11-21T21:43:01.541Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2024-11-23T03:00:00.000Z",
+      "State": "Confirmado",
+      "hour": 9,
+      "id": "dtLXHm7"
+    },
+    {
+      "creationDate": "2024-11-21T21:44:04.318Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2025-01-01T03:00:00.000Z",
+      "State": "Confirmado",
+      "hour": 8,
+      "id": "JD-dDX7"
     }
   ]
 }
