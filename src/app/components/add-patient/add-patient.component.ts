@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
+import { PatientService } from '../../services/patient-service/patient.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Patient } from '../modules/modules.module';
-import { CustomValidators } from '../validators/custom-validators';
-import { PatientService } from '../services/patient-service/patient.service';
+import { Patient } from '../../modules/modules.module';
+import { CustomValidators } from '../../validators/custom-validators';
 
 @Component({
   selector: 'app-add-patient',

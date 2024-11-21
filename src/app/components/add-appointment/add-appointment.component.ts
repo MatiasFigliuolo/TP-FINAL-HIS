@@ -1,12 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Appointment, AppointmentState, Medic, Patient } from '../modules/modules.module';
+import { PatientService } from '../../services/patient-service/patient.service';
+import { AppointmentServiceService } from '../../services/appointment-service/appointment-service.service';
+import { Appointment, AppointmentState, Medic, Patient } from '../../modules/modules.module';
+import { MedicServiceService } from '../../services/medic-service/medic-service.service';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { CustomValidators } from '../validators/custom-validators';
-import { MedicServiceService } from '../services/medic-service/medic-service.service';
-import { PatientService } from '../services/patient-service/patient.service';
-import { AppointmentServiceService } from '../services/appointment-service/appointment-service.service';
-import { AppointmentUpdatesService } from '../services/appointment-update-service/appointment-update.service';
+import { CustomValidators } from '../../validators/custom-validators';
 
 @Component({
   selector: 'app-add-appointment',
@@ -30,12 +29,11 @@ export class AddAppointmentComponent implements OnInit {
     private medicService: MedicServiceService,
     private patientService: PatientService,
     private appointmentService: AppointmentServiceService,
-    private appointmentUpdateService: AppointmentUpdatesService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.medicService.getAll().subscribe((medics: Medic[]) => {
-      console.log('Medics received in ngOnInit:', medics);  
+    
       this.medicList = medics;
     });
     this.patientService.getAll().subscribe((patients: Patient[]) => {
@@ -43,11 +41,13 @@ export class AddAppointmentComponent implements OnInit {
     });
 
     this.appointmentForm.get('matricula')?.valueChanges.subscribe(medic => {
+      this.refrescarLista();
       this.updateHours();
       this.loadEventsForMedic(String(medic));
     });
   
     this.appointmentForm.get('date')?.valueChanges.subscribe(date => {
+      this.refrescarLista();
       this.updateHours();
     });
 
@@ -56,6 +56,14 @@ export class AddAppointmentComponent implements OnInit {
       this.appointmentList = appointment;
     });
 
+  }
+
+  refrescarLista()
+  {
+    this.appointmentService.getAll().subscribe((appointment : Appointment[]) =>
+      {
+        this.appointmentList = appointment;
+      });
   }
 
   appointmentForm = new FormGroup({
@@ -80,18 +88,25 @@ export class AddAppointmentComponent implements OnInit {
     appointment.medicId = this.matricula?.value!;
     appointment.patientDni =Number(this.dni?.value!);
     appointment.hour = Number(this.hour?.value!);
-    this.appointmentService.add(appointment);
-    console.log(appointment);
+    this.appointmentService.add(appointment).subscribe({
+      next: () => {
+    
+        this.appointmentForm.reset();
+        swal("Turno agregado exitosamente!",'',"success");
+      },
+      error: (err: any) => {
+        console.error('Error al agregar el Turno:', err);
+      }
+    });;
+    
 
-    this.appointmentUpdateService.notifyAppointmentAdded(appointment);
-  
-    this.appointmentForm.reset();
-    swal("Turno generado Exitosamente!",'',"success");
   }
 
   updateHours(): void {
     const medicId = this.appointmentForm.get('matricula')?.value || '';
     const date = this.appointmentForm.get('date')?.value || new Date();
+    console.log(medicId);
+    console.log(date);
     this.hourFilter(medicId, date);
   }
 
