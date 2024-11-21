@@ -1,5 +1,6 @@
+<div [routerLink]="['/log-in']">
 <app-nav></app-nav>
-
+</div>
 <div class="title common-margin-left">
     <h3>Próximos turnos: </h3>
 </div>
@@ -24,6 +25,6 @@
     </table>
   </div>
 
-  <div *ngIf="appointmentFilterList">
+  <div *ngIf="!appointmentFilterList">
     <h2>!! No hay Trabajo !!</h2>
   </div>
