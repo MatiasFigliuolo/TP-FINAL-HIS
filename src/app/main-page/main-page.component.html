@@ -14,14 +14,18 @@
         <tr>
           <th>Fecha</th>
           <th>Hora</th>
-          <th>Paciente</th>
-          <th>Médico</th>
+<!--           <th>Paciente</th> -->
+          <th>DNI</th>
+<!--           <th>Médico</th> -->
+          <th>Matrícula</th>
         </tr>
       </thead>
       <tbody> <tr *ngFor="let appointment of filteredAppointments"> 
         <td>{{ appointment.appointmentDate| date: 'dd/MM/yy' }}</td> 
         <td>{{ formatHour(appointment.hour) }}</td>
+<!--         <td>{{ getPatientName(appointment.patientDni) }}</td> -->
         <td>{{ appointment.patientDni }}</td> 
-        <td>{{ appointment.medicId }}</td> 
+<!--         <td>{{ getMedicName(appointment.medicId) }}</td> -->
+        <td>{{ formatMedicId(appointment.medicId) }}</td>
     </table>
   </div>

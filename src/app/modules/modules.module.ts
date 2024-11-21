@@ -22,7 +22,7 @@ export class Patient {
 export class Appointment
 {
   creationDate: Date = new Date();
-  patientDni: String = '';
+  patientDni: number = 0;
   medicId: String = '';
   appointmentDate : Date = new Date();
   State: AppointmentState = AppointmentState.Pending;
