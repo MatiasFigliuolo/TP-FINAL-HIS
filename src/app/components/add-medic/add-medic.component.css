@@ -1,0 +1,67 @@
+.formBox {
+    background-color: rgb(229, 239, 248);
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    height: 70%;
+    max-width: 150%; 
+    max-height: 600px;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px; 
+    row-gap: 40px; 
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.formBox input[type="text"], 
+.formBox input[type="email"], 
+.formBox input[type="number"], 
+.formBox input[type="password"] {
+    width: 90%;
+    padding: 3px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.buttonClass {
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 48%; 
+    text-align: center;
+    transition: ease-in-out 0.5s;
+}
+
+.buttonConfirmar {
+    background-color: #512da8;
+    color: white;
+    width: 20%;
+    border: 1px solid #512da8;
+    grid-column: 2;
+}
+
+.buttonClass:hover {
+    background-color: rgb(178, 209, 228);
+    color: black;
+}
+
+.addMedic {
+    margin-top: 7.5%;
+    margin-left: 5.5%;
+}
