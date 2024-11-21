@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, tap, map, Observable,of,Subject } from 'rxjs';
+import { catchError, tap, map, Observable,of,Subject, throwError } from 'rxjs';
 import { Patient } from '../../modules/modules.module';
 
 @Injectable({
