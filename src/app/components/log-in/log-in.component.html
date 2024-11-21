@@ -19,33 +19,30 @@
                 </div>
                 <input type="text" placeholder="adminId" formControlName="adminId">
                 <input type="password" placeholder="Contraseña" formControlName="password">
-                <button type="submit">Iniciar Sesion</button>
+                <button type="submit" [disabled]="!adminLogInForm.valid">Iniciar Sesion</button>
             </form>
         </div>
-        
+
         <div class="form-container sign-in">
             <form [formGroup]="medicLogInForm" (ngSubmit)="onSubmitMedic()">
-                <h1>Inicie sesion</h1>
+                <h1>Medic LogIn</h1>
                 <div class="welcome-message">
-                    <h2>Bienvenido de nuevo</h2>
-                    <p>Ingresá tus datos personales para acceder al sitio.</p>
-                </div>               
-                <input type="email" placeholder="Correo Electrónico" formControlName="matricula">
+                    <p>Ingresá tu matricula y contraseña para acceder</p>
+                </div>
+                <input type="text" placeholder="Matricula" formControlName="matricula">
                 <input type="password" placeholder="Contraseña" formControlName="password">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-                <button [routerLink]="[ '/main-page' ]">Inicia Sesión</button>
+                <button type="submit" [disabled]="!medicLogInForm.valid">Inicia Sesión</button>
             </form>
         </div>
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
-                    <h1>Bienvenido de nuevo</h1>
-                    <p>Ingresá tus datos personales para acceder al sitio.</p>
-                    <button type="button" (click)="deactivateContainer()">Inicia Sesión</button>
+                    <h1>Medic LogIn</h1>
+                    <button type="button" (click)="deactivateContainer()"><-Medic LogIn</button>
                 </div>
                 <div class="toggle-panel toggle-right">
-                    <h1>Hola!</h1>
-                    <p>Regístrate con tus datos personales para comenzar a usar el sistema.</p>                    <button type="button" (click)="activateContainer()">Crea tu cuenta</button>
+                    <h1>Admin LogIn</h1>
+                    <button type="button" (click)="activateContainer()">Admin LogIn -></button>
                 </div>
             </div>
         </div>
