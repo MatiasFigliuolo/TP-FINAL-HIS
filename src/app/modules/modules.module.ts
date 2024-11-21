@@ -9,6 +9,7 @@ export class Medic {
 }
 
 export class Patient {
+  id: number | undefined;
   dni: number = 0;
   firstName: string = '';
   lastName: string = '';
