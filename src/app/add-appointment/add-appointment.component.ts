@@ -6,6 +6,7 @@ import { CustomValidators } from '../validators/custom-validators';
 import { MedicServiceService } from '../services/medic-service/medic-service.service';
 import { PatientService } from '../services/patient-service/patient.service';
 import { AppointmentServiceService } from '../services/appointment-service/appointment-service.service';
+import { AppointmentUpdatesService } from '../services/appointment-update-service/appointment-update.service';
 
 @Component({
   selector: 'app-add-appointment',
@@ -17,7 +18,7 @@ export class AddAppointmentComponent implements OnInit {
   medicList: Array<Medic> = [];
   patientList: Array<Patient> = [];
   appointmentList: Array<Appointment> = [];
-  availableHours: Array<Number>= [12,1,2,3,4,5,6,7,8,9];
+  availableHours: Array<Number>= [8,9,10,11,12,13,14,15,16,17,18];
   updatedHours: Array<Number> = [];
 
   calendarOptions : any = {
@@ -28,7 +29,8 @@ export class AddAppointmentComponent implements OnInit {
   constructor(
     private medicService: MedicServiceService,
     private patientService: PatientService,
-    private appointmentService: AppointmentServiceService
+    private appointmentService: AppointmentServiceService,
+    private appointmentUpdateService: AppointmentUpdatesService
   ) { }
 
   ngOnInit(): void {
@@ -76,12 +78,14 @@ export class AddAppointmentComponent implements OnInit {
     appointment.creationDate = new Date();
     appointment.appointmentDate = this.date?.value!;
     appointment.medicId = this.matricula?.value!;
-    appointment.patientDni =this.dni?.value!;
+    appointment.patientDni =Number(this.dni?.value!);
     appointment.hour = Number(this.hour?.value!);
     this.appointmentService.add(appointment);
     console.log(appointment);
-    this.appointmentForm.reset();
 
+    this.appointmentUpdateService.notifyAppointmentAdded(appointment);
+  
+    this.appointmentForm.reset();
     swal("Turno generado Exitosamente!",'',"success");
   }
 
