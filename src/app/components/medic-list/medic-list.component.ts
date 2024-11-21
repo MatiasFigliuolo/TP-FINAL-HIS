@@ -18,11 +18,10 @@ export class MedicListComponent implements OnInit {
   ngOnInit(): void {
     this.medicService.getAll().subscribe((medics: Medic[]) => {
       this.medicList = medics;
-      this.filteredMedics = [...medics];  // Inicializa la lista filtrada
-      this.filterMedics();  // Llamar a filterMedics para aplicar el filtro si existe algún término de búsqueda
+      this.filteredMedics = [...medics];  
+      this.filterMedics();  
     });
 
-    // Suscribirse a las actualizaciones de la lista de médicos
     this.medicService.medicList$.subscribe((updatedMedics: Medic[]) => {
       console.log('Updated medics received ngonInit:', updatedMedics);
       this.medicList = updatedMedics;
@@ -31,8 +30,6 @@ export class MedicListComponent implements OnInit {
 
     this.medicService.updateMedicList();
   }
-
-
 
   selectMedic(medic: Medic): void {
     this.selectedMedic = medic;
@@ -45,7 +42,7 @@ export class MedicListComponent implements OnInit {
   filterMedics(): void {
     const term = this.searchTerm.toLowerCase();
     if (term === '') {
-      this.filteredMedics = [...this.medicList];  // Si no hay término de búsqueda, muestra todos los médicos
+      this.filteredMedics = [...this.medicList];  
     } else {
       this.filteredMedics = this.medicList.filter(medic =>
         medic.firstName.toLowerCase().includes(term) ||

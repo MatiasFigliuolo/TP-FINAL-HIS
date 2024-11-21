@@ -21,22 +21,23 @@
     </select>
   </div>
 
-  <div class="form-field-container">
+  <div class="form-field-row">
     <mat-form-field>
       <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-  </div>
-
-  <div class="hourStyle" *ngIf="appointmentForm.get('matricula')?.value && appointmentForm.get('dni')?.value">
-
-    <select class="form-select" id="inputGroupSelect02" formControlName="hour">
-      <option value="" disabled selected>Hora</option>
-      <option *ngFor="let hour of updatedHours" [value]="hour">{{ hour }}</option>
-    </select>
-
-    <button type="submit" [disabled]="!appointmentForm.valid" mat-raised-button color="primary" class="custom-button">Submit</button>
+  
+    <div class="hour-and-button" *ngIf="appointmentForm.get('matricula')?.value && appointmentForm.get('dni')?.value">
+      <select class="form-select" formControlName="hour">
+        <option value="" disabled selected>Hora</option>
+        <option *ngFor="let hour of updatedHours" [value]="hour">{{ hour }}</option>
+      </select>
+  
+      <button type="submit" [disabled]="!appointmentForm.valid" mat-raised-button color="primary" class="custom-button">
+        Sacar Turno
+      </button>
+    </div>
   </div>
 
   <div class="row" *ngIf="!matricula?.valid && (matricula?.dirty || matricula?.touched)">

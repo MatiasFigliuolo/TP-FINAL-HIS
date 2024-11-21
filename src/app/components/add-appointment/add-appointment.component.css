@@ -1,5 +1,3 @@
-
-
 .backgroundStyle {
 
     background-color: rgb(229, 239, 248);
@@ -17,8 +15,6 @@
     top: 27%;
     left: 27%;
     transform: translate(-50%, -50%);
-
-
 }
 
 .medicPatientStyle {
@@ -34,35 +30,53 @@
     right: 4%;
     margin-top: 7%;
     width: 40%;
-    /* Ajusta según el tamaño deseado */
     height: 21%;
     transform-origin: top left;
-    /* Asegura que el escalado se haga desde la esquina superior izquierda */
 }
 
-.hourStyle{
-    display: inline-block;
-    position: relative;
-    width: 15%;
-    margin-left: 50px;
+.hourStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
 }
 
-.form-field-container{
+.form-field-container {
     position: relative;
     left: 2%;
 }
 
-.custom-button {
-    border-radius: 25px; /* Bordes redondeados */
-    background-color: #6200ea; /* Fondo morado, puedes cambiar el color */
-    color: white; /* Color de las letras */
-    padding: 8px 15px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de letra */
-    font-weight: bold; /* Letra en negrita */ 
-    border: none; /* Elimina bordes predeterminados */
-    transition: background-color 0.3s ease; /* Efecto suave al cambiar el color */
+.form-field-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    margin-left: 2%;
 }
 
 .custom-button:hover {
     cursor: pointer;
+}
+
+.hour-and-button {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-left: 20px; 
+    width: 30%;
+}
+
+.custom-button {
+    border-radius: 5px; 
+    background-color: #6200ea;
+    color: white;
+    font-size: 12px;
+    font-style: bold;
+    border: none;
+    padding: 5px 10px; 
+    height: 38px; 
+    min-width: 90px; 
+    line-height: normal; 
+    transition: background-color 0.3s ease;
+    text-align: center; 
 }

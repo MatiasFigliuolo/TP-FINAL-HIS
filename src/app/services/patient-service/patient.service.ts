@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, tap, map, Observable,of,Subject } from 'rxjs';
+import { catchError, tap, map, Observable,of,Subject, throwError } from 'rxjs';
 import { Patient } from '../../modules/modules.module';
 
 @Injectable({
@@ -45,28 +45,30 @@ export class PatientService {
   }
 
   updatePatient(patient: Patient): Observable<Patient> {
-    const url = `${this.apiUrl}/${patient.dni}`;  
+    const url = `${this.apiUrl}/${patient.id}`; // Comenzamos a usar id como identificador por problemas con el dni
     return this.http.put<Patient>(url, patient, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     }).pipe(
-      tap(() => this.updatePatientList()),  
+      tap(() => this.updatePatientList()),
       catchError((error) => {
         console.error('Error al actualizar el paciente:', error);
-        return of(patient);  
+        return of(patient);
       })
     );
   }
+  
 
   deletePatient(patient: Patient): Observable<Patient> {
-    const url = `${this.apiUrl}/${patient.dni}`;
+    const url = `${this.apiUrl}/${patient.id}`; // Comenzamos a usar id como identificador por problemas con el dni
     return this.http.delete<Patient>(url).pipe(
-      tap(() => this.updatePatientList()), 
+      tap(() => this.updatePatientList()),
       catchError((error) => {
         console.error('Error al eliminar el paciente:', error);
-        return of(patient);  
+        return of(patient);
       })
     );
   }
+  
 
 }
 

@@ -22,10 +22,9 @@ export class ListPatientComponent implements OnInit {
       this.filteredPatients = patients; 
     });
 
-    // Suscribirse al observable para recibir actualizaciones de la lista
     this.patientService.patientList$.subscribe((updatedPatients: Patient[]) => {
       this.patientList = updatedPatients;
-      this.filteredPatients = updatedPatients; // Actualizar la lista filtrada si es necesario
+      this.filteredPatients = updatedPatients; 
     });
   }
 

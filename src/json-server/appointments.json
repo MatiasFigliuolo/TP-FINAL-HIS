@@ -160,6 +160,69 @@
       "appointmentDate": "2024-11-28T03:00:00.000Z",
       "State": "Confirmado",
       "hour": 6
+    },
+    {
+      "creationDate": "2024-11-21T20:23:32.328Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2024-11-21T20:23:24.012Z",
+      "State": "Confirmado",
+      "hour": 8,
+      "id": "fCrKY3m"
+    },
+    {
+      "creationDate": "2024-11-21T20:23:50.777Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2024-11-21T03:00:00.000Z",
+      "State": "Confirmado",
+      "hour": 8,
+      "id": "in5LwXN"
+    },
+    {
+      "creationDate": "2024-11-21T20:23:58.008Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2024-11-21T03:00:00.000Z",
+      "State": "Confirmado",
+      "hour": 8,
+      "id": "au0Plbt"
+    },
+    {
+      "creationDate": "2024-11-21T20:28:10.464Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2024-11-21T20:27:51.904Z",
+      "State": "Confirmado",
+      "hour": 9,
+      "id": "uUBXQuO"
+    },
+    {
+      "creationDate": "2024-11-21T20:28:39.326Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2024-11-21T03:00:00.000Z",
+      "State": "Confirmado",
+      "hour": 10,
+      "id": "0UTQ3DR"
+    },
+    {
+      "creationDate": "2024-11-21T20:28:51.890Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2024-11-21T03:00:00.000Z",
+      "State": "Confirmado",
+      "hour": 9,
+      "id": "cAEvD1z"
+    },
+    {
+      "creationDate": "2024-11-21T20:31:05.503Z",
+      "patientDni": 1234567,
+      "medicId": "M34567",
+      "appointmentDate": "2024-11-21T20:30:51.236Z",
+      "State": "Confirmado",
+      "hour": 8,
+      "id": "5uUjkYx"
     }
   ]
 }

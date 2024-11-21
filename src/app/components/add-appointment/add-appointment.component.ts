@@ -76,18 +76,17 @@ export class AddAppointmentComponent implements OnInit {
     appointment.creationDate = new Date();
     appointment.appointmentDate = this.date?.value!;
     appointment.medicId = this.matricula?.value!;
-    appointment.patientDni =this.dni?.value!;
+    appointment.patientDni =Number(this.dni?.value!);
     appointment.hour = Number(this.hour?.value!);
     this.appointmentService.add(appointment);
-    console.log(appointment);
     this.appointmentForm.reset();
 
     swal("Turno generado Exitosamente!",'',"success");
   }
 
   updateHours(): void {
-    const medicId = this.appointmentForm.get('matricula')?.value || '';
-    const date = this.appointmentForm.get('date')?.value || new Date();
+    const medicId = this.matricula?.value!;
+    const date = this.date?.value!;
     this.hourFilter(medicId, date);
   }
 
@@ -106,8 +105,8 @@ export class AddAppointmentComponent implements OnInit {
           elementDate.getMonth() === selectedDate.getMonth() &&
           elementDate.getDate() === selectedDate.getDate()
         ) {
-    
           this.updatedHours = this.updatedHours.filter(hour => hour !== element.hour);
+          console.log(this.updateHours);
         }
       }
     });
