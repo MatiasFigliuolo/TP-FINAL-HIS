@@ -84,7 +84,7 @@ export class AddAppointmentComponent implements OnInit {
     console.log(appointment);
 
     this.appointmentUpdateService.notifyAppointmentAdded(appointment);
-
+  
     this.appointmentForm.reset();
     swal("Turno generado Exitosamente!",'',"success");
   }

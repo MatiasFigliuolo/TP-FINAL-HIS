@@ -78,7 +78,7 @@ export class MainPageComponent implements OnInit {
     return `${hourNumber}:00`;
   }
 
-  getPatientName(dni: number): string {
+  /* getPatientName(dni: number): string {
     const patient = this.patientList.find(p => p.dni === dni);
     return patient ? `${patient.firstName} ${patient.lastName}` : 'Paciente no encontrado';
   }  
@@ -86,7 +86,7 @@ export class MainPageComponent implements OnInit {
   getMedicName(id: String): string {
     const medic = this.medicList.find(m => m.matricula === id);
     return medic ? `${medic.firstName} ${medic.lastName}` : 'Médico no encontrado';
-  }
+  } */
 
   formatMedicId(medicId: String): String {
     if (!medicId.startsWith('M')) {
