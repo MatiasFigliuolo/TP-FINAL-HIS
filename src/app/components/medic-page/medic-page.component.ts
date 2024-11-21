@@ -24,10 +24,9 @@ export class MedicPageComponent implements OnInit {
     this.appointmentService.getAll().subscribe((appointment: Appointment[]) => {
       this.appointmentList = appointment; 
     })
-
-    this.appointmentFilterList = this.appointmentList.filter(appointment => appointment.medicId === this.medicMatricula);
     console.log(this.appointmentList);
-    console.log(this.appointmentFilterList);
+    this.appointmentFilterList = this.appointmentList.filter(appointment => appointment.medicId === this.medicMatricula);
+    
 
   }
   

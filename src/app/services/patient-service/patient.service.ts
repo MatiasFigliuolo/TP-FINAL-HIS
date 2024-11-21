@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, Observable,of,Subject } from 'rxjs';
+import { catchError, tap, map, Observable,of,Subject } from 'rxjs';
 import { Patient } from '../../modules/modules.module';
 
 @Injectable({
@@ -35,11 +35,35 @@ export class PatientService {
   getByDni(dni: Number): Observable<boolean> {
     return this.http.get<any[]>(`${this.apiUrl}?dni=${dni}`).pipe(
       map(dni => {
-        console.log('Respuesta de getByDni:', dni);  // Log para verificar la respuesta
-        return dni.length > 0;  // Si el array tiene al menos un médico con esa matrícula, retorna true
+        console.log('Respuesta de getByDni:', dni);  
+        return dni.length > 0;  
       }),
       catchError(() => {
-        return of(false);  // Si ocurre un error, asumimos que no existe
+        return of(false);  
+      })
+    );
+  }
+
+  updatePatient(patient: Patient): Observable<Patient> {
+    const url = `${this.apiUrl}/${patient.dni}`;  
+    return this.http.put<Patient>(url, patient, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    }).pipe(
+      tap(() => this.updatePatientList()),  
+      catchError((error) => {
+        console.error('Error al actualizar el paciente:', error);
+        return of(patient);  
+      })
+    );
+  }
+
+  deletePatient(patient: Patient): Observable<Patient> {
+    const url = `${this.apiUrl}/${patient.dni}`;
+    return this.http.delete<Patient>(url).pipe(
+      tap(() => this.updatePatientList()), 
+      catchError((error) => {
+        console.error('Error al eliminar el paciente:', error);
+        return of(patient);  
       })
     );
   }
