@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Appointment } from '../../modules/modules.module';
 import { Observable, of } from 'rxjs';
 import { ValidationErrors } from '@angular/forms';
@@ -7,11 +7,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class AppointmentServiceService {
+export class AppointmentServiceService implements OnInit {
   private apiUrl = 'http://localhost:3002/appointments';
   private appointmentList = new Array<Appointment>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
+  
+  ngOnInit(): void {
+    this.getAll().subscribe((appointment: Appointment[]) =>
+      {
+        this.appointmentList = appointment;
+      }); 
+   
+  }
 
   getAll(): Observable<Appointment[]> {
     return this.http.get<Appointment[]>(this.apiUrl);
@@ -37,29 +45,4 @@ export class AppointmentServiceService {
       return of(null); // Válido si la fecha es correcta
     }
   }
-
-
-  /* VERSION VIEJA */ 
-  /* add(appointment : Appointment)
-  {
-    this.appointmentList.push(appointment);
-  }
-
-  getAll() : Appointment[]
-  {
-    return this.appointmentList;
-  }
-
-  fechaNoPasada(date: Date): Observable<ValidationErrors | null> {
-    const fechaActual = new Date();
-    const fechaActualDia = new Date(fechaActual.getFullYear(),fechaActual.getMonth(),fechaActual.getDate());
-    const fechaDadaDia = new Date(date.getFullYear(), date.getMonth(),date.getDate());
-   
-    if (fechaDadaDia < fechaActualDia) {
-      return of({ checkDate: true }); // Retorna un error si la fecha es del pasado
-    } else {
-      return of(null); // Retorna null si la fecha es válida
-    }
-  }*/
-
 } 

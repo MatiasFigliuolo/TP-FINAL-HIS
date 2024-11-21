@@ -1,11 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { PatientService } from '../services/patient-service/patient.service';
-import { AppointmentServiceService } from '../services/appointment-service/appointment-service.service';
-import { Appointment, AppointmentState, Medic, Patient } from '../modules/modules.module';
-import { MedicServiceService } from '../services/medic-service/medic-service.service';
+import { PatientService } from '../../services/patient-service/patient.service';
+import { AppointmentServiceService } from '../../services/appointment-service/appointment-service.service';
+import { Appointment, AppointmentState, Medic, Patient } from '../../modules/modules.module';
+import { MedicServiceService } from '../../services/medic-service/medic-service.service';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { CustomValidators } from '../validators/custom-validators';
+import { CustomValidators } from '../../validators/custom-validators';
 
 @Component({
   selector: 'app-add-appointment',

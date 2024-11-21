@@ -1,0 +1,27 @@
+<app-nav></app-nav>
+
+<div class="searchContainer common-margin-left"> 
+    <input type="text" placeholder="Ingrese DNI del paciente o Matricula del medico" [(ngModel)]="searchTerm" (ngModelChange)="filterAppointments()" class="searchBar" /> 
+</div>    
+
+<div class="title common-margin-left">
+    <h3>Próximos turnos: </h3>
+</div>
+
+ <div class="appointmentListStyle common-margin-left">
+    <table class="table table-striped appointmentListStyle">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Paciente</th>
+          <th>Médico</th>
+        </tr>
+      </thead>
+      <tbody> <tr *ngFor="let appointment of filteredAppointments"> 
+        <td>{{ appointment.appointmentDate| date: 'dd/MM/yy' }}</td> 
+        <td>{{ formatHour(appointment.hour) }}</td>
+        <td>{{ appointment.patientDni }}</td> 
+        <td>{{ appointment.medicId }}</td> 
+    </table>
+  </div>

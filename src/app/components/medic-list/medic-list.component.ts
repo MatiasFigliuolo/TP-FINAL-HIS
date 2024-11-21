@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Medic } from '../modules/modules.module';
-import { MedicServiceService } from '../services/medic-service/medic-service.service';
+import { Medic } from '../../modules/modules.module';
+import { MedicServiceService } from '../../services/medic-service/medic-service.service';
 
 @Component({
   selector: 'app-medic-list',

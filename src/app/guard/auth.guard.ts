@@ -8,10 +8,9 @@ export const authAdminGuard: CanActivateFn = (route, state) => {
   return authService.checkAdminCredentials().pipe(
     map((isAuthenticated: any) => {
       if (isAuthenticated) {
-        swal("! Inicio de sesion exitoso !",'',"success");
         return true;
       } else {
-        swal("Contraseña o adminId incorrectas",'',"error");
+        swal("Contraseña o adminId incorrecta/s",'',"error");
         return false;
       }
     })
@@ -23,10 +22,9 @@ export const authMedicGuard: CanActivateFn = (route, state) => {
   return authService.checkMedicCredentials().pipe(
     map((isAuthenticated: any) => {
       if (isAuthenticated) {
-        swal("! Inicio de sesion exitoso !",'',"success");
         return true;
       } else {
-        swal("Contraseña o adminId incorrectas",'',"error");
+        swal("Contraseña o Matricula incorrecta/s",'',"error");
         return false;
       }
     })

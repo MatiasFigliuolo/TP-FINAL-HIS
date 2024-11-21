@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LogInComponent } from './log-in/log-in.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { AddMedicComponent } from './add-medic/add-medic.component';
-import { AddPatientComponent } from './add-patient/add-patient.component';
-import { MedicListComponent } from './medic-list/medic-list.component';
-import { ListPatientComponent } from './list-patient/list-patient.component';
-import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
-import { authAdminGuard} from './guard/auth.guard';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { AddMedicComponent } from './components/add-medic/add-medic.component';
+import { AddPatientComponent } from './components/add-patient/add-patient.component';
+import { MedicListComponent } from './components/medic-list/medic-list.component';
+import { ListPatientComponent } from './components/list-patient/list-patient.component';
+import { AddAppointmentComponent } from './components/add-appointment/add-appointment.component';
+import { authAdminGuard, authMedicGuard} from './guard/auth.guard';
+import { MedicPageComponent } from './components/medic-page/medic-page.component';
 
 const routes: Routes = [
   {path: 'log-in', component: LogInComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'list-patients', component: ListPatientComponent,canActivate: [authAdminGuard]},
   {path: 'add-appointment', component: AddAppointmentComponent,canActivate: [authAdminGuard]},
   {path: 'add-patient', component: AddPatientComponent,canActivate: [authAdminGuard]},
+  {path: 'medic-page/:matricula', component: MedicPageComponent, canActivate: [authMedicGuard]},
   {path: '', redirectTo: 'log-in', pathMatch: 'full'},
   {path: '**', redirectTo: 'log-in'}
 

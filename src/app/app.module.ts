@@ -8,19 +8,21 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { NavComponent } from './nav/nav.component';
-import { LogInComponent } from './log-in/log-in.component';
-import { AddMedicComponent } from './add-medic/add-medic.component';
-import { AddPatientComponent } from './add-patient/add-patient.component';
-import { MedicListComponent } from './medic-list/medic-list.component';
-import { ListPatientComponent } from './list-patient/list-patient.component';
-import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { NavComponent } from './components/nav/nav.component';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { AddMedicComponent } from './components/add-medic/add-medic.component';
+import { AddPatientComponent } from './components/add-patient/add-patient.component';
+import { MedicListComponent } from './components/medic-list/medic-list.component';
+import { ListPatientComponent } from './components/list-patient/list-patient.component';
+import { AddAppointmentComponent } from './components/add-appointment/add-appointment.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
-import { MatNativeDateModule } from '@angular/material/core'; 
+import { MatNativeDateModule } from '@angular/material/core';
+import { MedicPageComponent } from './components/medic-page/medic-page.component';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     AddPatientComponent,
     MedicListComponent,
     ListPatientComponent,
-    AddAppointmentComponent
+    AddAppointmentComponent,
+    MedicPageComponent
   ],
   imports: [
     BrowserModule,

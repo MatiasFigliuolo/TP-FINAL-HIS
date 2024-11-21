@@ -21,8 +21,8 @@ export class AuthService {
 
   setAdminCredentials(admin : Admin)
   {
-    this.adminCredentials.id = admin.adminId;
-    this.adminCredentials.password = admin.password;
+    this.adminCredentials.id = admin.adminId.toLowerCase();
+    this.adminCredentials.password = admin.password.toLowerCase();
   }
 
   setMedicCredentials(medic : Medic)
