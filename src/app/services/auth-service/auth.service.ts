@@ -21,8 +21,8 @@ export class AuthService {
 
   setAdminCredentials(admin : Admin)
   {
-    this.adminCredentials.id = admin.adminId.toLowerCase();
-    this.adminCredentials.password = admin.password.toLowerCase();
+    this.adminCredentials.id = admin.adminId;
+    this.adminCredentials.password = admin.password;
   }
 
   setMedicCredentials(medic : Medic)
@@ -40,6 +40,7 @@ export class AuthService {
     {
       return of (false);
     }
+    
   }
   checkMedicCredentials(): Observable<boolean> {
     for (const element of this.medicList) {

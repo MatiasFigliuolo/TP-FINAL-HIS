@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Medic } from '../../modules/modules.module';
 import { MedicServiceService } from '../../services/medic-service/medic-service.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-medic-list',
   templateUrl: './medic-list.component.html',
@@ -62,13 +62,30 @@ export class MedicListComponent implements OnInit {
   }
   
   deleteMedic(): void {
-    if (this.selectedMedic) {
-      this.medicService.deleteMedic(this.selectedMedic).subscribe(() => {
-        console.log('Médico eliminado con éxito');
-        this.selectedMedic = null;  // Limpia el formulario después de eliminar
+      Swal.fire({
+        title: "Estás seguro?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Eliminar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+             title: "Eliminado!",
+            text: "El paciente fue eliminado.",
+            icon: "success"
+          });
+          if (this.selectedMedic){
+            this.medicService.deleteMedic(this.selectedMedic).subscribe(() => {
+              console.log('Médico eliminado con éxito');
+              this.selectedMedic = null;  // Limpia el formulario después de eliminar
+           });      
+          }
+        }
       });
     }
-  }
+  
 
   closeDetails() {
     this.selectedMedic = null;
