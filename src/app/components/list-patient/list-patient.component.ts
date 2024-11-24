@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../../services/patient-service/patient.service';
 import { Patient } from '../../modules/modules.module';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-list-patient',
@@ -55,12 +57,28 @@ export class ListPatientComponent implements OnInit {
   }
 
   deletePatient(): void {
-    if (this.selectedPatient) {
-      this.patientService.deletePatient(this.selectedPatient).subscribe(() => {
-        console.log('Paciente eliminado con éxito');
-        this.selectedPatient = null;  
-      });
-    }
+    Swal.fire({
+      title: "Estás seguro?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+           title: "Eliminado!",
+          text: "El paciente fue eliminado.",
+          icon: "success"
+        });
+        if (this.selectedPatient) {
+          this.patientService.deletePatient(this.selectedPatient).subscribe(() => {
+            console.log('Paciente eliminado con éxito');
+            this.selectedPatient = null;  
+          });
+        }
+      }
+    });
   }
 
   closeDetails() {
