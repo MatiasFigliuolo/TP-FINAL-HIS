@@ -3,7 +3,7 @@
     {
       "id": "e160",
       "dni": "1234567",
-      "firstName": "Juan",
+      "firstName": "pepe",
       "lastName": "Perez",
       "birthDate": "1985-03-25",
       "address": "Calle Falsa 123",
@@ -32,28 +32,6 @@
       "insurance": "Galeno",
       "email": "carlos.gonzalez@yahoo.com",
       "phone": "1122334455"
-    },
-    {
-      "id": "6afb",
-      "dni": "4567890",
-      "firstName": "Ana",
-      "lastName": "Martinez",
-      "birthDate": "1988-02-22",
-      "address": "Calle Corrientes 300",
-      "insurance": "OSDE",
-      "email": "ana.martinez@gmail.com",
-      "phone": "2233445566"
-    },
-    {
-      "id": "a6da",
-      "dni": "51234567",
-      "firstName": "Luis",
-      "lastName": "Fernandez",
-      "birthDate": "1970-11-02",
-      "address": "Diagonal Sur 800",
-      "insurance": "IOMA",
-      "email": "luis.fernandez@yahoo.com",
-      "phone": "3344556677"
     },
     {
       "id": "faf2",

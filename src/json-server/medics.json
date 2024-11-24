@@ -37,15 +37,6 @@
       "password": "password6"
     },
     {
-      "id": "8",
-      "matricula": "M89012",
-      "firstName": "Elena",
-      "lastName": "Gimenez",
-      "email": "elena.gimenez@hospital.com",
-      "phone": 6677889900,
-      "password": "password8"
-    },
-    {
       "id": "9",
       "matricula": "M90123",
       "firstName": "Jorge",
@@ -145,16 +136,6 @@
       "password": "password19"
     },
     {
-      "id": "20",
-      "matricula": "M23410",
-      "firstName": "Silvia",
-      "lastName": "Navarro",
-      "email": "silvia.navarro@hospital.com",
-      "phone": 9100112233,
-      "password": "password20"
-    },
-    {
-      "id": "21",
       "id": "21",
       "matricula": "M58230",
       "firstName": "Luna",
@@ -186,7 +167,7 @@
       "matricula": "12134",
       "firstName": "John ",
       "lastName": "Diagnosticgood",
-      "email": "DiagnosticGood.john@atlantichealt.com",
+      "email": "DiagnosticGood.john@atlantichealth.com",
       "phone": "1234545345",
       "password": "123"
     }
