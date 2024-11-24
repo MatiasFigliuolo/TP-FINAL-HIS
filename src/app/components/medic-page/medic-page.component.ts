@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Appointment } from '../../modules/modules.module';
 import { AppointmentServiceService } from '../../services/appointment-service/appointment-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-medic-page',
@@ -15,7 +15,8 @@ export class MedicPageComponent implements OnInit {
 
   constructor(
     private appointmentService: AppointmentServiceService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router : Router
   ) {}
 
   ngOnInit(): void {
@@ -33,5 +34,10 @@ export class MedicPageComponent implements OnInit {
   formatHour(hour: any): string {
     const hourNumber = Number(hour);
     return `${hourNumber}:00`;
+  }
+
+  appointmentView(appointmentId : string)
+  {
+    this.router.navigate(['/appointment-view/'+appointmentId]);
   }
 }

@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<br><br>
+<br><br>
+<div>
+    <div class="card" style="width: 40rem;">
+        <div class="card-body">
+          <h3 class="card-title">Paciente: {{appointment.patientName}}</h3>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Medico: {{appointment.medicName}}</h6>
+          <p>Fecha: {{appointment.appointmentDate}}</p>
+          <p>Estado: {{appointment.State}}</p>
+        </div>
+      </div>
+
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" [(ngModel)]="comment"></textarea>
+        <label for="floatingTextarea2">Comments</label>
+        <button class="button" (click)="uploadComment()">Subir</button>
+      </div>
+</div>

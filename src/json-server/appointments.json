@@ -1,282 +1,136 @@
 {
   "appointments": [
     {
-      "creationDate": "2024-01-15T10:00:00Z",
-      "patientDni": "12345678",
-      "medicId": "M12345",
-      "appointmentDate": "2024-02-05T09:00:00Z",
-      "hour": 9,
-      "id": "b5e9"
-    },
-    {
-      "creationDate": "2024-02-10T11:30:00Z",
-      "patientDni": "23456789",
-      "medicId": "M23456",
-      "appointmentDate": "2024-03-12T10:30:00Z",
-      "hour": 5,
-      "id": "9f59"
-    },
-    {
-      "creationDate": "2024-03-02T08:45:00Z",
-      "patientDni": "34567890",
-      "medicId": "M34567",
-      "appointmentDate": "2024-04-05T11:00:00Z",
-      "hour": 5,
-      "id": "bce7"
-    },
-    {
-      "creationDate": "2024-04-10T14:00:00Z",
-      "patientDni": "45678901",
-      "medicId": "M45678",
-      "appointmentDate": "2024-05-15T13:00:00Z",
-      "hour": 1,
-      "id": "41ee"
-    },
-    {
-      "creationDate": "2024-05-20T09:30:00Z",
-      "patientDni": "56789012",
-      "medicId": "M56789",
-      "appointmentDate": "2024-06-20T08:30:00Z",
-      "hour": 8,
-      "id": "a077"
-    },
-    {
-      "creationDate": "2024-06-01T16:30:00Z",
-      "patientDni": "67890123",
-      "medicId": "M67890",
-      "appointmentDate": "2024-07-25T09:00:00Z",
-      "hour": 9,
-      "id": "c6c5"
-    },
-    {
-      "creationDate": "2024-07-10T13:15:00Z",
-      "patientDni": "78901234",
-      "medicId": "M78901",
-      "appointmentDate": "2024-08-05T10:30:00Z",
-      "hour": 1,
-      "id": "7045"
-    },
-    {
-      "creationDate": "2024-08-01T08:00:00Z",
-      "patientDni": "89012345",
-      "medicId": "M89012",
-      "appointmentDate": "2024-09-09T14:00:00Z",
-      "hour": 2,
-      "id": "d98c"
-    },
-    {
-      "creationDate": "2024-09-15T17:45:00Z",
-      "patientDni": "90123456",
-      "medicId": "M90123",
-      "appointmentDate": "2024-10-10T08:00:00Z",
-      "hour": 8,
-      "id": "8188"
-    },
-    {
-      "creationDate": "2024-09-20T11:00:00Z",
-      "patientDni": "11223344",
-      "medicId": "M01234",
-      "appointmentDate": "2024-10-22T15:30:00Z",
-      "hour": 3,
-      "id": "ebf7"
-    },
-    {
-      "creationDate": "2024-10-10T09:00:00Z",
-      "patientDni": "22334455",
-      "medicId": "M34521",
-      "appointmentDate": "2024-11-01T10:00:00Z",
-      "hour": 1,
-      "id": "25b4"
-    },
-    {
-      "creationDate": "2024-10-15T13:15:00Z",
-      "patientDni": "33445566",
-      "medicId": "M45632",
-      "appointmentDate": "2024-11-05T12:00:00Z",
-      "hour": 12,
-      "id": "8a60"
-    },
-    {
-      "creationDate": "2024-11-05T10:30:00Z",
-      "patientDni": "44556677",
-      "medicId": "M56743",
-      "appointmentDate": "2024-11-15T14:00:00Z",
-      "hour": 2,
-      "id": "ac75"
-    },
-    {
-      "creationDate": "2024-11-10T11:45:00Z",
-      "patientDni": "55667788",
-      "medicId": "M67854",
-      "appointmentDate": "2024-12-10T16:30:00Z",
-      "hour": 4,
-      "id": "089b"
-    },
-    {
-      "creationDate": "2024-12-01T08:30:00Z",
-      "patientDni": "66778899",
-      "medicId": "M78965",
-      "appointmentDate": "2024-12-15T10:30:00Z",
-      "hour": 7,
-      "id": "cfde"
-    },
-    {
-      "creationDate": "2024-12-12T10:15:00Z",
-      "patientDni": "77889900",
-      "medicId": "M89076",
-      "appointmentDate": "2024-12-20T11:00:00Z",
-      "hour": 12,
-      "id": "6d24"
-    },
-    {
-      "creationDate": "2024-12-15T09:00:00Z",
-      "patientDni": "88990011",
-      "medicId": "M90187",
-      "appointmentDate": "2024-12-25T14:00:00Z",
-      "hour": 2,
-      "id": "e86e"
-    },
-    {
-      "creationDate": "2024-01-05T17:30:00Z",
-      "patientDni": "99001122",
-      "medicId": "M01298",
-      "appointmentDate": "2024-02-15T09:00:00Z",
-      "hour": 9,
-      "id": "e2a4"
-    },
-    {
-      "creationDate": "2024-02-28T15:00:00Z",
-      "patientDni": "10223344",
-      "medicId": "M12309",
-      "appointmentDate": "2024-03-25T10:00:00Z",
-      "hour": 1,
-      "id": "484a"
-    },
-    {
-      "id": "848f",
-      "creationDate": "2024-11-19T19:24:41.483Z",
-      "patientDni": "1234567",
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-28T03:00:00.000Z",
-      "State": "Confirmado",
-      "hour": 6
-    },
-    {
-      "creationDate": "2024-11-21T20:23:32.328Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-21T20:23:24.012Z",
-      "State": "Confirmado",
-      "hour": 8,
-      "id": "fCrKY3m"
-    },
-    {
-      "creationDate": "2024-11-21T20:23:50.777Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-21T03:00:00.000Z",
-      "State": "Confirmado",
-      "hour": 8,
-      "id": "in5LwXN"
-    },
-    {
-      "creationDate": "2024-11-21T20:23:58.008Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-21T03:00:00.000Z",
-      "State": "Confirmado",
-      "hour": 8,
-      "id": "au0Plbt"
-    },
-    {
-      "creationDate": "2024-11-21T20:28:10.464Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-21T20:27:51.904Z",
-      "State": "Confirmado",
-      "hour": 9,
-      "id": "uUBXQuO"
-    },
-    {
-      "creationDate": "2024-11-21T20:28:39.326Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-21T03:00:00.000Z",
-      "State": "Confirmado",
+      "creationDate": "2024-11-24T12:00:00.000Z",
+      "patientDni": 12345678,
+      "medicId": "MED001",
+      "appointmentDate": "2024-12-01T10:00:00.000Z",
+      "State": "Pending",
       "hour": 10,
-      "id": "0UTQ3DR"
+      "patientName": "Juan Pérez",
+      "medicName": "Dr. García",
+      "id": "APPT001",
+      "comments": ""
     },
     {
-      "creationDate": "2024-11-21T20:28:51.890Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-21T03:00:00.000Z",
-      "State": "Confirmado",
-      "hour": 9,
-      "id": "cAEvD1z"
-    },
-    {
-      "creationDate": "2024-11-21T20:31:05.503Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-21T20:30:51.236Z",
-      "State": "Confirmado",
-      "hour": 8,
-      "id": "5uUjkYx"
-    },
-    {
-      "creationDate": "2024-11-21T21:33:40.566Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-22T03:00:00.000Z",
-      "State": "Confirmado",
-      "hour": 8,
-      "id": "GmxPDHd"
-    },
-    {
-      "creationDate": "2024-11-21T21:34:00.900Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-23T03:00:00.000Z",
-      "State": "Confirmado",
-      "hour": 10,
-      "id": "ygFgewq"
-    },
-    {
-      "creationDate": "2024-11-21T21:43:01.541Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-23T03:00:00.000Z",
-      "State": "Confirmado",
-      "hour": 9,
-      "id": "dtLXHm7"
-    },
-    {
-      "creationDate": "2024-11-21T21:44:04.318Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2025-01-01T03:00:00.000Z",
-      "State": "Confirmado",
-      "hour": 8,
-      "id": "JD-dDX7"
-    },
-    {
-      "creationDate": "2024-11-21T22:12:47.212Z",
-      "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-23T03:00:00.000Z",
-      "State": "Confirmado",
+      "creationDate": "2024-11-23T12:00:00.000Z",
+      "patientDni": 87654321,
+      "medicId": "MED002",
+      "appointmentDate": "2024-12-02T11:00:00.000Z",
+      "State": "Confirmed",
       "hour": 11,
-      "id": "H12p6lL"
+      "patientName": "María López",
+      "medicName": "Dr. Martínez",
+      "id": "APPT002",
+      "comments": ""
     },
     {
-      "creationDate": "2024-11-21T22:30:49.793Z",
+      "creationDate": "2024-11-22T12:00:00.000Z",
+      "patientDni": 11223344,
+      "medicId": "MED003",
+      "appointmentDate": "2024-12-03T09:00:00.000Z",
+      "State": "Completed",
+      "hour": 9,
+      "patientName": "Carlos Gómez",
+      "medicName": "Dra. Fernández",
+      "id": "APPT003",
+      "comments": ""
+    },
+    {
+      "creationDate": "2024-11-21T12:00:00.000Z",
+      "patientDni": 55667788,
+      "medicId": "MED004",
+      "appointmentDate": "2024-12-04T14:00:00.000Z",
+      "State": "Pending",
+      "hour": 14,
+      "patientName": "Ana Torres",
+      "medicName": "Dr. Ramírez",
+      "id": "APPT004",
+      "comments": ""
+    },
+    {
+      "creationDate": "2024-11-20T12:00:00.000Z",
+      "patientDni": 99887766,
+      "medicId": "MED005",
+      "appointmentDate": "2024-12-05T15:00:00.000Z",
+      "State": "Cancelled",
+      "hour": 15,
+      "patientName": "Lucía Vargas",
+      "medicName": "Dra. Muñoz",
+      "id": "APPT005",
+      "comments": ""
+    },
+    {
+      "creationDate": "2024-11-19T12:00:00.000Z",
+      "patientDni": 33445566,
+      "medicId": "MED006",
+      "appointmentDate": "2024-12-06T16:00:00.000Z",
+      "State": "Pending",
+      "hour": 16,
+      "patientName": "Roberto Díaz",
+      "medicName": "Dr. Herrera",
+      "id": "APPT006",
+      "comments": ""
+    },
+    {
+      "creationDate": "2024-11-18T12:00:00.000Z",
+      "patientDni": 66778899,
+      "medicId": "MED007",
+      "appointmentDate": "2024-12-07T12:00:00.000Z",
+      "State": "Pending",
+      "hour": 12,
+      "patientName": "Elena Navarro",
+      "medicName": "Dr. Castro",
+      "id": "APPT007",
+      "comments": ""
+    },
+    {
+      "creationDate": "2024-11-17T12:00:00.000Z",
+      "patientDni": 44556677,
+      "medicId": "MED008",
+      "appointmentDate": "2024-12-08T13:00:00.000Z",
+      "State": "Confirmed",
+      "hour": 13,
+      "patientName": "Jorge Ruiz",
+      "medicName": "Dra. Morales",
+      "id": "APPT008",
+      "comments": ""
+    },
+    {
+      "creationDate": "2024-11-16T12:00:00.000Z",
+      "patientDni": 77889900,
+      "medicId": "MED009",
+      "appointmentDate": "2024-12-09T08:00:00.000Z",
+      "State": "Pending",
+      "hour": 8,
+      "patientName": "Clara Ríos",
+      "medicName": "Dr. López",
+      "id": "APPT009",
+      "comments": ""
+    },
+    {
+      "creationDate": "2024-11-15T12:00:00.000Z",
+      "patientDni": 22334455,
+      "medicId": "MED010",
+      "appointmentDate": "2024-12-10T17:00:00.000Z",
+      "State": "Cancelled",
+      "hour": 17,
+      "patientName": "Pedro Mendoza",
+      "medicName": "Dra. Sánchez",
+      "id": "APPT010",
+      "comments": ""
+    },
+    {
+      "creationDate": "2024-11-24T22:06:16.644Z",
       "patientDni": 1234567,
-      "medicId": "M34567",
-      "appointmentDate": "2024-11-23T03:00:00.000Z",
+      "medicId": "MED001",
+      "appointmentDate": "2024-11-25T03:00:00.000Z",
       "State": "Confirmado",
-      "hour": 18,
-      "id": "EVKTuoo"
+      "hour": 10,
+      "patientName": "Perez pepe",
+      "medicName": "Dr. García",
+      "id": "jBQQRwr",
+      "comment": ""
     }
   ]
 }

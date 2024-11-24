@@ -23,17 +23,6 @@
       "phone": "987654321"
     },
     {
-      "id": "eff5",
-      "dni": "3456789",
-      "firstName": "Carlos",
-      "lastName": "Gonzalez",
-      "birthDate": "1975-12-09",
-      "address": "Av. Libertador 555",
-      "insurance": "Galeno",
-      "email": "carlos.gonzalez@yahoo.com",
-      "phone": "1122334455"
-    },
-    {
       "id": "faf2",
       "dni": "6543210",
       "firstName": "Lucia",
