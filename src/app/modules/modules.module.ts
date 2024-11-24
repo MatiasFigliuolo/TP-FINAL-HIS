@@ -30,6 +30,8 @@ export class Appointment
   hour: Number = 0;
   patientName?: string;  
   medicName?: string;
+  id: string = '';
+  comment: string = '';
 }
 
 export enum AppointmentState

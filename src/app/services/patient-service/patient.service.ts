@@ -10,6 +10,7 @@ export class PatientService {
   private apiUrl = 'http://localhost:3000/pacientes';
   private patientListSubject = new Subject<Patient[]>();
   public patientList$ = this.patientListSubject.asObservable();
+  private patientSerch = new Patient(); 
 
   constructor(private http: HttpClient) { }
 
@@ -41,6 +42,14 @@ export class PatientService {
       catchError(() => {
         return of(false);  
       })
+    );
+  }
+
+  getNameByDni(dni: number): Observable<Patient> {
+    return this.getAll().pipe(
+      map((patient: Patient[]) => 
+        patient.find(patient => patient.dni = dni) || new Patient()
+      )
     );
   }
 

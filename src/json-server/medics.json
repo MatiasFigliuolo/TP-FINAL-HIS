@@ -1,175 +1,94 @@
 {
-  "medicos": [
+  "medicos":[
     {
-      "id": "3",
-      "matricula": "M34567",
-      "firstName": "Luis",
-      "lastName": "Martinez",
-      "email": "luis.martinez@hospital.com",
-      "phone": 1122334455,
+      "id": 1,
+      "matricula": "MED001",
+      "firstName": "Carlos",
+      "lastName": "García",
+      "email": "carlos.garcia@example.com",
+      "phone": 123456789,
+      "password": "password1"
+    },
+    {
+      "id": 2,
+      "matricula": "MED002",
+      "firstName": "María",
+      "lastName": "Martínez",
+      "email": "maria.martinez@example.com",
+      "phone": 234567890,
+      "password": "password2"
+    },
+    {
+      "id": 3,
+      "matricula": "MED003",
+      "firstName": "Fernando",
+      "lastName": "Fernández",
+      "email": "fernando.fernandez@example.com",
+      "phone": 345678901,
       "password": "password3"
     },
     {
-      "id": "4",
-      "matricula": "M45678",
-      "firstName": "Maria",
-      "lastName": "Lopez",
-      "email": "maria.lopez@hospital.com",
-      "phone": 2233445566,
+      "id": 4,
+      "matricula": "MED004",
+      "firstName": "Luis",
+      "lastName": "Ramírez",
+      "email": "luis.ramirez@example.com",
+      "phone": 456789012,
       "password": "password4"
     },
     {
-      "id": "5",
-      "matricula": "M56789",
-      "firstName": "Fernando",
-      "lastName": "Sosa",
-      "email": "fernando.sosa@hospital.com",
-      "phone": 3344556677,
+      "id": 5,
+      "matricula": "MED005",
+      "firstName": "Ana",
+      "lastName": "Muñoz",
+      "email": "ana.munoz@example.com",
+      "phone": 567890123,
       "password": "password5"
     },
     {
-      "id": "6",
-      "matricula": "M67890",
-      "firstName": "Lucia",
-      "lastName": "Perez",
-      "email": "lucia.perez@hospital.com",
-      "phone": 4455667788,
+      "id": 6,
+      "matricula": "MED006",
+      "firstName": "Roberto",
+      "lastName": "Herrera",
+      "email": "roberto.herrera@example.com",
+      "phone": 678901234,
       "password": "password6"
     },
     {
-      "id": "9",
-      "matricula": "M90123",
-      "firstName": "Jorge",
-      "lastName": "Diaz",
-      "email": "jorge.diaz@hospital.com",
-      "phone": 7788990011,
+      "id": 7,
+      "matricula": "MED007",
+      "firstName": "Claudia",
+      "lastName": "Castro",
+      "email": "claudia.castro@example.com",
+      "phone": 789012345,
+      "password": "password7"
+    },
+    {
+      "id": 8,
+      "matricula": "MED008",
+      "firstName": "Sofía",
+      "lastName": "Morales",
+      "email": "sofia.morales@example.com",
+      "phone": 890123456,
+      "password": "password8"
+    },
+    {
+      "id": 9,
+      "matricula": "MED009",
+      "firstName": "José",
+      "lastName": "López",
+      "email": "jose.lopez@example.com",
+      "phone": 901234567,
       "password": "password9"
     },
     {
-      "id": "10",
-      "matricula": "M01234",
-      "firstName": "Laura",
-      "lastName": "Gutierrez",
-      "email": "laura.gutierrez@hospital.com",
-      "phone": 8899001122,
+      "id": 10,
+      "matricula": "MED010",
+      "firstName": "Elena",
+      "lastName": "Sánchez",
+      "email": "elena.sanchez@example.com",
+      "phone": 123098456,
       "password": "password10"
-    },
-    {
-      "id": "11",
-      "matricula": "M34521",
-      "firstName": "Diego",
-      "lastName": "Vega",
-      "email": "diego.vega@hospital.com",
-      "phone": 9911223344,
-      "password": "password11"
-    },
-    {
-      "id": "12",
-      "matricula": "M45632",
-      "firstName": "Sofia",
-      "lastName": "Mendez",
-      "email": "sofia.mendez@hospital.com",
-      "phone": 1022334455,
-      "password": "password12"
-    },
-    {
-      "id": "13",
-      "matricula": "M56743",
-      "firstName": "Andres",
-      "lastName": "Cruz",
-      "email": "andres.cruz@hospital.com",
-      "phone": 2033445566,
-      "password": "password13"
-    },
-    {
-      "id": "14",
-      "matricula": "M67854",
-      "firstName": "Clara",
-      "lastName": "Vargas",
-      "email": "clara.vargas@hospital.com",
-      "phone": 3044556677,
-      "password": "password14"
-    },
-    {
-      "id": "15",
-      "matricula": "M78965",
-      "firstName": "Ricardo",
-      "lastName": "Castro",
-      "email": "ricardo.castro@hospital.com",
-      "phone": 4055667788,
-      "password": "password15"
-    },
-    {
-      "id": "16",
-      "matricula": "M89076",
-      "firstName": "Marta",
-      "lastName": "Moreno",
-      "email": "marta.moreno@hospital.com",
-      "phone": 5066778899,
-      "password": "password16"
-    },
-    {
-      "id": "17",
-      "matricula": "M90187",
-      "firstName": "Hector",
-      "lastName": "Ortiz",
-      "email": "hector.ortiz@hospital.com",
-      "phone": 6077889900,
-      "password": "password17"
-    },
-    {
-      "id": "18",
-      "matricula": "M01298",
-      "firstName": "Alicia",
-      "lastName": "Silva",
-      "email": "alicia.silva@hospital.com",
-      "phone": 7088990011,
-      "password": "password18"
-    },
-    {
-      "id": "19",
-      "matricula": "M12309",
-      "firstName": "Enrique",
-      "lastName": "Reyes",
-      "email": "enrique.reyes@hospital.com",
-      "phone": 8099001122,
-      "password": "password19"
-    },
-    {
-      "id": "21",
-      "matricula": "M58230",
-      "firstName": "Luna",
-      "lastName": "De Noia",
-      "email": "denoialuna@gmail.com",
-      "phone": 2235250554,
-      "password": "ssssss"
-    },
-    {
-      "id": "22",
-      "matricula": "M25869",
-      "firstName": "Juan Cruz",
-      "lastName": "Morales",
-      "email": "jcmxu95@gmail.com",
-      "phone": 2235050264,
-      "password": "234"
-    },
-    {
-      "id": "23",
-      "matricula": "151521897",
-      "firstName": "Matias",
-      "lastName": "Figliuolo",
-      "email": "matias.figliuolo1@gmail.com",
-      "phone": null,
-      "password": "2352"
-    },
-    {
-      "id": "24",
-      "matricula": "12134",
-      "firstName": "John ",
-      "lastName": "Diagnosticgood",
-      "email": "DiagnosticGood.john@atlantichealth.com",
-      "phone": "1234545345",
-      "password": "123"
     }
-  ]
+  ]  
 }

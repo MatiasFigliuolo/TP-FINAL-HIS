@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Appointment } from '../../modules/modules.module';
-import { Observable, of } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { ValidationErrors } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -10,6 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AppointmentServiceService implements OnInit {
   private apiUrl = 'http://localhost:3002/appointments';
   private appointmentList = new Array<Appointment>();
+  private appointmentSerch = new Appointment();
 
   constructor(private http: HttpClient) {}
   
@@ -20,7 +21,15 @@ export class AppointmentServiceService implements OnInit {
       }); 
    
   }
-
+  
+  getAppointmentById(id: string): Observable<Appointment> {
+    return this.getAll().pipe(
+      map((appointments: Appointment[]) => 
+        appointments.find(app => app.id === id) || new Appointment()
+      )
+    );
+  }
+  
   getAll(): Observable<Appointment[]> {
     return this.http.get<Appointment[]>(this.apiUrl);
   }

@@ -12,6 +12,8 @@ export class MedicServiceService implements OnInit {
   private apiUrl = 'http://localhost:3001/medicos';
   private medicListSubject = new BehaviorSubject<Medic[]>([]);
   medicList$ = this.medicListSubject.asObservable();
+  private medicName = '';
+  private medicSerch = new Medic();
 
   private medicList = new Array<Medic>();
 
@@ -47,6 +49,15 @@ export class MedicServiceService implements OnInit {
       })
     );
   }
+
+  getNameByMatricula(matricula: string): Observable<Medic> {
+    return this.getAll().pipe(
+      map((medic: Medic[]) => 
+        medic.find(medic => medic.matricula === matricula) || new Medic()
+      )
+    );
+  }
+
 
   updateMedicList(): void {
     this.getAll().subscribe((medics: Medic[]) => {

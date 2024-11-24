@@ -36,4 +36,9 @@ body {
   .common-margin-left {
     margin-left: 1%;
   }
+  .appointments:hover
+  {
+    border: solid 1px black;
+    cursor: pointer;
+  }
   
