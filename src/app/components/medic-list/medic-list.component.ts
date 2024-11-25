@@ -73,7 +73,7 @@ export class MedicListComponent implements OnInit {
         if (result.isConfirmed) {
           Swal.fire({
              title: "Eliminado!",
-            text: "El paciente fue eliminado.",
+            text: "El medico fue eliminado.",
             icon: "success"
           });
           if (this.selectedMedic){

@@ -1,0 +1,59 @@
+<app-nav></app-nav>
+<div class="searchContainer">
+    <input type="text" placeholder="Ingrese DNI del paciente o Matrícula del médico" [(ngModel)]="searchTerm"
+      (ngModelChange)="filterAttendances()" (keydown.enter)="onSearchEnter()" class="searchBar" />
+</div>
+
+<div>
+      <div class="listStyle">
+        <div class="row">
+            <div class="col-md-8 AttendanceListStyle">
+                <table class="table table-hover">
+                    <thead class="table-header">
+                        <tr>
+                            <th>DNI</th>
+                            <th>Paciente</th>
+                            <th>Matrícula</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="AttendanceStyle" *ngFor="let attendance of filteredAttendances" (click)="selectAttendance(attendance)">
+                            <td>{{ attendance.patientDni }}</td>
+                            <td>{{ attendance.patientName }}</td>
+                            <td>{{ attendance.mediMatricula }}</td>
+                          </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="col-md-4" *ngIf="selectedAttendance">
+                <div class="attendance-details">
+                    <button class="close-button" (click)="closeDetails()">×</button>
+                    <h4>Detalles del Turno</h4>
+                    <form #medicForm="ngForm">
+                        <div class="form-group">
+                            <label>Fecha:</label>
+                            <input type="text" [(ngModel)]="selectedAttendance.date" name="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Paciente:</label>
+                            <input type="text" [(ngModel)]="selectedAttendance.patientName name="patientName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Medico:</label>
+                            <input type="text" [(ngModel)]="selectedAttendance.medicName" name="medicName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Informe:</label>
+                            <input type="text" [(ngModel)]="selectedAttendance.informe" name="form" class="form-control">
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn btn-success" (click)="updateAttendance()">Confirmar</button>
+                             <button type="button" class="btn btn-danger" (click)="deleteAttendance()">Eliminar</button>
+                       </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
