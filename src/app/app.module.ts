@@ -23,7 +23,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MedicPageComponent } from './components/medic-page/medic-page.component';
 import { AppointmentViewComponent } from './components/appointment-view/appointment-view.component';
-import { AttendanceComponent } from './attendance/attendance.component';
+import { AttendanceComponent } from './components/attendance/attendance.component';
 
 
 

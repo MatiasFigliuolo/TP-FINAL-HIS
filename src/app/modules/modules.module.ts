@@ -7,6 +7,18 @@ export class Medic {
   phone: number = 0;
   password: string = '';
 }
+export class Attendance
+{
+  id: number | undefined;
+  medicId: number = 0;
+  medicName: String = "";
+  patientDni: number = 0;
+  patientName: String = "";
+  appointmentId: number = 0;
+  date: Date = new Date();
+  hour: Number = 0;
+  report: string = '';
+}
 
 export class Patient {
   id: number | undefined;
@@ -32,20 +44,6 @@ export class Appointment
   patientName?: string;  
   medicName?: string;
 }
-
-export class Attendance {
-  id: number = 0;
-  report: string = '';
-  creationDate: Date = new Date();
-  patientDni: number = 0;
-  medicId: string = '';
-  appointmentDate: Date = new Date();
-  State: string = 'Pending'; // Asegúrate de tener un estado para la atención
-  hour: number = 0;
-  patientName?: string;
-  medicName?: string;
-}
-
 export enum AppointmentState
 {
   Confirm = 'Confirmado',

@@ -1,0 +1,44 @@
+{
+  "attendances": [
+    {
+      "id": 0,
+      "medicId": 0,
+      "medicName": "",
+      "patientDni": 0,
+      "patientName": "",
+      "date": "2024-11-25T22:28:18.607Z",
+      "hour": 0,
+      "report": "asd"
+    },
+    {
+      "id": 0,
+      "medicId": 0,
+      "medicName": "",
+      "patientDni": 0,
+      "patientName": "",
+      "date": "2024-11-25T22:28:18.607Z",
+      "hour": 0,
+      "report": "asd"
+    },
+    {
+      "id": 0,
+      "medicId": 0,
+      "medicName": "",
+      "patientDni": 0,
+      "patientName": "",
+      "date": "2024-11-25T22:28:18.607Z",
+      "hour": 0,
+      "report": "asd"
+    },
+    {
+      "id": 0,
+      "medicId": 0,
+      "medicName": "",
+      "patientDni": 0,
+      "patientName": "",
+      "date": "2024-11-25T22:28:18.607Z",
+      "hour": 0,
+      "report": "asd"
+    }
+  ]
+}
