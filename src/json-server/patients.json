@@ -14,7 +14,7 @@
     {
       "id": "d7a6",
       "dni": "2345678",
-      "firstName": "Marias",
+      "firstName": "Matias",
       "lastName": "Lopez",
       "birthDate": "1990-07-14",
       "address": "Avenida Siempre Viva 742",
@@ -37,23 +37,12 @@
       "id": "5bcc",
       "dni": "12345678",
       "firstName": "Fernando",
-      "lastName": "Sosa",
+      "lastName": "asdasd",
       "birthDate": "1982-09-07",
       "address": "Belgrano 1200",
       "insurance": "Swiss Medical",
       "email": "fernando.sosa@yahoo.com",
       "phone": "5566778899"
-    },
-    {
-      "id": "5553",
-      "dni": "7654321",
-      "firstName": "Marta",
-      "lastName": "Diaz",
-      "birthDate": "1965-06-21",
-      "address": "Rivadavia 900",
-      "insurance": "OSDE",
-      "email": "marta.diaz@gmail.com",
-      "phone": "6677889900"
     },
     {
       "id": "0294",
@@ -208,6 +197,17 @@
       "email": "matias.figliuolo1@gmail.com",
       "phone": 2235134158,
       "insurance": "osde"
+    },
+    {
+      "id": "7610",
+      "dni": "38828968",
+      "firstName": "Juan Cruz",
+      "lastName": "Morales",
+      "birthDate": "05/03/1995",
+      "address": "05/03/1995",
+      "email": "jcmxu95@gmail.com",
+      "phone": null,
+      "insurance": "asd"
     }
   ]
 }

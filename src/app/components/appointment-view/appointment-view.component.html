@@ -1,20 +1,25 @@
 <app-nav></app-nav>
-<br><br>
-<br><br>
-<div>
-    <div class="card" style="width: 40rem;">
-        <div class="card-body">
-          <h3 class="card-title">Paciente: {{appointment.patientName}}</h3>
-          <h6 class="card-subtitle mb-2 text-body-secondary">Medico: {{appointment.medicName}}</h6>
-          <p>Fecha: {{appointment.appointmentDate}}</p>
-          <p>Estado: {{appointment.State}}</p>
-        </div>
-      </div>
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Paciente: {{ appointment.patientName }}</h3>
+      <h6 class="card-subtitle mb-2 text-muted">Médico: {{ appointment.medicName }}</h6>
+      <p>Fecha: {{ appointment.appointmentDate | date }}</p>
+      <p>Hora: {{ appointment.hour }}</p>
+      <p>Estado: {{ appointment.State }}</p>
+    </div>
+  </div>
 
-    <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" ></textarea>
-        <label for="floatingTextarea2">Comments</label>
-        <br>
-        <button class="button" (click)="uploadComment()" [disabled]="">Subir</button>
-      </div>
+  <div class="form-group mt-4">
+    <label for="report">Informe Médico</label>
+    <textarea
+      id="report"
+      [(ngModel)]="report"
+      class="form-control"
+      placeholder="Escribe el informe aquí..."
+      rows="5"
+    ></textarea>
+  </div>
+
+  <button class="btn btn-primary mt-3" (click)="saveAttendance()">Guardar Atención</button>
 </div>
