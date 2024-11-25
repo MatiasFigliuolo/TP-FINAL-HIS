@@ -268,6 +268,15 @@
       "appointmentDate": "2024-11-28T03:00:00.000Z",
       "State": "Confirmado",
       "hour": 12
+    },
+    {
+      "id": "6fa8",
+      "creationDate": "2024-11-24T17:02:31.527Z",
+      "patientDni": 1234567,
+      "medicId": "M45678",
+      "appointmentDate": "2024-11-24T17:02:08.674Z",
+      "State": "Confirmado",
+      "hour": 11
     }
   ]
 }
