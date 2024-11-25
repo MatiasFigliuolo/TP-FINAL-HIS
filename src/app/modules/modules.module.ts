@@ -22,6 +22,7 @@ export class Patient {
 
 export class Appointment
 {
+  id: number | undefined;
   creationDate: Date = new Date();
   patientDni: number = 0;
   medicId: String = '';
@@ -30,8 +31,6 @@ export class Appointment
   hour: Number = 0;
   patientName?: string;  
   medicName?: string;
-  id: string = '';
-  comment: string = '';
 }
 
 export enum AppointmentState

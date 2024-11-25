@@ -20,7 +20,7 @@
           <td>{{ formatHour(appointment.hour) }}</td>
           <td>{{ appointment.patientDni }}</td>
           <td>{{ appointment.medicId }}</td>
-          <button (click)="appointmentView(appointment.id)" class="button"> View</button>
+          <button (click)="appointmentView(appointment.id!)" class="button"> View</button>
       </tr>
   </table>
 </div>

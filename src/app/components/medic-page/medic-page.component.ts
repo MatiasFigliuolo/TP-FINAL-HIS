@@ -36,7 +36,7 @@ export class MedicPageComponent implements OnInit {
     return `${hourNumber}:00`;
   }
 
-  appointmentView(appointmentId : string)
+  appointmentView(appointmentId : number)
   {
     this.router.navigate(['/appointment-view/'+appointmentId]);
   }
