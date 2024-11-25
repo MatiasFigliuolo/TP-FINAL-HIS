@@ -1,6 +1,7 @@
 {
   "appointments": [
     {
+      "id": 1,
       "creationDate": "2024-11-24T12:00:00.000Z",
       "patientDni": 12345678,
       "medicId": "MED001",
@@ -8,11 +9,10 @@
       "State": "Pending",
       "hour": 10,
       "patientName": "Juan Pérez",
-      "medicName": "Dr. García",
-      "id": "APPT001",
-      "comments": ""
+      "medicName": "Dr. García"
     },
     {
+      "id": 2,
       "creationDate": "2024-11-23T12:00:00.000Z",
       "patientDni": 87654321,
       "medicId": "MED002",
@@ -20,11 +20,10 @@
       "State": "Confirmed",
       "hour": 11,
       "patientName": "María López",
-      "medicName": "Dr. Martínez",
-      "id": "APPT002",
-      "comments": ""
+      "medicName": "Dr. Martínez"
     },
     {
+      "id": 3,
       "creationDate": "2024-11-22T12:00:00.000Z",
       "patientDni": 11223344,
       "medicId": "MED003",
@@ -32,11 +31,10 @@
       "State": "Completed",
       "hour": 9,
       "patientName": "Carlos Gómez",
-      "medicName": "Dra. Fernández",
-      "id": "APPT003",
-      "comments": ""
+      "medicName": "Dra. Fernández"
     },
     {
+      "id": 4,
       "creationDate": "2024-11-21T12:00:00.000Z",
       "patientDni": 55667788,
       "medicId": "MED004",
@@ -44,11 +42,10 @@
       "State": "Pending",
       "hour": 14,
       "patientName": "Ana Torres",
-      "medicName": "Dr. Ramírez",
-      "id": "APPT004",
-      "comments": ""
+      "medicName": "Dr. Ramírez"
     },
     {
+      "id": 5,
       "creationDate": "2024-11-20T12:00:00.000Z",
       "patientDni": 99887766,
       "medicId": "MED005",
@@ -56,11 +53,10 @@
       "State": "Cancelled",
       "hour": 15,
       "patientName": "Lucía Vargas",
-      "medicName": "Dra. Muñoz",
-      "id": "APPT005",
-      "comments": ""
+      "medicName": "Dra. Muñoz"
     },
     {
+      "id": 6,
       "creationDate": "2024-11-19T12:00:00.000Z",
       "patientDni": 33445566,
       "medicId": "MED006",
@@ -68,11 +64,10 @@
       "State": "Pending",
       "hour": 16,
       "patientName": "Roberto Díaz",
-      "medicName": "Dr. Herrera",
-      "id": "APPT006",
-      "comments": ""
+      "medicName": "Dr. Herrera"
     },
     {
+      "id": 7,
       "creationDate": "2024-11-18T12:00:00.000Z",
       "patientDni": 66778899,
       "medicId": "MED007",
@@ -80,11 +75,10 @@
       "State": "Pending",
       "hour": 12,
       "patientName": "Elena Navarro",
-      "medicName": "Dr. Castro",
-      "id": "APPT007",
-      "comments": ""
+      "medicName": "Dr. Castro"
     },
     {
+      "id": 8,
       "creationDate": "2024-11-17T12:00:00.000Z",
       "patientDni": 44556677,
       "medicId": "MED008",
@@ -92,11 +86,10 @@
       "State": "Confirmed",
       "hour": 13,
       "patientName": "Jorge Ruiz",
-      "medicName": "Dra. Morales",
-      "id": "APPT008",
-      "comments": ""
+      "medicName": "Dra. Morales"
     },
     {
+      "id": 9,
       "creationDate": "2024-11-16T12:00:00.000Z",
       "patientDni": 77889900,
       "medicId": "MED009",
@@ -104,11 +97,10 @@
       "State": "Pending",
       "hour": 8,
       "patientName": "Clara Ríos",
-      "medicName": "Dr. López",
-      "id": "APPT009",
-      "comments": ""
+      "medicName": "Dr. López"
     },
     {
+      "id": 10,
       "creationDate": "2024-11-15T12:00:00.000Z",
       "patientDni": 22334455,
       "medicId": "MED010",
@@ -116,11 +108,10 @@
       "State": "Cancelled",
       "hour": 17,
       "patientName": "Pedro Mendoza",
-      "medicName": "Dra. Sánchez",
-      "id": "APPT010",
-      "comments": ""
+      "medicName": "Dra. Sánchez"
     },
     {
+      "id": 11,
       "creationDate": "2024-11-24T22:06:16.644Z",
       "patientDni": 1234567,
       "medicId": "MED001",
@@ -128,9 +119,7 @@
       "State": "Confirmado",
       "hour": 10,
       "patientName": "Perez pepe",
-      "medicName": "Dr. García",
-      "id": "jBQQRwr",
-      "comment": ""
+      "medicName": "Dr. García"
     }
   ]
 }

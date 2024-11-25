@@ -13,8 +13,7 @@ import { PatientService } from '../../services/patient-service/patient.service';
 export class AppointmentViewComponent implements OnInit {
 
   appointment = new Appointment();
-  appointmentId = '';
-  comment = '';
+  appointmentId = 0;
 
   constructor(private route : ActivatedRoute,
     private appointmentService: AppointmentServiceService,
@@ -23,7 +22,7 @@ export class AppointmentViewComponent implements OnInit {
 
   ngOnInit(): void
   {
-    this.appointmentId = String(this.route.snapshot.paramMap.get('appId'));
+    this.appointmentId = Number(this.route.snapshot.paramMap.get('appId'));
 
     this.appointmentService.getAppointmentById(this.appointmentId).subscribe((appointment) => {
       this.appointment = appointment;
@@ -34,7 +33,7 @@ export class AppointmentViewComponent implements OnInit {
 
   uploadComment()
   {
-    this.appointment.comment = this.comment;
+    this.appointmentService.updateAppointment(this.appointment);
   }
 
 }
