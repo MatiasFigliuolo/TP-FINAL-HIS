@@ -1,29 +1,30 @@
 <app-nav></app-nav>
 
 <div class="title common-margin-left">
-    <h3>Próximos turnos: </h3>
+  <h3>Próximos turnos: </h3>
 </div>
 
- <div class="appointmentListStyle common-margin-left">
-    <table class="table table-striped appointmentListStyle">
-      <thead>
-        <tr>
-          <th>Fecha</th>
-          <th>Hora</th>
-          <th>Paciente</th>
-          <th>Médico</th>
-        </tr>
-      </thead>
-      <tbody> 
-        <tr *ngFor="let appointment of appointmentFilterList">
-        <td>{{ appointment.appointmentDate| date: 'dd/MM/yy' }}</td> 
-        <td>{{ formatHour(appointment.hour) }}</td>
-        <td>{{ appointment.patientDni }}</td> 
-        <td>{{ appointment.medicId }}</td>
-        </tr>
-    </table>
-  </div>
+<div class="appointmentListStyle common-margin-left">
+  <table class="table table-striped appointmentListStyle">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Paciente</th>
+        <th>Médico</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointmentFilterList" class="appointments">
+          <td>{{ appointment.appointmentDate| date: 'dd/MM/yy' }}</td>
+          <td>{{ formatHour(appointment.hour) }}</td>
+          <td>{{ appointment.patientDni }}</td>
+          <td>{{ appointment.medicId }}</td>
+          <button (click)="appointmentView(appointment.id!)" class="button"> View</button>
+      </tr>
+  </table>
+</div>
 
-  <div *ngIf="appointmentFilterList">
-    <h2>!! No hay Trabajo !!</h2>
-  </div>
+<div *ngIf="!appointmentFilterList">
+  <h2>!! No hay Trabajo !!</h2>
+</div>

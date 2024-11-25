@@ -9,6 +9,8 @@ import { ListPatientComponent } from './components/list-patient/list-patient.com
 import { AddAppointmentComponent } from './components/add-appointment/add-appointment.component';
 import { authAdminGuard, authMedicGuard} from './guard/auth.guard';
 import { MedicPageComponent } from './components/medic-page/medic-page.component';
+import { AppointmentViewComponent } from './components/appointment-view/appointment-view.component';
+import { AttendanceComponent } from './components/attendance/attendance.component';
 
 const routes: Routes = [
   {path: 'log-in', component: LogInComponent},
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'add-appointment', component: AddAppointmentComponent,canActivate: [authAdminGuard]},
   {path: 'add-patient', component: AddPatientComponent,canActivate: [authAdminGuard]},
   {path: 'medic-page/:matricula', component: MedicPageComponent, canActivate: [authMedicGuard]},
+  {path: 'appointment-view/:appId', component: AppointmentViewComponent, canActivate: [authMedicGuard]},
+  {path: 'attendance', component: AttendanceComponent, canActivate: [authMedicGuard]},
   {path: '', redirectTo: 'log-in', pathMatch: 'full'},
   {path: '**', redirectTo: 'log-in'}
 

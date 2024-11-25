@@ -9,14 +9,20 @@ import { MedicServiceService } from '../medic-service/medic-service.service';
 export class AuthService {
   private adminCredentials = {id : '' , password : ''};
   private adminLogInId = 'admin123';
-  private adminLogInPassword = '1234'
-  private medicCredentials = {matricula: '', password : ''}
+  private adminLogInPassword = '1234';
+  admin = false;
+  private medicCredentials = {matricula: '', password : ''};
   private medicList: Medic[] = [];
 
   constructor(private medicService : MedicServiceService) {
     this.medicService.getAll().subscribe((medic : Medic[]) =>{
       this.medicList = medic;
     });
+  }
+
+  getAdmin()
+  {
+    return this.admin;
   }
 
   setAdminCredentials(admin : Admin)
@@ -35,12 +41,12 @@ export class AuthService {
   {
     if(this.adminCredentials.id === this.adminLogInId && this.adminCredentials.password === this.adminLogInPassword)
     {
+      this.admin = true;
       return of (true);
     }else
     {
       return of (false);
     }
-    
   }
   checkMedicCredentials(): Observable<boolean> {
     for (const element of this.medicList) {
@@ -49,5 +55,10 @@ export class AuthService {
       }
     }
     return of(false);
+  }
+
+  logOut()
+  {
+    this.admin = false;
   }
 }

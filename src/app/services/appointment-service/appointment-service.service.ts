@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Appointment } from '../../modules/modules.module';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, catchError, map, Observable, of, switchMap, tap, throwError } from 'rxjs';
 import { ValidationErrors } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -9,7 +9,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AppointmentServiceService implements OnInit {
   private apiUrl = 'http://localhost:3002/appointments';
-  private appointmentList = new Array<Appointment>();
+  private appointmentSubjectList = new BehaviorSubject<Appointment[]>([]);
+  private appointmentList = new Array<Appointment>(); 
+  private appointmentSerch = new Appointment();
 
   constructor(private http: HttpClient) {}
   
@@ -20,7 +22,15 @@ export class AppointmentServiceService implements OnInit {
       }); 
    
   }
-
+  
+  getAppointmentById(id: number): Observable<Appointment> {
+    return this.getAll().pipe(
+      map((appointments: Appointment[]) => 
+        appointments.find(app => app.id === id) || new Appointment()
+      )
+    );
+  }
+  
   getAll(): Observable<Appointment[]> {
     return this.http.get<Appointment[]>(this.apiUrl);
   }
@@ -44,5 +54,32 @@ export class AppointmentServiceService implements OnInit {
     } else {
       return of(null); // Válido si la fecha es correcta
     }
+  }
+  deleteAppointment(id: number): Observable<Appointment> {
+    const url = `${this.apiUrl}/${id}`; // Usar id como identificador
+    return this.getAppointmentById(id).pipe(
+      switchMap((appointment: any) =>
+        this.http.delete<Appointment>(url).pipe(
+          tap(() => this.updateAppointmentList()),
+          catchError((error) => {
+            console.error('Error al eliminar el paciente:', error);
+            // Devolver el appointment original en caso de error
+            return of(appointment);
+          })
+        )
+      ),
+      catchError((error) => {
+        console.error('Error al obtener el paciente:', error);
+        // Devolver un observable vacío o algún valor manejable
+        return throwError(() => new error(('No se pudo obtener el appointment')));
+      })
+    );
+  }
+  
+
+  updateAppointmentList(): void {
+    this.getAll().subscribe((appointment: Appointment[]) => {
+      this.appointmentSubjectList.next(appointment); 
+    });
   }
 } 

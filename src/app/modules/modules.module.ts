@@ -22,6 +22,7 @@ export class Patient {
 
 export class Appointment
 {
+  id: number | undefined;
   creationDate: Date = new Date();
   patientDni: number = 0;
   medicId: String = '';
@@ -29,6 +30,19 @@ export class Appointment
   State: AppointmentState = AppointmentState.Pending;
   hour: Number = 0;
   patientName?: string;  
+  medicName?: string;
+}
+
+export class Attendance {
+  id: number = 0;
+  report: string = '';
+  creationDate: Date = new Date();
+  patientDni: number = 0;
+  medicId: string = '';
+  appointmentDate: Date = new Date();
+  State: string = 'Pending'; // Asegúrate de tener un estado para la atención
+  hour: number = 0;
+  patientName?: string;
   medicName?: string;
 }
 

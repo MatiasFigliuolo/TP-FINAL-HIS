@@ -69,7 +69,7 @@ export class MedicListComponent implements OnInit {
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Eliminar"
-      }).then((result) => {
+      }).then((result : any) => {
         if (result.isConfirmed) {
           Swal.fire({
              title: "Eliminado!",

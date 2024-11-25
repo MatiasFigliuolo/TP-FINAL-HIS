@@ -3,7 +3,7 @@ import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MedicPageComponent } from './components/medic-page/medic-page.component';
+import { AppointmentViewComponent } from './components/appointment-view/appointment-view.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 
 
 
@@ -36,14 +38,16 @@ import { MedicPageComponent } from './components/medic-page/medic-page.component
     MedicListComponent,
     ListPatientComponent,
     AddAppointmentComponent,
-    MedicPageComponent
+    MedicPageComponent,
+    AppointmentViewComponent,
+    AttendanceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
+
      FullCalendarModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
@@ -52,7 +56,7 @@ import { MedicPageComponent } from './components/medic-page/medic-page.component
     FormsModule,
     RouterModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
