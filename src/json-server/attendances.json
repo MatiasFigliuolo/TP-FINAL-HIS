@@ -1,106 +1,115 @@
 {
   "attendances": [
     {
-      "id": 0,
-      "medicId": 0,
-      "medicName": "",
-      "patientDni": 0,
-      "patientName": "",
-      "date": "2024-11-25T22:28:18.607Z",
-      "hour": 0,
-      "report": "asd"
+      "id": 1,
+      "medicId": "MED001",
+      "medicName": "Carlos García",
+      "patientDni": "1234567",
+      "patientName": "pepe Perez",
+      "date": "2024-11-25T10:00:00Z",
+      "hour": 10,
+      "report": "Consulta de rutina"
     },
     {
-      "id": 0,
-      "medicId": 0,
-      "medicName": "",
-      "patientDni": 0,
-      "patientName": "",
-      "date": "2024-11-25T22:49:57.063Z",
-      "hour": 0,
-      "report": "asd"
+      "id": 2,
+      "medicId": "MED002",
+      "medicName": "María Martínez",
+      "patientDni": "2345678",
+      "patientName": "Matias Lopez",
+      "date": "2024-11-26T14:30:00Z",
+      "hour": 14,
+      "report": "Seguimiento mensual"
     },
     {
-      "id": 0,
-      "medicId": 0,
-      "medicName": "",
-      "patientDni": 0,
-      "patientName": "",
-      "date": "2024-11-25T22:49:57.063Z",
-      "hour": 0,
-      "report": "asd"
+      "id": 3,
+      "medicId": "MED003",
+      "medicName": "Fernando Fernández",
+      "patientDni": "6543210",
+      "patientName": "Lucia Gimenez",
+      "date": "2024-11-27T09:00:00Z",
+      "hour": 9,
+      "report": "Control preoperatorio"
     },
     {
-      "id": 0,
-      "medicId": 0,
-      "medicName": "",
-      "patientDni": 0,
-      "patientName": "",
-      "date": "2024-11-25T22:49:57.063Z",
-      "hour": 0,
-      "report": "asd"
+      "id": 4,
+      "medicId": "MED004",
+      "medicName": "Luis Ramírez",
+      "patientDni": "12345678",
+      "patientName": "Fernando asdasd",
+      "date": "2024-11-28T16:00:00Z",
+      "hour": 16,
+      "report": "Examen físico anual"
     },
     {
-      "id": "c312",
-      "medicId": 0,
-      "medicName": "",
-      "patientDni": 0,
-      "patientName": "",
-      "date": "2024-11-25T22:50:58.693Z",
-      "hour": 0,
-      "report": "bbb"
+      "id": 5,
+      "medicId": "MED005",
+      "medicName": "Ana Muñoz",
+      "patientDni": "5123456",
+      "patientName": "Jorge Alvarez",
+      "date": "2024-11-29T11:30:00Z",
+      "hour": 11,
+      "report": "Chequeo médico"
     },
     {
-      "id": "f383",
-      "medicId": 0,
-      "medicName": "",
-      "patientDni": 0,
-      "patientName": "",
-      "date": "2024-11-25T22:50:58.693Z",
-      "hour": 0,
-      "report": "bbb"
+      "id": 6,
+      "medicId": "MED006",
+      "medicName": "Roberto Herrera",
+      "patientDni": "8765432",
+      "patientName": "Laura Ortiz",
+      "date": "2024-12-01T13:45:00Z",
+      "hour": 13,
+      "report": "Diagnóstico inicial"
     },
     {
-      "id": "b9e2",
-      "medicId": 0,
-      "medicName": "",
-      "patientDni": 0,
-      "patientName": "",
-      "date": "2024-11-25T22:50:58.693Z",
-      "hour": 0,
-      "report": "bbb"
+      "id": 7,
+      "medicId": "MED007",
+      "medicName": "Claudia Castro",
+      "patientDni": "4321098",
+      "patientName": "Rosa Castro",
+      "date": "2024-12-02T15:00:00Z",
+      "hour": 15,
+      "report": "Consulta psicológica"
     },
     {
-      "id": "ed8e",
-      "medicId": 0,
-      "medicName": "",
-      "patientDni": 0,
-      "patientName": "",
-      "date": "2024-11-25T22:50:58.693Z",
-      "hour": 0,
-      "report": "bbb"
-    },
-    {
-      "id": "970f",
-      "appointmentId": "12",
-      "medicId": null,
-      "medicName": "Dr. García",
-      "patientDni": 1234567,
-      "patientName": "Perez pepe",
-      "date": "2024-11-26T03:00:00.000Z",
+      "id": 8,
+      "medicId": "MED008",
+      "medicName": "Sofía Morales",
+      "patientDni": "50123456",
+      "patientName": "Diego Ramirez",
+      "date": "2024-12-03T08:30:00Z",
       "hour": 8,
-      "report": "sdf"
+      "report": "Análisis de laboratorio"
     },
     {
-      "id": "2ca9",
-      "appointmentId": "12",
+      "id": 9,
+      "medicId": "MED009",
+      "medicName": "José López",
+      "patientDni": "2345670",
+      "patientName": "Elsa Salame Vega",
+      "date": "2024-12-04T12:00:00Z",
+      "hour": 12,
+      "report": "Evaluación cardíaca"
+    },
+    {
+      "id": 10,
+      "medicId": "MED010",
+      "medicName": "Elena Sánchez",
+      "patientDni": "38828968",
+      "patientName": "Juan Cruz Morales",
+      "date": "2024-12-05T10:00:00Z",
+      "hour": 10,
+      "report": "Seguimiento postoperatorio"
+    },
+    {
+      "id": "2123",
+      "appointmentId": "11",
       "medicId": "MED001",
       "medicName": "Dr. García",
       "patientDni": 1234567,
       "patientName": "Perez pepe",
-      "date": "2024-11-26T03:00:00.000Z",
-      "hour": 8,
-      "report": "pepito"
+      "date": "2024-11-25T03:00:00.000Z",
+      "hour": 10,
+      "report": "papito\n"
     }
   ]
 }
