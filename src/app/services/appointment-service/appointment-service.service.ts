@@ -23,13 +23,24 @@ export class AppointmentServiceService implements OnInit {
    
   }
   
+  // getAppointmentById(id: number): Observable<Appointment> {
+  //   return this.getAll().pipe(
+  //     map((appointments: Appointment[]) => 
+  //       appointments.find(app => app.id === id) || new Appointment()
+  //     )
+  //   );
+  // }
   getAppointmentById(id: number): Observable<Appointment> {
-    return this.getAll().pipe(
-      map((appointments: Appointment[]) => 
-        appointments.find(app => app.id === id) || new Appointment()
-      )
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Appointment>(url).pipe(
+      tap(appointment => console.log('Datos del Appointment en el servicio:', appointment)),
+      catchError(error => {
+        console.error('Error al obtener el Appointment:', error);
+        return of(new Appointment()); // Devuelve un Appointment vacío si hay un error
+      })
     );
   }
+  
   
   getAll(): Observable<Appointment[]> {
     return this.http.get<Appointment[]>(this.apiUrl);

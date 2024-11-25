@@ -16,7 +16,7 @@
       "medicName": "",
       "patientDni": 0,
       "patientName": "",
-      "date": "2024-11-25T22:28:18.607Z",
+      "date": "2024-11-25T22:49:57.063Z",
       "hour": 0,
       "report": "asd"
     },
@@ -26,7 +26,7 @@
       "medicName": "",
       "patientDni": 0,
       "patientName": "",
-      "date": "2024-11-25T22:28:18.607Z",
+      "date": "2024-11-25T22:49:57.063Z",
       "hour": 0,
       "report": "asd"
     },
@@ -36,9 +36,71 @@
       "medicName": "",
       "patientDni": 0,
       "patientName": "",
-      "date": "2024-11-25T22:28:18.607Z",
+      "date": "2024-11-25T22:49:57.063Z",
       "hour": 0,
       "report": "asd"
+    },
+    {
+      "id": "c312",
+      "medicId": 0,
+      "medicName": "",
+      "patientDni": 0,
+      "patientName": "",
+      "date": "2024-11-25T22:50:58.693Z",
+      "hour": 0,
+      "report": "bbb"
+    },
+    {
+      "id": "f383",
+      "medicId": 0,
+      "medicName": "",
+      "patientDni": 0,
+      "patientName": "",
+      "date": "2024-11-25T22:50:58.693Z",
+      "hour": 0,
+      "report": "bbb"
+    },
+    {
+      "id": "b9e2",
+      "medicId": 0,
+      "medicName": "",
+      "patientDni": 0,
+      "patientName": "",
+      "date": "2024-11-25T22:50:58.693Z",
+      "hour": 0,
+      "report": "bbb"
+    },
+    {
+      "id": "ed8e",
+      "medicId": 0,
+      "medicName": "",
+      "patientDni": 0,
+      "patientName": "",
+      "date": "2024-11-25T22:50:58.693Z",
+      "hour": 0,
+      "report": "bbb"
+    },
+    {
+      "id": "970f",
+      "appointmentId": "12",
+      "medicId": null,
+      "medicName": "Dr. García",
+      "patientDni": 1234567,
+      "patientName": "Perez pepe",
+      "date": "2024-11-26T03:00:00.000Z",
+      "hour": 8,
+      "report": "sdf"
+    },
+    {
+      "id": "2ca9",
+      "appointmentId": "12",
+      "medicId": "MED001",
+      "medicName": "Dr. García",
+      "patientDni": 1234567,
+      "patientName": "Perez pepe",
+      "date": "2024-11-26T03:00:00.000Z",
+      "hour": 8,
+      "report": "pepito"
     }
   ]
 }

@@ -1,5 +1,5 @@
 export class Medic {
-  id: number | undefined;
+  id: String | undefined;
   matricula: string = '';
   firstName: string = '';
   lastName: string = '';
@@ -10,7 +10,7 @@ export class Medic {
 export class Attendance
 {
   id: number | undefined;
-  medicId: number = 0;
+  medicId: String = "";
   medicName: String = "";
   patientDni: number = 0;
   patientName: String = "";
