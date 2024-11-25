@@ -28,6 +28,7 @@ import { AttendanceViewComponent } from './components/attendance-view/attendance
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,8 +50,7 @@ import { AttendanceViewComponent } from './components/attendance-view/attendance
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-
-     FullCalendarModule,
+    FullCalendarModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatInputModule,

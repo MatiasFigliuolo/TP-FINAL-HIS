@@ -37,43 +37,50 @@ export class AppointmentViewComponent implements OnInit {
 
   }*/
 
+    // ngOnInit(): void {
+    //   this.appointmentId = Number(this.route.snapshot.paramMap.get('appId'));
+    //   this.appointmentService.getAppointmentById(this.appointmentId).subscribe((appointment) => {
+    //     this.appointment = appointment;
+    //     this.prefillAttendance(); // Llenar los datos de Attendance
+    //   });
+    // }
+
     ngOnInit(): void {
       this.appointmentId = Number(this.route.snapshot.paramMap.get('appId'));
-  
+    
       this.appointmentService.getAppointmentById(this.appointmentId).subscribe((appointment) => {
+        console.log('Datos recibidos del Appointment:', appointment);
         this.appointment = appointment;
-        this.prefillAttendance();
+    
+        if (this.appointment && this.appointment.id) {
+          this.prefillAttendance(); // Llama a prefillAttendance solo si hay un Appointment válido
+        } else {
+          console.error('El Appointment recibido es inválido o está vacío.');
+        }
       });
     }
+    
   
-    // Prellenar la atención con datos del turno seleccionado
     prefillAttendance(): void {
       this.newAttendance = {
-        id: 0,
+        id: undefined,
         appointmentId: this.appointment.id!,
-        medicId: Number(this.appointment.medicId),
+        medicId: this.appointment.medicId || '',
         medicName: this.appointment.medicName || '',
         patientDni: this.appointment.patientDni,
         patientName: this.appointment.patientName || '',
         date: this.appointment.appointmentDate,
         hour: this.appointment.hour,
-        report: ''
+        report: '' // Informe vacío inicialmente
       };
     }
 
       // Guardar la atención
     saveAttendance(): void {
-      this.newAttendance.report = this.report; // Asigna el informe al campo correspondiente
-
-      this.attendanceService.add(this.newAttendance).subscribe(() => {
-        console.log('Atención guardada con éxito');
+      this.newAttendance.report = this.report; // Asignar el informe médico
+      this.attendanceService.add(this.newAttendance).subscribe((response) => {
+        console.log('Atención guardada con éxito:', response);
       });
     }
-
-
-  uploadComment()
-  {
-  
-  }
 
 }

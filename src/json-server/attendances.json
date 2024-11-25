@@ -99,6 +99,17 @@
       "date": "2024-12-05T10:00:00Z",
       "hour": 10,
       "report": "Seguimiento postoperatorio"
+    },
+    {
+      "id": "2123",
+      "appointmentId": "11",
+      "medicId": "MED001",
+      "medicName": "Dr. García",
+      "patientDni": 1234567,
+      "patientName": "Perez pepe",
+      "date": "2024-11-25T03:00:00.000Z",
+      "hour": 10,
+      "report": "papito\n"
     }
   ]
 }

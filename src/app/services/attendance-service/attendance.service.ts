@@ -20,16 +20,17 @@ export class AttendanceService {
     );
   }
 
-  // Agregar una nueva atención
-  add(attendance: Attendance): Observable<Attendance> {
+   // Agregar una nueva atención
+   add(attendance: Attendance): Observable<Attendance> {
+    const { id, ...dataWithoutId } = attendance; // Excluir id para que el servidor lo genere
     const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
     };
-    return this.http.post<Attendance>(this.apiUrl, attendance, httpOptions).pipe(
-      tap(() => this.updateAttendanceList()),
-      catchError(this.handleError<Attendance>('add'))
-    );
+    return this.http.post<Attendance>(this.apiUrl, dataWithoutId, httpOptions);
   }
+
 
   // Actualizar una atención
   update(attendance: Attendance): Observable<Attendance> {
