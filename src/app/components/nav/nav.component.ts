@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AuthService } from '../../services/auth-service/auth.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { MedicPageComponent } from '../medic-page/medic-page.component';
 
 @Component({
   selector: 'app-nav',
@@ -13,24 +14,31 @@ export class NavComponent implements OnInit {
   medicMatricula = '';
   constructor(private authService: AuthService,
     private route: ActivatedRoute,
-    private router : Router
+    private router : Router,
   ) { }
 
   ngOnInit(): void {
     this.isAdmin = this.authService.getAdmin();
-    if(localStorage.getItem('medicMatricula'))
-    {
-      this.medicMatricula = localStorage.getItem('medicMatricula') || '';
-    }else
-    {
-      this.medicMatricula = String(this.route.snapshot.paramMap.get('matricula'));
-      localStorage.setItem('medicMatricula',this.medicMatricula);
+  
+    const localMatricula =localStorage.getItem('medicMatricula') || null;
+    if (localMatricula != null) 
+      {
+      this.medicMatricula = localMatricula;
+      console.log(this.medicMatricula);
+    } else {
+      const matriculaParam = this.route.snapshot.paramMap.get('matricula');
+      if (matriculaParam) {
+        this.medicMatricula = matriculaParam;
+        localStorage.setItem('medicMatricula', matriculaParam);
+      } else {
+        console.error('No se pudo encontrar medicMatricula en localStorage ni en los parámetros de ruta.');
+      }
     }
   }
-
+  
   medicPageNav() 
   {
-    this.router.navigate(['/medic-page/'+this.medicMatricula]);
+    this.router.navigate(['/medic-page', this.medicMatricula]);
   }
 
   cleanLocalStorage()
