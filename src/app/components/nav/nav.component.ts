@@ -35,6 +35,9 @@ export class NavComponent implements OnInit {
 
   cleanLocalStorage()
   {
+    this.isAdmin = false;
+    this.authService.logOut();
     localStorage.removeItem('medicMatricula');
+  
   }
 }

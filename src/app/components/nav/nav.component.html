@@ -49,7 +49,7 @@
           <br><br>
           <br><br>
           <li class="nav-item dropdown">
-            <a class="nav-link" [routerLink]="['/log-in']" aria-expanded="false">
+            <a class="nav-link" [routerLink]="['/log-in']" (click)="cleanLocalStorage()" aria-expanded="false">
               Log Out
             </a>
           </li>
@@ -62,7 +62,7 @@
 
 <nav class="navbar bg-body-tertiary fixed-top" *ngIf="!isAdmin">
   <div class="container-fluid">
-    <a class="navbar-brand" (click)="medicPageNav()">Atlantic Health</a>
+    <a class="navbar-brand" (click)="medicPageNav()" style="cursor: pointer;">Atlantic Health</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

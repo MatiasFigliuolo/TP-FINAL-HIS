@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Appointment } from '../../modules/modules.module';
-import { BehaviorSubject, catchError, map, Observable, of, tap } from 'rxjs';
+import { BehaviorSubject, catchError, map, Observable, of, switchMap, tap, throwError } from 'rxjs';
 import { ValidationErrors } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -55,24 +55,31 @@ export class AppointmentServiceService implements OnInit {
       return of(null); // Válido si la fecha es correcta
     }
   }
+  deleteAppointment(id: number): Observable<Appointment> {
+    const url = `${this.apiUrl}/${id}`; // Usar id como identificador
+    return this.getAppointmentById(id).pipe(
+      switchMap((appointment: any) =>
+        this.http.delete<Appointment>(url).pipe(
+          tap(() => this.updateAppointmentList()),
+          catchError((error) => {
+            console.error('Error al eliminar el paciente:', error);
+            // Devolver el appointment original en caso de error
+            return of(appointment);
+          })
+        )
+      ),
+      catchError((error) => {
+        console.error('Error al obtener el paciente:', error);
+        // Devolver un observable vacío o algún valor manejable
+        return throwError(() => new error(('No se pudo obtener el appointment')));
+      })
+    );
+  }
+  
 
   updateAppointmentList(): void {
     this.getAll().subscribe((appointment: Appointment[]) => {
-      console.log('Emitting updated medic list updateMedicService:', appointment);
-      this.appointmentSubjectList.next(appointment);  // Emite la lista actualizada
+      this.appointmentSubjectList.next(appointment); 
     });
-  }
-
-  updateAppointment(appointment: Appointment): Observable<Appointment> {
-    const url = `${this.apiUrl}/${appointment.id}`;  // Asegúrate de que 'matricula' sea el identificador en el servidor
-    return this.http.put<Appointment>(url, appointment, {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    }).pipe(
-      tap(() => this.updateAppointmentList()),  // Actualiza la lista tras la modificación
-      catchError((error) => {
-        console.error('Error al actualizar el médico:', error);
-        return of(appointment);  // Retorna el médico original en caso de error
-      })
-    );
   }
 } 

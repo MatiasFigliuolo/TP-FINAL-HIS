@@ -47,7 +47,6 @@ export class AuthService {
     {
       return of (false);
     }
-    
   }
   checkMedicCredentials(): Observable<boolean> {
     for (const element of this.medicList) {
@@ -56,5 +55,10 @@ export class AuthService {
       }
     }
     return of(false);
+  }
+
+  logOut()
+  {
+    this.admin = false;
   }
 }

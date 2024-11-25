@@ -1,5 +1,5 @@
 {
-  "medicos":[
+  "medicos": [
     {
       "id": 1,
       "matricula": "MED001",
@@ -89,6 +89,15 @@
       "email": "elena.sanchez@example.com",
       "phone": 123098456,
       "password": "password10"
+    },
+    {
+      "matricula": "MED01",
+      "firstName": "Marcos",
+      "lastName": "Perez",
+      "email": "",
+      "phone": null,
+      "password": "1234",
+      "id": 11
     }
-  ]  
+  ]
 }

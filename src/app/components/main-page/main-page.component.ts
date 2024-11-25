@@ -5,6 +5,7 @@ import { MedicServiceService } from '../../services/medic-service/medic-service.
 import { PatientService} from '../../services/patient-service/patient.service';
 import { forkJoin } from 'rxjs';
 import { AppointmentUpdatesService } from '../../services/appointment-update-service/appointment-update.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-main-page',
@@ -83,5 +84,31 @@ export class MainPageComponent implements OnInit {
       return 'M' + medicId;  
     }
     return medicId;  
+  }
+
+  deleteAppointment(id : number)
+  {
+    Swal.fire({
+      title: "Estás seguro?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+           title: "Eliminado!",
+          text: "El turno fue eliminado.",
+          icon: "success"
+        });
+        if (id) {
+          this.appointmentService.deleteAppointment(id).subscribe(() => {
+            console.log('Paciente eliminado con éxito');
+            this.ngOnInit();
+          });
+        }
+      }
+    });
   }
 }
