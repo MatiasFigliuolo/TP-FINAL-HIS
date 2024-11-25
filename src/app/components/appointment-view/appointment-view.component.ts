@@ -33,7 +33,7 @@ export class AppointmentViewComponent implements OnInit {
 
   uploadComment()
   {
-    this.appointmentService.updateAppointment(this.appointment);
+  
   }
 
 }

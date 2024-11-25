@@ -27,5 +27,6 @@
         <td>{{ appointment.patientDni }}</td> 
 <!--         <td>{{ getMedicName(appointment.medicId) }}</td> -->
         <td>{{ formatMedicId(appointment.medicId) }}</td>
+        <td><button type="button" class="btn btn-danger" (click)="deleteAppointment(appointment.id!)">Eliminar</button></td>
     </table>
   </div>
