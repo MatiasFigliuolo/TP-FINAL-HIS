@@ -40,6 +40,10 @@ export class NavComponent implements OnInit {
   {
     this.router.navigate(['/medic-page', this.medicMatricula]);
   }
+  attendanceView()
+  {
+    this.router.navigate(['/attendance-view/'+this.medicMatricula]);
+  }
 
   cleanLocalStorage()
   {

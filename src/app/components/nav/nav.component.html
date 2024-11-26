@@ -60,7 +60,7 @@
   </div>
 </nav>
 
-
+<!-- Nav Medicos -->
 <nav class="navbar bg-body-tertiary fixed-top" *ngIf="!isAdmin">
   <div class="container-fluid">
     <a class="navbar-brand" (click)="medicPageNav()" style="cursor: pointer;">Atlantic Health</a>
@@ -76,6 +76,15 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Turnos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="attendanceView()">Turnos atendidos</a></li>
+            </ul>
+          </li>
+          <br><br>
+          <li class="nav-item dropdown">
             <a class="nav-link" [routerLink]="['/log-in']" (click)="cleanLocalStorage()" aria-expanded="false">
               Log Out
             </a>
@@ -85,6 +94,7 @@
     </div>
   </div>
 </nav>
+
 
 <nav>
 

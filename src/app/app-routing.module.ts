@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'add-patient', component: AddPatientComponent,canActivate: [authAdminGuard]},
   {path: 'medic-page/:matricula', component: MedicPageComponent, canActivate: [authMedicGuard]},
   {path: 'appointment-view/:appId', component: AppointmentViewComponent, canActivate: [authMedicGuard]},
-  {path: 'attendance-view', component: AttendanceViewComponent, canActivate: [authAdminGuard]},
+  {path: 'attendance-view/:matricula', component: AttendanceViewComponent, canActivate: [authMedicGuard]},
   {path: '', redirectTo: 'log-in', pathMatch: 'full'},
   {path: '**', redirectTo: 'log-in'}
 
