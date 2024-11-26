@@ -1,86 +1,81 @@
 import { Component, OnInit } from '@angular/core';
-import { Appointment, Attendance, Medic, Patient } from '../../modules/modules.module';
+import { Appointment, Attendance } from '../../modules/modules.module';
 import { ActivatedRoute } from '@angular/router';
 import { AppointmentServiceService } from '../../services/appointment-service/appointment-service.service';
-import { MedicServiceService } from '../../services/medic-service/medic-service.service';
-import { PatientService } from '../../services/patient-service/patient.service';
 import { AttendanceService } from '../../services/attendance-service/attendance.service';
 
 @Component({
   selector: 'app-appointment-view',
   templateUrl: './appointment-view.component.html',
-  styleUrl: './appointment-view.component.css'
+  styleUrls: ['./appointment-view.component.css'] // Corregido el nombre
 })
 export class AppointmentViewComponent implements OnInit {
 
   appointment = new Appointment();
   appointmentId = 0;
-  selectedAppointment: Appointment | null = null;
+  appointmentDate: string = ''; // Cambiado a string para formateo
   newAttendance: Attendance = new Attendance();
   report: string = ''; // Campo para el informe del médico
 
-
-  constructor(private route : ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private appointmentService: AppointmentServiceService,
     private attendanceService: AttendanceService
-)
-{}
-  
-  /*ngOnInit(): void
-  {
+  ) {}
+
+  ngOnInit(): void {
     this.appointmentId = Number(this.route.snapshot.paramMap.get('appId'));
 
     this.appointmentService.getAppointmentById(this.appointmentId).subscribe((appointment) => {
       this.appointment = appointment;
-      console.log(appointment);
+      this.prefillAttendance();
+
+      // Validar y formatear la fecha del turno
+      if (appointment.appointmentDate) {
+        this.appointmentDate = this.formatDate(appointment.appointmentDate);
+      } else {
+        console.error('Fecha inválida en el turno:', appointment.appointmentDate);
+      }
     });
+  }
 
-  }*/
-
-    // ngOnInit(): void {
-    //   this.appointmentId = Number(this.route.snapshot.paramMap.get('appId'));
-    //   this.appointmentService.getAppointmentById(this.appointmentId).subscribe((appointment) => {
-    //     this.appointment = appointment;
-    //     this.prefillAttendance(); // Llenar los datos de Attendance
-    //   });
-    // }
-
-    ngOnInit(): void {
-      this.appointmentId = Number(this.route.snapshot.paramMap.get('appId'));
-    
-      this.appointmentService.getAppointmentById(this.appointmentId).subscribe((appointment) => {
-        console.log('Datos recibidos del Appointment:', appointment);
-        this.appointment = appointment;
-    
-        if (this.appointment && this.appointment.id) {
-          this.prefillAttendance(); // Llama a prefillAttendance solo si hay un Appointment válido
-        } else {
-          console.error('El Appointment recibido es inválido o está vacío.');
-        }
-      });
-    }
-    
-  
-    prefillAttendance(): void {
-      this.newAttendance = {
-        id: undefined,
-        appointmentId: this.appointment.id!,
-        medicId: this.appointment.medicId || '',
-        medicName: this.appointment.medicName || '',
-        patientDni: this.appointment.patientDni,
-        patientName: this.appointment.patientName || '',
-        date: this.appointment.appointmentDate,
-        hour: this.appointment.hour,
-        report: '' // Informe vacío inicialmente
-      };
+  // Método para formatear la fecha en formato DD/MM/YYYY
+  formatDate(dateInput: string | Date): string {
+    const date = new Date(dateInput);
+    if (isNaN(date.getTime())) {
+      console.error('Fecha inválida:', dateInput);
+      return 'Fecha inválida';
     }
 
-      // Guardar la atención
-    saveAttendance(): void {
-      this.newAttendance.report = this.report; // Asignar el informe médico
-      this.attendanceService.add(this.newAttendance).subscribe((response) => {
-        console.log('Atención guardada con éxito:', response);
-      });
-    }
+    const day = date.getDate().toString().padStart(2, '0'); // Asegura dos dígitos
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Mes (0-based)
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
 
+  // Prellenar la atención con datos del turno seleccionado
+  prefillAttendance(): void {
+    this.newAttendance = {
+      id: 0,
+      appointmentId: this.appointment.id!,
+      medicId: this.appointment.medicId || '',
+      medicName: this.appointment.medicName || '',
+      patientDni: this.appointment.patientDni,
+      patientName: this.appointment.patientName || '',
+      date: this.appointment.appointmentDate,
+      hour: this.appointment.hour,
+      report: ''
+    };
+  }
+
+  // Guardar la atención
+  saveAttendance(): void {
+    this.newAttendance.report = this.report; // Asigna el informe al campo correspondiente
+
+    this.attendanceService.add(this.newAttendance).subscribe(() => {
+      console.log('Atención guardada con éxito');
+    }, error => {
+      console.error('Error al guardar la atención:', error);
+    });
+  }
 }
