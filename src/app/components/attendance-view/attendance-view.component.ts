@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Attendance } from '../../modules/modules.module';
 import { AttendanceService } from '../../services/attendance-service/attendance.service';
 import Swal from 'sweetalert2';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-attendance-view',
@@ -14,13 +15,17 @@ export class AttendanceViewComponent {
   filteredAttendances: Attendance[] = [];
   searchTerm: string = '';
   AttendanceSerivce: any;
+  medicMatricula = '';
 
-  constructor(private attendanceService: AttendanceService) { }
+  constructor(private attendanceService: AttendanceService,
+  private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.attendanceService.attendanceList$.subscribe((updatedAttendances: Attendance[]) => {
       this.AttendanceList = updatedAttendances;
-      this.filteredAttendances = [...updatedAttendances]; 
+      this.filteredAttendances = [...updatedAttendances];
+      this.medicMatricula = String(this.route.snapshot.paramMap.get('matricula'));
+      this.listFilter();
     });
   
     this.attendanceService.updateAttendanceList();
@@ -29,7 +34,12 @@ export class AttendanceViewComponent {
   selectAttendance(Attendance: Attendance): void {
     this.SelectedAttendance = Attendance;
   }
-
+  listFilter()
+  {
+    this.attendanceService.getAll().subscribe((attendances: Attendance[]) => {
+      this.filteredAttendances = attendances.filter(attendance => attendance.medicId === this.medicMatricula);
+  });
+}
   onSearchEnter() {
     this.filterAttendances();
   }
@@ -40,8 +50,7 @@ export class AttendanceViewComponent {
       this.filteredAttendances = [...this.AttendanceList];
     } else {
       this.filteredAttendances = this.AttendanceList.filter(Attendance =>
-        Attendance.patientDni.toString().toLowerCase().includes(term) ||
-        Attendance.medicId.toString().toLowerCase().includes(term)
+        Attendance.patientDni.toString().toLowerCase().includes(term)
       );
     }
   }
