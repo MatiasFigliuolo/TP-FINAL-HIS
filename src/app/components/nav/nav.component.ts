@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AuthService } from '../../services/auth-service/auth.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { MedicPageComponent } from '../medic-page/medic-page.component';
 
 @Component({
   selector: 'app-nav',
@@ -13,7 +14,7 @@ export class NavComponent implements OnInit {
   medicMatricula = '';
   constructor(private authService: AuthService,
     private route: ActivatedRoute,
-    private router : Router
+    private router : Router,
   ) { }
 
   ngOnInit(): void {
@@ -34,10 +35,10 @@ export class NavComponent implements OnInit {
       }
     }
   }
-
+  
   medicPageNav() 
   {
-    this.router.navigate(['/medic-page/'+this.medicMatricula]);
+    this.router.navigate(['/medic-page', this.medicMatricula]);
   }
   attendanceView()
   {

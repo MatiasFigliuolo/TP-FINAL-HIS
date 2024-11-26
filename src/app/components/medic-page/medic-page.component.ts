@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MedicPageComponent implements OnInit {
   private appointmentList: Appointment[] = [];
-  private medicMatricula = '';
+  medicMatricula = '';
   appointmentFilterList: Appointment[] = [];
 
   constructor(
