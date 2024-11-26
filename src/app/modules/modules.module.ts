@@ -1,11 +1,23 @@
 export class Medic {
-  id: number | undefined;
+  id: String | undefined;
   matricula: string = '';
   firstName: string = '';
   lastName: string = '';
   email: string = '';
   phone: number = 0;
   password: string = '';
+}
+export class Attendance
+{
+  id: number | undefined;
+  medicId: String = "";
+  medicName: String = "";
+  patientDni: number = 0;
+  patientName: String = "";
+  appointmentId: number = 0;
+  date: Date = new Date();
+  hour: Number = 0;
+  report: string = '';
 }
 
 export class Patient {
@@ -32,7 +44,6 @@ export class Appointment
   patientName?: string;  
   medicName?: string;
 }
-
 export enum AppointmentState
 {
   Confirm = 'Confirmado',

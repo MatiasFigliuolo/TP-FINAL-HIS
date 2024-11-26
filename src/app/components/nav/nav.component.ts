@@ -18,19 +18,30 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     this.isAdmin = this.authService.getAdmin();
-    if(localStorage.getItem('medicMatricula'))
-    {
-      this.medicMatricula = localStorage.getItem('medicMatricula') || '';
-    }else
-    {
-      this.medicMatricula = String(this.route.snapshot.paramMap.get('matricula'));
-      localStorage.setItem('medicMatricula',this.medicMatricula);
+  
+    const localMatricula =localStorage.getItem('medicMatricula') || null;
+    if (localMatricula != null) 
+      {
+      this.medicMatricula = localMatricula;
+      console.log(this.medicMatricula);
+    } else {
+      const matriculaParam = this.route.snapshot.paramMap.get('matricula');
+      if (matriculaParam) {
+        this.medicMatricula = matriculaParam;
+        localStorage.setItem('medicMatricula', matriculaParam);
+      } else {
+        console.error('No se pudo encontrar medicMatricula en localStorage ni en los parámetros de ruta.');
+      }
     }
   }
 
   medicPageNav() 
   {
     this.router.navigate(['/medic-page/'+this.medicMatricula]);
+  }
+  attendanceView()
+  {
+    this.router.navigate(['/attendance-view/'+this.medicMatricula]);
   }
 
   cleanLocalStorage()
